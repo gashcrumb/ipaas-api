@@ -9,7 +9,7 @@ This is an enterprise-grade API that uses a layered approach for greater abstrac
 - And, finally, the **interface** that we traditionally know as an API, which returns JSON to users like any RESTful API.
 
 
-If you'd like to contribute, please read the [`./contributing.md`]('./contributing.md') file in detail.
+If you'd like to contribute, please read the [`./contributing.md`](./contributing.md) file in detail.
 
 ### Models
 To see a list of models, go to the [`src/models`]('../src/models') directory. Each subdirectory there is a model.

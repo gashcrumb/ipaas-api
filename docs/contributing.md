@@ -1,7 +1,7 @@
 # Contributing
 Pull requests are always welcome. Please be sure to read through this entire guide before opening up a pull request.
 
-**We also highly recommend reading the [Technical Overview]('./overview.md') of this project before contributing.**
+**We also highly recommend reading the [Technical Overview](./overview.md) of this project before contributing.**
 
 ## Getting Started
 - Fork this repository.
@@ -14,10 +14,10 @@ Pull requests are always welcome. Please be sure to read through this entire gui
 
 
 ### Models
-To see a list of models, go to the [`src/models`]('../src/models') directory. Each subdirectory there is a model.
+To see a list of models, go to the [`src/models`](../src/models/index.js) file. Each subdirectory there is a model.
 
 **Model Associations**
-To view the model associations, go to the  [`src/models/index.js`]('../src/models/index.js') file.
+To view the model associations, go to the  [`src/models/index.js`](../src/models/index.js) file.
 
 
 
