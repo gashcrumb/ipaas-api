@@ -15,15 +15,8 @@ var router = express.Router();
 var routes = require('./router.js');
 var config = require(__dirname + '/config/' + app.get('env') + '.json');
 
-// Synchronize Models & Initialize Connection
-/*
  var Models = require(__dirname + '/src/models/index.js');
  var models = new Models();
-
- models.sequelize.sync().then(function() {
- return console.log('Database successfully synced.');
- });
- */
 
 
 // ---------------------- Express ---->>
@@ -70,7 +63,14 @@ app.use(function(req, res, next) {
 
 // ---------------------- Start Up Server ---->>
 app.listen(app.get('port'), function() {
-  console.log('Red Hat iPaaS API is listening on port ' + app.get('port') + ' in ' + app.get('env') + ' mode.');
+
+  // Synchronize Models & Initialize Connection
+
+  models.sequelize.sync({ force: true }).then(function() {
+    console.log('Database successfully synced.');
+
+    return console.log(config['settings']['title'] + ' is listening on port ' + app.get('port') + ' in ' + app.get('env') + ' mode.');
+  });
 });
 
 

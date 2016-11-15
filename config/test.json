@@ -1,9 +1,8 @@
 {
   "db": {
     "options": {
-      "host": "127.0.0.1",
       "dialect": "sqlite",
-      "storage": "./db.development.sqlite",
+      "storage": ":memory:",
       "define": {
         "underscored": false,
         "freezeTableName": false,
@@ -22,7 +21,7 @@
   "settings": {
     "baseUrl": "http://127.0.0.1",
     "port": 9090,
-    "secret": "6fE0QCh2Io",
+    "secret": "kgSE35C8k",
     "title": "Red Hat iPaaS API"
   }
 }

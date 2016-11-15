@@ -55,4 +55,7 @@ npm-debug.log
 /.github
 /.vscode
 
+# Data
+*.sqlite
+
 

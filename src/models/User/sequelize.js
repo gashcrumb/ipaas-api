@@ -1,6 +1,8 @@
 // User Model
 
 module.exports = function(sequelize, DataTypes) {
+
+
   return sequelize.define('User', {
     username: {
       type: DataTypes.STRING(50),
@@ -34,6 +36,12 @@ module.exports = function(sequelize, DataTypes) {
     lastName: {type: DataTypes.STRING(100)},
     password: {type: DataTypes.STRING(75), required: false},
     status: {type: DataTypes.STRING(50)}
+  }, {
+    classMethods: {
+      associate: function(models) {
+        History.belongsTo(models.User);
+      }
+    }
   });
 };
 
