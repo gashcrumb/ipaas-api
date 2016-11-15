@@ -32,3 +32,4 @@ We are in the process of creating a diagram for the Entity Relationships in iPaa
     - has many Reports (or should this be under Integrations instead?)
     - has many Settings
 
+Again, this list may not be up-to-date, or may be under development. Please see the active list of models by viewing the [`../src/models`]('../src/models') directory.

@@ -9,6 +9,8 @@ This is an enterprise-grade API that uses a layered approach for greater abstrac
 - And, finally, the **interface** that we traditionally know as an API, which returns JSON to users like any RESTful API.
 
 
+If you'd like to contribute, please read the [`./contributing.md`]('./contributing.md') file in detail.
+
 ### Models
 To see a list of models, go to the [`src/models`]('../src/models') directory. Each subdirectory there is a model.
 
@@ -36,13 +38,6 @@ The API uses a few lightweight technologies, consisting of the following:
 9. The `[Model]Repository` then creates a deep copy of the object returned from the database, and then returns that copy.
 
 
-## Guidelines & Best Practices
-- Models, repositories, and services should only be called when needed, and on an individual basis.
-- Constructors/classes should be used for EACH model, which will allow for those models to be instantiated individually, as opposed to instantiating the models layer which would include all models. The main models file should only require the individual model file. At the top of that model file should be `object var [Model] = {}` with default parameters of that model. Functions will then determine how to map to Sequelize (default ORM) and import the files, etc. For example, the Users controller calls the `UserService`, which calls the `UserRepository` (and possibly other repositories), which calls the User model, for instance.
-- Model parents and children will all be on the same table, and use the same classes.
-- Layers: You **must** specify the layer name and the model name. This is very important!
-- **Extends Function**: Used for extending `Base[Layer]` with `[Model][Layer]`. Allows you to create an object that has no properties of its own, but inherits everything from the parent's prototype. The object is then used as the layer (service, repository, etc.) instance/object. Make sure each base class constructor is EMPTY. Only add reusable properties to it, which go in the prototype to then be inherited by other layers. Otherwise, those properties in the constructor will be added to the prototype chain, rather than ONLY using the child's (or layer’s) properties. The parent will never be modified once the child is, because only the parent’s prototypes are inherited. This protects the original object retrieved by Sequelize from the database from being modified by any user of the subsequently created class. You should never have to use the uber property, or the uber Class, EVER, because it references the BaseRepository, or BaseService, directly.
-
 ## Deep Dive into JavaScript Prototypical Inheritance
 A brief overview of how this layered approach works, using vanilla JavaScript:
 
@@ -51,7 +46,11 @@ A brief overview of how this layered approach works, using vanilla JavaScript:
 - The `Service` layer will inherit properties directly from the `Repository` file(s) that it specifies within the constructor (you must add the function ‘call’ or ‘apply’ within the prototype of the Service layer, directly referencing the Repository file or even Service file that you wish to inherit properties from. In addition, the Service class will inherit the prototype chain of its respective Repository class with ServiceClass.prototype = new RepositoryClass. Just remember that the model name is specified as a property in every Repository class, and it will inherit that as well.
 - `Mixins`: When you want to combine the properties of multiple objects into one final object, such as when fetching model associations, use mixins. If the function does not pass a raw query to Sequelize, then it can and should be done from the service layer. If will be executing raw sequel queries, do it in the repository layer. Do this with actual results from Service calls, not with Service files or Repository files directly.
 
-## The API (Routes & Controllers) & Issues
+## The API (Routes & Controllers)
+
+Endpoints are located in /router.js. This API supports basic authentication with Everyauth and Bcrypt. It provides a service layer, repository layer, and model layer so that you can use multiple repositories and data stores like MySQL, and external services like Twitter. Models are wired up with whatever repository is configured via the /src/api directory.
+
+### Issues & Concerns
 Some ideas I came up with for the API and some issues that were presented in the final layer of this interface. Please note that this was as of about three years ago and may no longer be a concern.
 
 1. Separating API (actions) & Routes (views)
