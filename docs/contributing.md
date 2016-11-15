@@ -31,6 +31,7 @@ To see a list of models, go to the [`src/models`](../src/models/index.js) file. 
 **Model Associations**
 To view the model associations, go to the  [`src/models/index.js`](../src/models/index.js) file.
 
+
 ### Testing
 - Tests are run by the CI against pull requests when they're opened and whenever commits are merged to master.
 - To run tests locally:
