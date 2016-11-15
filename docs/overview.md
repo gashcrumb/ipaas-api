@@ -75,7 +75,7 @@ Some ideas I came up with for the API and some issues that were presented in the
 
 ## How the Service & Repository layers interact when using an ORM
 
-- The default ORM is [Sequelize](http://docs.sequelizejs.com/en/v3/), but can be swapped out in the [`../config`]('../config') directory. The file depends on your environment.
+- The default ORM is [Sequelize](http://docs.sequelizejs.com/en/v3/), but can be swapped out in the [`../config`](config) directory. The file depends on your environment.
 - Each Repository will accept `this.params` as the `{where: this.params}` clause. Each Service can pass these parameters to the Repository by providing an object with the arguments: `{id: modelId}`, and can even ask for whichever associations it needs by doing: `{id: req.params.id, include: [{model: AnAssociatedModel}, {model: AnotherAssociatedModel}]`. This way, you can always just pass the arguments each time without having to worry about writing out `{where: {}}` every time.
 - There are a few exceptions to the above:
     - When you want to pass a raw query to Sequelize, in which case you do not add a “where” clause. Here, this.params will be passed directly to Sequelize. The two methods that do this / allow this are: search, query, findAll, findWhere
