@@ -14,3 +14,5 @@ Run `npm start` and the API will be available on [http://127.0.0.1:9090](http://
 
 ## Overview
 Endpoints are located in `/router.js`. This API supports basic authentication with Everyauth and Bcrypt. It provides a service layer, repository layer, and model layer so that you can use multiple repositories and data stores like MySQL, and external services like Twitter. Models are wired up with whatever repository is configured via the `/src/api` directory.
+
+For a more detailed overview of the Red Hat iPaaS API, please see our [Technical Overview]('./docs/overview.md').

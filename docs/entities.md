@@ -1,5 +1,5 @@
 # Entity Relationships
-We are in the process of creating a diagram for the Entity Relationships in iPaaS. Below is what we currently have, which is pretty incomplete and under continuous develolpment. Please feel free to edit this document as necessary.
+We are in the process of creating a diagram for the Entity Relationships in iPaaS. Below is what we currently have, which is pretty incomplete and under continuous development. Please feel free to edit this document as necessary.
 
 ## Models/Entities:
 - Connection
