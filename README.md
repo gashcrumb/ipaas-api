@@ -30,7 +30,9 @@ The API uses a few lightweight technologies, consisting of the following:
 
 
 ## Installing
-Just run `npm install` or `npm i`.
+- Clone this repository: `git clone git@github.com:redhat-ipaas/ipaas-api.git`
+- Install dependencies with: `npm install` or `npm i`
+- Rename `config/development_example.json` to `config/development.json`, or whichever environment you prefer.
 
 ## Running
 Run `npm start` and the API will be available on [http://127.0.0.1:9090](http://127.0.0.1:9090) or [http://localhost:9090](http://localhost:9090).
