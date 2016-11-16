@@ -8,6 +8,7 @@
   },
   "main": "server.js",
   "scripts": {
+    "seed": "node_modules/.bin/sequelize",
     "setup": ""
   },
   "dependencies": {
@@ -27,5 +28,8 @@
     "sequelize": "3.25.0",
     "sequelize-cli": "2.4.0",
     "sqlite3": "3.1.8"
+  },
+  "devDependencies": {
+    "sequelize-fixtures": "^0.5.5"
   }
 }

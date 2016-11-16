@@ -41,7 +41,8 @@ function Models() {
       fs
         .readdirSync(path.join(__dirname, eachDir.toLowerCase()))
         .filter(function(file) {
-          return (file.indexOf('.') !== 0) && (file !== 'index.js');
+          // Check for ORM-specific file
+          return (file.indexOf(config['orm'].toLowerCase() + '.js') === 0) && (file.indexOf('.') !== 0) && (file !== 'index.js');
         })
         .forEach(function(file) {
           //console.log('File: ' + JSON.stringify(file));
