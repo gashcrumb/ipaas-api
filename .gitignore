@@ -1,5 +1,8 @@
 # gitignore
 
+# Build & Distribution Files
+build/Release
+
 # Data
 *.sqlite
 
@@ -17,10 +20,13 @@
 /src/*/__build__/
 /src/*/dist/
 
+# Docs
+/doc/
+
 # IDE-Generated Files
 .idea/
-*.swp
 /.github
+*.swp
 /.vscode
 
 # Logs
@@ -35,16 +41,16 @@ Icon?
 Thumbs.db
 
 # Runtime Data
-pids
 *.pid
 *.seed
+pids
 
 # Sensitive Files
+.lock-wscript
 config/development.json
 config/production.json
 config/staging.json
 config/testing.json
-.lock-wscript
 
 # Testing & Code Coverage
 /coverage
