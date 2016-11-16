@@ -1,4 +1,4 @@
-# API
+# Red Hat iPaaS API
 
 [![CircleCI](https://circleci.com/gh/redhat-ipaas/ipaas-api.svg?style=svg)](https://circleci.com/gh/redhat-ipaas/ipaas-api)
 
@@ -26,7 +26,6 @@ The API uses a few lightweight technologies, consisting of the following:
 - ORM: [Sequelize](http://docs.sequelizejs.com/en/v3/)
 - UUID Generator: [node-uuid](https://www.npmjs.com/package/node-uuid)
 - Convenience: [Async](https://github.com/caolan/async), [Lodash](https://npmjs.org/package/lodash). [Request](https://www.npmjs.com/package/request)
-
 
 
 ## Installing
