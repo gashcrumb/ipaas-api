@@ -27,7 +27,6 @@ The API uses a few lightweight technologies, consisting of the following:
 - UUID Generator: [node-uuid](https://www.npmjs.com/package/node-uuid)
 - Convenience: [Async](https://github.com/caolan/async), [Lodash](https://npmjs.org/package/lodash). [Request](https://www.npmjs.com/package/request)
 
-
 ## Installing
 - Clone this repository: `git clone git@github.com:redhat-ipaas/ipaas-api.git`
 - Install dependencies with: `npm install` or `npm i`
@@ -38,3 +37,7 @@ Run `npm start` and the API will be available on [http://127.0.0.1:9090](http://
 
 ## Running the tests
 Run `npm test` to run all the unit tests.
+
+## Contributing
+For information on contributing to ipaas-api, see [`docs/contributing.md`](./docs/contributing.md).
+
