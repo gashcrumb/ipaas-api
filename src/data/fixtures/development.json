@@ -1,0 +1,50 @@
+[
+  {
+    "model": "User",
+    "data": {
+      "hasAdminRight": true,
+      "fullName": "Luke Skywalker",
+      "username": "lskywalker"
+    }
+  },
+  {
+    "model": "User",
+    "data": {
+      "hasAdminRight": true,
+      "fullName": "Darth Vader",
+      "username": "dvader"
+    }
+  },
+  {
+    "model": "User",
+    "data": {
+      "hasAdminRight": true,
+      "fullName": "Leia Organa",
+      "username": "lorgana"
+    }
+  },
+  {
+    "model": "User",
+    "data": {
+      "hasAdminRight": false,
+      "fullName": "Owen Lars",
+      "username": "olars"
+    }
+  },
+  {
+    "model": "User",
+    "data": {
+      "hasAdminRight": false,
+      "fullName": "Beru Whitesun lars",
+      "username": "blars"
+    }
+  },
+  {
+    "model": "User",
+    "data": {
+      "hasAdminRight": false,
+      "fullName": "R2-D2",
+      "username": "r2d2"
+    }
+  }
+]

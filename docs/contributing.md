@@ -9,6 +9,18 @@ Pull requests are always welcome. Please be sure to read through this entire gui
 - Install dependencies with `npm i` or `npm install`.
 
 
+### Your Environment
+**NOTE:** By default, [Express.js](http://expressjs.com/) will define your `process.env.NODE_ENV`, or your Node.js environment variable, as `development` via `app.get('env')` if you have not defined one. For more information, see [here](http://expressjs.com/en/4x/api.html#app.get). For the purposes of this documentation, we will assume you are in `development` mode the entire time and will add relevant comments for other environments. If you'd like to use another environment, we support the following: `development`, `staging`, `test`, `production`
+
+## Data Layer
+
+### SQLite
+If you will be working on this project locally, it is likely you'll want to use SQLite as the data store. We recommend downloading a GUI for SQLite, such as [DB Browser for SQLite](http://sqlitebrowser.org/), to be able to view and edit the data easily.
+
+When running `npm start`, the SQLite database and tables will be created, and the database will then be seeded with dummy data. We provide a set of seed JSON files to populate the database. Note that by default, if you are in `development` environment, it will automatically use the JSON file located at `/src/data/fixtures/development.json` to populate the database. If you do NOT want this, you can change your environment to anything other than `development`.
+
+## Guidelines
+
 ### Version Control
 - Each commit should reference a GitHub ticket if it is related to it. Append each commit comment with “re #” and add the GitHub ticket/issue number.
 
@@ -21,7 +33,7 @@ To view the model associations, go to the  [`src/models/index.js`](../src/models
 
 
 
-## Guidelines & Best Practices
+### Code Best Practices
 - Models, repositories, and services should only be called when needed, and on an individual basis.
 - Constructors/classes should be used for EACH model, which will allow for those models to be instantiated individually, as opposed to instantiating the models layer which would include all models. The main models file should only require the individual model file. At the top of that model file should be `object var [Model] = {}` with default parameters of that model. Functions will then determine how to map to Sequelize (default ORM) and import the files, etc. For example, the Users controller calls the `UserService`, which calls the `UserRepository` (and possibly other repositories), which calls the User model, for instance.
 - Model parents and children will all be on the same table, and use the same classes.

@@ -1,0 +1,29 @@
+[
+  {
+    "model": "User",
+    "data": {
+      "id": 122,
+      "fullName": "Jane Doe",
+      "role": "Developer"
+    }
+  },
+  {
+    "model": "User",
+    "data": {
+      "id": 123,
+      "name": "John",
+      "role": "Analyst"
+    }
+  },
+  {
+    "model": "Project",
+    "data": {
+      "id": 20,
+      "name": "The Great Project",
+      "people": [
+        122,
+        123
+      ]
+    }
+  }
+]

@@ -6,8 +6,8 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(50),
       unique: true
     },
+    uuid: {type: DataTypes.UUID},
     type: {type: DataTypes.STRING(50)},
-    description: {type: DataTypes.TEXT},
     email: {
       type: DataTypes.STRING(100),
       unique: true,
@@ -16,16 +16,6 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     firstName: {type: DataTypes.STRING(100)},
-    fullName: {
-      type: DataTypes.STRING(200),
-      set: function(val) {
-        var firstName = this.getDataValue('firstName');
-        var lastName = this.getDataValue('lastName');
-        //var fullName = [firstName, lastName].join(' ');
-
-        this.setDataValue('fullName', [firstName, lastName].join(' '));
-      }
-    },
     hash: {type: DataTypes.STRING(255)},
     hasAdminRight: {
       type: DataTypes.BOOLEAN,
@@ -38,6 +28,24 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         History.belongsTo(models.User);
+      }
+    }
+  }, {
+    // Enable timestamps
+    timestamps: true
+  }, {
+    getterMethods: {
+      fullName: function() {
+        return this.firstName + ' ' + this.lastName
+      }
+    },
+
+    setterMethods: {
+      fullName: function(value) {
+        var names = value.split(' ');
+
+        this.setDataValue('firstName', names.slice(0, -1).join(' '));
+        this.setDataValue('lastName', names.slice(-1).join(' '));
       }
     }
   });
