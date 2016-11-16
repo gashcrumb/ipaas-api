@@ -36,4 +36,5 @@ The API uses a few lightweight technologies, consisting of the following:
 ## Running
 Run `npm start` and the API will be available on [http://127.0.0.1:9090](http://127.0.0.1:9090) or [http://localhost:9090](http://localhost:9090).
 
-
+## Running the tests
+Run `npm test` to run all the unit tests.
