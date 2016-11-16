@@ -70,7 +70,7 @@ app.listen(app.get('port'), function() {
   models.sequelize.sync({ force: true }).then(function() {
     console.log('Database successfully synced.');
 
-    // Seed the database if in development mode.
+    // Seed the database if you configure it to.
     // You can easily change the JSON seed file in /config/{your environment}.json
     // under `db.options.seederStoragePath`.
     // This file is usually located in /src/data/fixtures/{name}.json
