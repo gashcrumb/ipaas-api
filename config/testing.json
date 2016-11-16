@@ -1,0 +1,28 @@
+{
+  "db": {
+    "options": {
+      "dialect": "sqlite",
+      "storage": ":memory:",
+      "seedDataOnInit": false,
+      "define": {
+        "underscored": false,
+        "freezeTableName": false,
+        "syncOnAssociation": true,
+        "charset": "utf8",
+        "collate": "utf8_general_ci",
+        "timestamps": true
+      },
+      "sync": {
+        "force": false
+      },
+      "syncOnAssociation": true
+    }
+  },
+  "orm": "Sequelize",
+  "settings": {
+    "baseUrl": "http://127.0.0.1",
+    "port": 9090,
+    "secret": "kgSE35C8k",
+    "title": "Red Hat iPaaS API"
+  }
+}
