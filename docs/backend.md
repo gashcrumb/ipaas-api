@@ -1,5 +1,7 @@
 # Backend
 
+While this repository is for the backend service that [ipaas-client](https://github.com/redhat-ipaas/ipaas-client) talks to, [ipaas-api](https://github.com/redhat-ipaas/ipaas-api) is a client to one or more backends.  It was found that directly interacting with the Forge and Kubernetes API was not ideal or optimized.  The historical artifacts from that are kept in the 'sandbox' directory, you can view the readme [here](../sandbox/README.md).
+
 The forge API hasn't been fully documented as of yet, but you can find the current documentation available [here](https://github.com/fabric8io/fabric8-forge/tree/master/fabric8-forge-web). In the meantime, we are adding some information about how to get everything set up so that you can run Hawtio iPaaS as it becomes integrated and increasingly depends on backend services.
 
 For the backend/API repository, please go [here](https://github.com/fabric8io/fabric8-forge).
