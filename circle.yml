@@ -7,6 +7,5 @@ branches:
 
 dependencies:
   pre:
-    - npm install
-    - npm update
+    - npm install update prune
 
