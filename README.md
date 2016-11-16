@@ -14,8 +14,10 @@ This is an enterprise-grade API that uses a layered approach for greater abstrac
 - A **service layer** for communicating with any service you'd like (ie Twitter, Facebook), where you can parse and transform data as necessary.
 - And, finally, the **interface** that we traditionally know as an API, which returns JSON to users like any RESTful API.
 
-For a more detailed overview of the Red Hat iPaaS API, please see our [Technical Overview]('./docs/overview.md').
+For a more detailed overview of the Red Hat iPaaS API, please see our [Technical Overview](./docs/overview.md).
 
+## Contributing
+For information on contributing to ipaas-api, see [`docs/contributing.md`](./docs/contributing.md).
 
 
 ## Installing
