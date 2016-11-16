@@ -14,8 +14,10 @@ This is an enterprise-grade API that uses a layered approach for greater abstrac
 - A **service layer** for communicating with any service you'd like (ie Twitter, Facebook), where you can parse and transform data as necessary.
 - And, finally, the **interface** that we traditionally know as an API, which returns JSON to users like any RESTful API.
 
-For a more detailed overview of the Red Hat iPaaS API, please see our [Technical Overview]('./docs/overview.md').
+For a more detailed overview of the Red Hat iPaaS API, please see our [Technical Overview](./docs/overview.md).
 
+## Contributing
+For information on contributing to ipaas-api, see [`docs/contributing.md`](./docs/contributing.md).
 
 
 ## Installing
@@ -24,3 +26,5 @@ Just run `npm install` or `npm i`.
 ## Running
 Run `npm start` and the API will be available on [http://127.0.0.1:9090](http://127.0.0.1:9090) or [http://localhost:9090](http://localhost:9090).
 
+## Running the tests
+Run `npm test` to run all the unit tests.
