@@ -1,10 +1,10 @@
-// Roles API
+// Connections API
 'use strict';
 
 // ---------------------- Dependencies ---->>
 
 var Services = require('../services/index.js');
-var RoleService = Services.RoleService;
+var ConnectionService = Services.ConnectionService;
 
 
 // ---------------------- API ---->>
@@ -15,9 +15,9 @@ exports.add = function(req, res) {
     params.UserId = req.user.id
   }
 
-  var Role = new RoleService(params);
+  var Connection = new ConnectionService(params);
 
-  Role
+  Connection
     .create()
     .then(function(result) {
       res.json(result);
@@ -32,9 +32,9 @@ exports.del = function(req, res) {
   var params = {id: req.params.id};
   params.UserId = req.user.id;
 
-  var Role = new RoleService(params);
+  var Connection = new ConnectionService(params);
 
-  Role
+  Connection
     .destroy()
     .then(function(result) {
       res.json(result);
@@ -64,9 +64,9 @@ exports.find = function(req, res) {
     params.include = includes;
   }
 
-  var Role = new RoleService(params);
+  var Connection = new ConnectionService(params);
 
-  Role
+  Connection
     .find()
     .then(function(result) {
       res.json(result);
@@ -93,9 +93,9 @@ exports.findAll = function(req, res) {
     params.include = includes;
   }
 
-  var Role = new RoleService(params);
+  var Connection = new ConnectionService(params);
 
-  Role
+  Connection
     .findAll()
     .then(function(result) {
       res.json(result);
@@ -111,9 +111,9 @@ exports.save = function(req, res) {
     params.UserId = req.user.id
   }
 
-  var Role = new RoleService(params);
+  var Connection = new ConnectionService(params);
 
-  Role
+  Connection
     .save()
     .then(function(result) {
       res.json(result);
