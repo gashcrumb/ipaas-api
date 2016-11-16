@@ -20,9 +20,15 @@ To see a list of models, go to the [`src/models`](../src/models) directory. Each
 To view the model associations, go to the  [`src/models/index.js`](../src/models/index.js) file.
 
 ### Testing
-- Unit tests are run via nodeunit.  After making changes run `npm test` to execute the tests locally.
 - Tests are run by the CI against pull requests when they're opened and whenever commits are merged to master.
-
+- To run tests locally:
+```
+npm test
+```
+- To run tests automatically when you make code changes:
+```
+npm run watch:test
+```  
 
 ## Guidelines & Best Practices
 - Models, repositories, and services should only be called when needed, and on an individual basis.
