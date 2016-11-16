@@ -1,4 +1,4 @@
-// ConfigType Repository
+// Example Repository
 'use strict';
 
 // ---------------------- Dependencies ---->>
@@ -9,13 +9,13 @@ var Models = require('../models/index.js');
 
 // ---------------------- Class/Constructor ---->>
 
-function ConfigTypeRepository(params) {
+function ExampleRepository(params) {
   // Instantiate new Models Layer
   var Model = new Models();
 
-  this.layerName = 'ConfigTypeRepository';
-  this.model = Model.ConfigType;
-  this.modelName = 'ConfigType';
+  this.layerName = 'ExampleRepository';
+  this.model = Model.Example;
+  this.modelName = 'Example';
   this.params = params;
 }
 
@@ -29,6 +29,6 @@ function extend(Child, Parent) {
   Child.uber = Parent.prototype;
 }
 
-extend(ConfigTypeRepository, BaseRepository);
+extend(ExampleRepository, BaseRepository);
 
-module.exports = ConfigTypeRepository;
+module.exports = ExampleRepository;

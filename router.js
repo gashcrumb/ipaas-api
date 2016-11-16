@@ -6,13 +6,7 @@ module.exports = exports.router = function Route(router, app) {
 
   // API / Data / Actions
   var api = {
-    configGroups: require('./src/api/configGroups.js'),
-    configs: require('./src/api/configs.js'),
-    configTypes: require('./src/api/configTypes.js'),
     connections: require('./src/api/connections.js'),
-    permissions: require('./src/api/permissions.js'),
-    reports: require('./src/api/reports.js'),
-    services: {},
     users: require('./src/api/users.js')
   };
 
@@ -67,41 +61,6 @@ module.exports = exports.router = function Route(router, app) {
   router.post('/v1/connections', api.connections.add);
   router.put('/v1/connections/:id', api.connections.save);
   router.delete('/v1/connections/:id', api.connections.del);
-
-  // Configurations
-  router.get('/v1/configs', api.configs.findAll);
-  router.get('/v1/configs/:id', api.configs.find);
-  router.post('/v1/configs', api.configs.add);
-  router.put('/v1/configs/:id', api.configs.save);
-  router.delete('/v1/configs/:id', api.configs.del);
-
-  // Configuration Groups
-  router.get('/v1/config-groups', api.configGroups.findAll);
-  router.get('/v1/config-groups/:id', api.configGroups.find);
-  router.post('/v1/config-groups', api.configGroups.add);
-  router.put('/v1/config-groups/:id', api.configGroups.save);
-  router.delete('/v1/config-groups/:id', api.configGroups.del);
-
-  // Configuration Types
-  router.get('/v1/config-types', api.configTypes.findAll);
-  router.get('/v1/config-types/:id', api.configTypes.find);
-  router.post('/v1/config-types', api.configTypes.add);
-  router.put('/v1/config-types/:id', api.configTypes.save);
-  router.delete('/v1/config-types/:id', api.configTypes.del);
-
-  // Permissions
-  router.get('/v1/permissions', api.permissions.findAll);
-  router.get('/v1/permissions/:id', api.permissions.find);
-  router.post('/v1/permissions', api.permissions.add);
-  router.put('/v1/permissions/:id', api.permissions.save);
-  router.delete('/v1/permissions/:id', api.permissions.del);
-
-  // Reports
-  router.get('/v1/reports', api.reports.findAll);
-  router.get('/v1/reports/:id', api.reports.find);
-  router.post('/v1/reports/:type', api.reports.add);
-  router.put('/v1/reports/:type/:id', api.reports.save);
-  router.delete('/v1/reports/:type/:id', api.reports.del);
 
   // Users
   router.get('/v1/users', api.users.findAll);
