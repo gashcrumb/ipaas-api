@@ -1,16 +1,9 @@
 {
   "db": {
-    "username": "",
-    "password": "",
-    "database": "",
     "options": {
-      "host": "127.0.0.1",
-      "port": 3306,
-      "protocol": "tcp",
-      "maxConcurrentQueries": 100,
-      "dialect": "mysql",
-      "omitNull": true,
-      "native": false,
+      "dialect": "sqlite",
+      "storage": ":memory:",
+      "seedDataOnInit": false,
       "define": {
         "underscored": false,
         "freezeTableName": false,
@@ -22,19 +15,14 @@
       "sync": {
         "force": false
       },
-      "syncOnAssociation": true,
-      "pool": {
-        "maxConnections": 5,
-        "maxIdleTime": 30
-      },
-      "language": "en"
+      "syncOnAssociation": true
     }
   },
   "orm": "Sequelize",
   "settings": {
     "baseUrl": "http://127.0.0.1",
     "port": 9090,
-    "secret": "6fE0QCh2Io",
+    "secret": "kgSE35C8k",
     "title": "Red Hat iPaaS API"
   }
 }

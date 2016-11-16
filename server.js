@@ -1,29 +1,23 @@
 // API Server
 
 // ---------------------- Dependencies ---->>
-var bodyParser = require('body-parser');
-var express = require('express');
-var http = require('http');
-var logger = require('morgan');
-var methodOverride = require('method-override');
-var path = require('path');
+const bodyParser = require('body-parser');
+const express = require('express');
+const http = require('http');
+const logger = require('morgan');
+const methodOverride = require('method-override');
+const path = require('path');
 
 
 // ---------------------- Other Initialization Tasks ---->>
-var app = module.exports = express();
-var router = express.Router();
-var routes = require('./router.js');
-var config = require(__dirname + '/config/' + app.get('env') + '.json');
+const app = module.exports = express();
+const router = express.Router();
+const routes = require('./router.js');
+const config = require(__dirname + '/config/' + app.get('env') + '.json');
+const sequelizeFixtures = require('sequelize-fixtures');
 
-// Synchronize Models & Initialize Connection
-/*
- var Models = require(__dirname + '/src/models/index.js');
- var models = new Models();
-
- models.sequelize.sync().then(function() {
- return console.log('Database successfully synced.');
- });
- */
+const Models = require(__dirname + '/src/models/index.js');
+const models = new Models();
 
 
 // ---------------------- Express ---->>
@@ -62,7 +56,7 @@ app.use(router);
 
 // If no route is matched by now, it must be a 404
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  const err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
@@ -70,7 +64,24 @@ app.use(function(req, res, next) {
 
 // ---------------------- Start Up Server ---->>
 app.listen(app.get('port'), function() {
-  console.log('Red Hat iPaaS API is listening on port ' + app.get('port') + ' in ' + app.get('env') + ' mode.');
+
+  // Synchronize Models & Initialize Connection
+
+  models.sequelize.sync({ force: true }).then(function() {
+    console.log('Database successfully synced.');
+
+    // Seed the database if in development mode.
+    // You can easily change the JSON seed file in /config/{your environment}.json
+    // under `db.options.seederStoragePath`.
+    // This file is usually located in /src/data/fixtures/{name}.json
+    if(config['db']['options']['seedDataOnInit'] === true) {
+      sequelizeFixtures.loadFile(path.join(__dirname + '/src/data/fixtures/', config['db']['options']['seederStoragePath']), models).then(function() {
+        console.log('Database successfully seeded with dummy data.');
+      });
+    }
+
+    return console.log(config['settings']['title'] + ' is listening on port ' + app.get('port') + ' in ' + app.get('env') + ' mode.');
+  });
 });
 
 

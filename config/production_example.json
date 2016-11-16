@@ -1,0 +1,32 @@
+{
+  "db": {
+    "options": {
+      "host": "127.0.0.1",
+      "port": 3306,
+      "protocol": "tcp",
+      "maxConcurrentQueries": 100,
+      "dialect": "mysql",
+      "omitNull": true,
+      "native": false,
+      "seedDataOnInit": false,
+      "define": {
+        "underscored": false,
+        "freezeTableName": false,
+        "syncOnAssociation": true,
+        "charset": "utf8",
+        "collate": "utf8_general_ci",
+        "timestamps": true
+      },
+      "sync": {
+        "force": false
+      },
+      "syncOnAssociation": true
+    }
+  },
+  "settings": {
+    "baseUrl": "http://127.0.0.1",
+    "port": 9090,
+    "secret": "6fE0QCh2Io",
+    "title": "Red Hat iPaaS API"
+  }
+}

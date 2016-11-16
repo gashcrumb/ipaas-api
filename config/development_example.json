@@ -1,16 +1,13 @@
 {
   "db": {
-    "username": "",
-    "password": "",
-    "database": "",
     "options": {
       "host": "127.0.0.1",
-      "port": 3306,
-      "protocol": "tcp",
-      "maxConcurrentQueries": 100,
-      "dialect": "mysql",
-      "omitNull": true,
-      "native": false,
+      "dialect": "sqlite",
+      "storage": "./db.development.sqlite",
+      "seedDataOnInit": false,
+      "seederStorage": "json",
+      "seederStoragePath": "development.json",
+      "seederStorageTableName": "sequelize_data",
       "define": {
         "underscored": false,
         "freezeTableName": false,
@@ -22,14 +19,10 @@
       "sync": {
         "force": false
       },
-      "syncOnAssociation": true,
-      "pool": {
-        "maxConnections": 5,
-        "maxIdleTime": 30
-      },
-      "language": "en"
+      "syncOnAssociation": true
     }
   },
+  "orm": "Sequelize",
   "settings": {
     "baseUrl": "http://127.0.0.1",
     "port": 9090,

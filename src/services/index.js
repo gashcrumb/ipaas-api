@@ -11,6 +11,7 @@
 exports.ConfigGroupService = require('./ConfigGroupService.js');
 exports.ConfigService = require('./ConfigService.js');
 exports.ConfigTypeService = require('./ConfigTypeService.js');
+exports.ConnectionService = require('./ConnectionService.js');
 exports.FileService = require('./FileService.js');
 exports.HistoryService = require('./HistoryService.js');
 exports.ImageService = require('./ImageService.js');
