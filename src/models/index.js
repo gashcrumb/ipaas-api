@@ -34,18 +34,18 @@ function Models() {
     }
 
     getDirectories(__dirname).map(function(eachDir) {
-      //console.log('Directory: ' + JSON.stringify(eachDir));
+      // console.log('Directory: ' + JSON.stringify(eachDir));
 
       // Importing models via Sequelize
 
       fs
-        .readdirSync(path.join(__dirname, eachDir.toLowerCase()))
+        .readdirSync(path.join(__dirname, eachDir))
         .filter(function(file) {
           // Check for ORM-specific file
           return (file.indexOf(config['orm'].toLowerCase() + '.js') === 0) && (file.indexOf('.') !== 0) && (file !== 'index.js');
         })
         .forEach(function(file) {
-          //console.log('File: ' + JSON.stringify(file));
+          // console.log('File: ' + JSON.stringify(file));
 
           var model = sequelize.import(path.join(__dirname, eachDir, file));
           db[model.name] = model;
