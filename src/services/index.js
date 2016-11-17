@@ -9,6 +9,9 @@
 // ---------------------- Services ---->>
 
 exports.ConnectionService = require('./ConnectionService.js');
+exports.ConfigGroupService = require('./ConfigGroupService.js');
+exports.ConfigService = require('./ConfigService.js');
+exports.ConfigTypeService = require('./ConfigTypeService.js');
 exports.UserService = require('./UserService.js');
 
 

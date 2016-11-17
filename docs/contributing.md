@@ -17,7 +17,8 @@ Pull requests are always welcome. Please be sure to read through this entire gui
 ### SQLite
 If you will be working on this project locally, it is likely you'll want to use SQLite as the data store. We recommend downloading a GUI for SQLite, such as [DB Browser for SQLite](http://sqlitebrowser.org/), to be able to view and edit the data easily.
 
-When running `npm start`, the SQLite database and tables will be created, and the database will then be seeded with dummy data. We provide a set of seed JSON files to populate the database. Note that by default, if you are in `development` environment, it will automatically use the JSON file located at `/src/data/fixtures/development.json` to populate the database. If you do NOT want this, you can change your environment to anything other than `development`.
+When running `npm start`, the SQLite database and tables will be created, and the database will then be seeded with dummy data. We provide a set of seed JSON files to populate the database, which you can enable to occur automatically on starting up the server by going to `/config/{environment}.json` and changing `db.options.seedDataOnInit` from `false` to `true`. Note that by default it will automatically use the JSON file located at `/src/data/fixtures/development.json` to populate the database, which you can change in the same configuration file under `db.options.seederStoragePath`.
+
 
 ## Guidelines
 

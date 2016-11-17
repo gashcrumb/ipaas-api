@@ -1,5 +1,13 @@
 [
   {
+    "model": "Connection",
+    "data": {
+      "hasAdminRight": true,
+      "fullName": "Luke Skywalker",
+      "username": "lskywalker"
+    }
+  },
+  {
     "model": "User",
     "data": {
       "hasAdminRight": true,
