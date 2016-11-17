@@ -13,10 +13,6 @@ exports.BaseRepository = require('./BaseRepository.js');
 exports.ConfigGroupRepository = require('./ConfigGroupRepository.js');
 exports.ConfigRepository = require('./ConfigRepository.js');
 exports.ConfigTypeRepository = require('./ConfigTypeRepository.js');
-exports.HistoryRepository = require('./HistoryRepository.js');
-exports.ImageRepository = require('./ImageRepository.js');
-exports.PermissionRepository = require('./PermissionRepository.js');
-exports.ReportRepository = require('./ReportRepository.js');
-exports.RoleRepository = require('./RoleRepository.js');
+exports.ConnectionRepository = require('./ConnectionRepository');
 exports.UserRepository = require('./UserRepository.js');
 
