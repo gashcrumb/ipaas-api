@@ -4,7 +4,7 @@
 
 The API for Red Hat iPaaS - a flexible, customizable, cloud-hosted platform that provides core integration capabilities as a service. It leverages Red Hat's existing product architecture using OpenShift Online/Dedicated and Fuse Integration Services.
 
-For the client repository, [see here](https://github.com/redhat-ipaas/ipaas-client).
+For the client repository, [see here](https://github.com/redhat-ipaas/ipaas-client). For the back end application, please see [this repo](https://github.com/fabric8io/fabric8-forge).
 
 ## Overview
 This is an enterprise-grade API that uses a layered approach for greater abstraction, improved security, and extendability. It supports:
