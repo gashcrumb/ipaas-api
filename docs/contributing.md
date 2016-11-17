@@ -39,6 +39,13 @@ There are a few things you need to do in order to create a new model:
 - **Create dummy seed data for the model. (optional)** Open up the following file: `src/data/fixtures/{your environment}.json` and add whatever dummy data you'd like your database to be populated with.
 - **Write unit tests. (optional)** This is optional if you'll be using this repository for your own purposes, but if you want to create a PR and have it merged back into the codebase you'll definitely need unit tests for your code.
 
+### Restarting after code changes
+For development you can have the service restart itself whenever a code or configuration change is made, simply run:
+
+```
+npm run watch:restart
+```
+
 ## Testing
 - Tests are run by the CI against pull requests when they're opened and whenever commits are merged to master.
 - To run tests locally:
