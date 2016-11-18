@@ -2,6 +2,46 @@
 We are in the process of creating a diagram for the Entity Relationships in iPaaS. Below is what we currently have, which is pretty incomplete and under continuous development. Please feel free to edit this document as necessary.
 
 ## Models/Entities:
+- Organization
+    - has a name
+    - has many Connections
+    - has many Integration Templates
+    - has many Users
+- User
+    - has a name
+    - has many Organizations
+    - has many Integrations
+- Integration
+    - has a name
+    - has a configuration
+    - has a state
+    - refers to an Integration Template
+    - has many Tags
+- Integration Template
+    - has a name
+    - has a step order
+    - has many Connections
+    - has many Steps
+    - has many Tags
+- Connection
+    - has a name
+    - refers to a Connection Type
+    - has enabled properties
+    - has property defaults
+    - has a position
+    - has many Tags
+- Connection Type
+    - has a name
+    - has properties
+- Step
+    - has configured properties
+    - refers to a Step Type
+- Step Type
+    - has a name
+    - has properties
+
+
+<!-- TODO wanna keep this handy for now
 - Connection
     - belongs to Organization
     - has many Tags (many-to-many)
@@ -31,5 +71,6 @@ We are in the process of creating a diagram for the Entity Relationships in iPaa
     - has many Integrations
     - has many Reports (or should this be under Integrations instead?)
     - has many Settings
+    -->
 
 Again, this list may not be up-to-date, or may be under development. Please see the active list of models by viewing the [`src/models`](../src/models/index.js) file.
