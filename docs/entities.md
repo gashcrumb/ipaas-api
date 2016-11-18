@@ -7,6 +7,7 @@ We are in the process of creating a diagram (see below) for the Entity Relations
     - has many Connections
     - has many Integration Templates
     - has many Users
+    - has many Environments
 - User
     - has a name
     - has many Organizations
@@ -17,6 +18,7 @@ We are in the process of creating a diagram (see below) for the Entity Relations
     - has a state
     - refers to an Integration Template
     - has many Tags
+    - has many Environments
 - Integration Template
     - has a name
     - has a step order
@@ -39,6 +41,10 @@ We are in the process of creating a diagram (see below) for the Entity Relations
 - Step Type
     - has a name
     - has properties
+- Environment
+    - has a name
+    - has many Integrations
+    - has many Organizations
 
 
 <!-- TODO wanna keep this handy for now
