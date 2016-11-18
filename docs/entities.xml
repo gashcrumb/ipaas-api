@@ -2,7 +2,7 @@
 <!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
 <!-- Active URL: http://ondras.zarovi.cz/sql/demo/?keyword=default -->
 <sql>
-  <datatypes db="mysql">
+  <datatypes db="sqlite">
     <group color="rgb(238,238,170)" label="Numeric">
       <type label="Integer" quote="" sql="INTEGER" length="0"/>
       <type label="TINYINT" quote="" sql="TINYINT" length="0"/>
@@ -41,20 +41,21 @@
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
-    <row name="name" null="1" autoincrement="0">
+    <row name="name" null="0" autoincrement="0">
       <datatype>VARCHAR</datatype>
-      <default>NULL</default></row>
+      <default>'NULL'</default></row>
     <row name="id_ConnectionTypes" null="1" autoincrement="0">
-      <datatype>VARCHAR</datatype>
+      <datatype>INTEGER</datatype>
       <default>NULL</default><relation table="ConnectionTypes" row="id" />
     </row>
     <row name="enabled_properties" null="1" autoincrement="0">
-      <datatype>BLOB</datatype>
-      <default>NULL</default><comment>The enabled properties for this connector, in a json schema format suitable for displaying a form</comment>
+      <datatype>MEDIUMTEXT</datatype>
+      <default>NULL</default><comment>The enabled properties for this connection configured by an Expert User, in a json schema format suitable for displaying a form</comment>
     </row>
     <row name="property_defaults" null="1" autoincrement="0">
-      <datatype>BLOB</datatype>
-      <default>NULL</default></row>
+      <datatype>MEDIUMTEXT</datatype>
+      <default>NULL</default><comment>Default values for the connection as configured by an Expert User</comment>
+    </row>
     <row name="location" null="1" autoincrement="0">
       <datatype>SET</datatype>
       <default>NULL</default><comment>If the connector can be from, to, or either</comment>
@@ -66,23 +67,23 @@
     </key>
     <comment>Connections that have been created and set up by an expert user</comment>
   </table>
-  <table x="1755" y="285" name="ConnectionTypes">
+  <table x="1805" y="305" name="ConnectionTypes">
     <row name="id" null="0" autoincrement="1">
-      <datatype>VARCHAR</datatype>
+      <datatype>INTEGER</datatype>
     </row>
-    <row name="name" null="1" autoincrement="0">
+    <row name="name" null="0" autoincrement="0">
       <datatype>VARCHAR</datatype>
-      <default>NULL</default></row>
-    <row name="properties" null="1" autoincrement="0">
-      <datatype>BLOB</datatype>
-      <default>NULL</default><comment>All available settings for the underlying component, in json since it could be any number of fields</comment>
+      <default>'NULL'</default></row>
+    <row name="properties" null="0" autoincrement="0">
+      <datatype>MEDIUMTEXT</datatype>
+      <default>'NULL'</default><comment>All available settings for the underlying component, in json since it could be any number of fields</comment>
     </row>
     <key type="PRIMARY" name="">
       <part>id</part>
     </key>
     <comment>Components that are available to create a Connection</comment>
   </table>
-  <table x="665" y="435" name="Integrations">
+  <table x="650" y="450" name="Integrations">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -90,18 +91,23 @@
       <datatype>INTEGER</datatype>
       <default>NULL</default><relation table="IntegrationTemplates" row="id" />
     </row>
+    <row name="name" null="0" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>'NULL'</default></row>
     <row name="configuration" null="1" autoincrement="0">
-      <datatype>BLOB</datatype>
-      <default>NULL</default></row>
+      <datatype>MEDIUMTEXT</datatype>
+      <default>NULL</default><comment>Instance configuration for the involved Connection and Steps</comment>
+    </row>
     <row name="state" null="1" autoincrement="0">
       <datatype>SET</datatype>
-      <default>NULL</default></row>
+      <default>NULL</default><comment>Integration state, if it's a draft, complete, running, or error</comment>
+    </row>
     <key type="PRIMARY" name="">
       <part>id</part>
     </key>
     <comment>An instance of an Integration Template that has been (or is being) configured by a citizen user.</comment>
   </table>
-  <table x="1545" y="530" name="Steps">
+  <table x="1530" y="515" name="Steps">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -110,7 +116,7 @@
       <default>NULL</default><relation table="StepTypes" row="id" />
     </row>
     <row name="configured_properties" null="1" autoincrement="0">
-      <datatype>BLOB</datatype>
+      <datatype>MEDIUMTEXT</datatype>
       <default>NULL</default></row>
     <key type="PRIMARY" name="">
       <part>id</part>
@@ -121,15 +127,15 @@
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
-    <row name="properties" null="1" autoincrement="0">
-      <datatype>BLOB</datatype>
-      <default>NULL</default></row>
+    <row name="properties" null="0" autoincrement="0">
+      <datatype>MEDIUMTEXT</datatype>
+      <default>'NULL'</default></row>
     <key type="PRIMARY" name="">
       <part>id</part>
     </key>
     <comment>A Step type is an available processor that could be configured for use in an Integration Template</comment>
   </table>
-  <table x="135" y="600" name="User">
+  <table x="145" y="630" name="User">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -138,7 +144,8 @@
       <default>NULL</default></row>
     <row name="kind" null="0" autoincrement="0">
       <datatype>SET</datatype>
-      <default>NULL</default></row>
+      <default>NULL</default><comment>The kind of user, i.e. Citizen, Expert, Developer</comment>
+    </row>
     <key type="PRIMARY" name="">
       <part>id</part>
     </key>
@@ -180,13 +187,17 @@
     </key>
     <comment>Associates Integration Templates to Connections and Steps, an Integration Template can have many Connections and many Steps</comment>
   </table>
-  <table x="925" y="410" name="IntegrationTemplates">
+  <table x="925" y="400" name="IntegrationTemplates">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
-    <row name="step_order" null="1" autoincrement="0">
+    <row name="name" null="0" autoincrement="0">
       <datatype>VARCHAR</datatype>
-      <default>NULL</default></row>
+      <default>'NULL'</default></row>
+    <row name="step_order" null="1" autoincrement="0">
+      <datatype>MEDIUMTEXT</datatype>
+      <default>NULL</default><comment>The order of Connections and Steps as configured by the User</comment>
+    </row>
     <key type="PRIMARY" name="">
       <part>id</part>
     </key>
@@ -271,6 +282,9 @@
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
+    <row name="name" null="0" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>'NULL'</default></row>
     <key type="PRIMARY" name="">
       <part>id</part>
     </key>
@@ -310,7 +324,7 @@
     </key>
     <comment>Relates tags to Integration Templates</comment>
   </table>
-  <table x="960" y="30" name="TagsIntegrations">
+  <table x="1000" y="20" name="TagsIntegrations">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -327,13 +341,17 @@
     </key>
     <comment>Relates Tags to Integrations</comment>
   </table>
-  <table x="1310" y="630" name="Environments">
+  <table x="1345" y="640" name="Environments">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
-    <row name="name" null="1" autoincrement="0">
+    <row name="name" null="0" autoincrement="0">
       <datatype>VARCHAR</datatype>
-      <default>NULL</default></row>
+      <default>'NULL'</default></row>
+    <row name="id_EnvironmentKinds" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="EnvironmentKinds" row="id" />
+    </row>
     <key type="PRIMARY" name="">
       <part>id</part>
     </key>
@@ -356,7 +374,7 @@
     </key>
     <comment>An Integration can be running in multiple Environments, multiple Integrations can be running in an Environment</comment>
   </table>
-  <table x="1035" y="725" name="EnvironmentsOrganizations">
+  <table x="1015" y="690" name="EnvironmentsOrganizations">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -372,6 +390,18 @@
       <part>id</part>
     </key>
     <comment>An environment can be associated with multiple organizations, an Organization can have multiple environments</comment>
+  </table>
+  <table x="1600" y="700" name="EnvironmentKinds">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="name" null="0" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>'NULL'</default></row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+    <comment>User defined types of Environments, like 'production', 'testing', etc.</comment>
   </table>
 </sql>
 

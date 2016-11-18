@@ -43,8 +43,11 @@ We are in the process of creating a diagram (see below) for the Entity Relations
     - has properties
 - Environment
     - has a name
+    - has an EnvironmentKind
     - has many Integrations
     - has many Organizations
+- EnvironmentKind
+    - has a name
 
 
 <!-- TODO wanna keep this handy for now
