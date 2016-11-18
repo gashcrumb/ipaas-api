@@ -1,5 +1,5 @@
 # Entity Relationships
-We are in the process of creating a diagram for the Entity Relationships in iPaaS. Below is what we currently have, which is pretty incomplete and under continuous development. Please feel free to edit this document as necessary.
+We are in the process of creating a diagram (see below) for the Entity Relationships in iPaaS. Below is a description of we are currently developing. Please feel free to edit this document as necessary.
 
 ## Models/Entities:
 - Organization
@@ -74,3 +74,7 @@ We are in the process of creating a diagram for the Entity Relationships in iPaa
     -->
 
 Again, this list may not be up-to-date, or may be under development. Please see the active list of models by viewing the [`src/models`](../src/models/index.js) file.
+
+## Visual entity graph
+You can view a diagram of the above relationships using [this online tool](http://ondras.zarovi.cz/sql/demo/?keyword=default), copy the contents of [`./entities.xml`](./entities.xml), click `Save / Load` at the top-right of the designer, paste the XML into the big text area and click `Load from XML`
+
