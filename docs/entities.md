@@ -28,8 +28,7 @@ We are in the process of creating a diagram (see below) for the Entity Relations
 - Connection
     - has a name
     - refers to a Connection Type
-    - has enabled properties
-    - has property defaults
+    - has configured properties
     - has a position
     - has many Tags
 - Connection Type

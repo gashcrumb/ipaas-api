@@ -37,7 +37,7 @@
       <type label="SET" quote="" sql="SET" length="1"/>
       <type label="Bit" quote="" sql="bit" length="0"/>
     </group>
-    </datatypes><table x="1530" y="310" name="Connections">
+    </datatypes><table x="1530" y="330" name="Connections">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -48,15 +48,11 @@
       <datatype>INTEGER</datatype>
       <default>NULL</default><relation table="ConnectionTypes" row="id" />
     </row>
-    <row name="enabled_properties" null="1" autoincrement="0">
+    <row name="configured_properties" null="1" autoincrement="0">
       <datatype>MEDIUMTEXT</datatype>
-      <default>NULL</default><comment>The enabled properties for this connection configured by an Expert User, in a json schema format suitable for displaying a form</comment>
+      <default>NULL</default><comment>Properties that have been enabled for this connection with their default values as configured by the Expert User</comment>
     </row>
-    <row name="property_defaults" null="1" autoincrement="0">
-      <datatype>MEDIUMTEXT</datatype>
-      <default>NULL</default><comment>Default values for the connection as configured by an Expert User</comment>
-    </row>
-    <row name="location" null="1" autoincrement="0">
+    <row name="position" null="1" autoincrement="0">
       <datatype>SET</datatype>
       <default>NULL</default><comment>If the connector can be from, to, or either</comment>
     </row>
@@ -83,7 +79,7 @@
     </key>
     <comment>Components that are available to create a Connection</comment>
   </table>
-  <table x="650" y="450" name="Integrations">
+  <table x="625" y="450" name="Integrations">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -107,7 +103,7 @@
     </key>
     <comment>An instance of an Integration Template that has been (or is being) configured by a citizen user.</comment>
   </table>
-  <table x="1530" y="515" name="Steps">
+  <table x="1530" y="500" name="Steps">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -117,7 +113,8 @@
     </row>
     <row name="configured_properties" null="1" autoincrement="0">
       <datatype>MEDIUMTEXT</datatype>
-      <default>NULL</default></row>
+      <default>NULL</default><comment>Any possible configurable properties for the step as set up by an Expert or Developer User</comment>
+    </row>
     <key type="PRIMARY" name="">
       <part>id</part>
     </key>
@@ -150,7 +147,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="410" y="730" name="UsersIntegrations">
+  <table x="395" y="630" name="UsersIntegrations">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -262,7 +259,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="385" y="310" name="OrganizationsIntegrations">
+  <table x="340" y="310" name="OrganizationsIntegrations">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
