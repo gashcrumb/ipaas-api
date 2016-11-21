@@ -84,5 +84,5 @@ We are in the process of creating a diagram (see below) for the Entity Relations
 Again, this list may not be up-to-date, or may be under development. Please see the active list of models by viewing the [`src/models`](../src/models/index.js) file.
 
 ## Visual entity graph
-You can view a diagram of the above relationships using [this online tool](http://ondras.zarovi.cz/sql/demo/?keyword=default), copy the contents of [`./entities.xml`](./entities.xml), click `Save / Load` at the top-right of the designer, paste the XML into the big text area and click `Load from XML`
 
+![Visual entity graph picture](./entities.png)

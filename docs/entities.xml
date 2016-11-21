@@ -37,7 +37,7 @@
       <type label="SET" quote="" sql="SET" length="1"/>
       <type label="Bit" quote="" sql="bit" length="0"/>
     </group>
-    </datatypes><table x="1530" y="330" name="Connections">
+    </datatypes><table x="1525" y="315" name="Connections">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -56,6 +56,9 @@
       <datatype>SET</datatype>
       <default>NULL</default><comment>If the connector can be from, to, or either</comment>
     </row>
+    <row name="description" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
     <key type="PRIMARY" name="">
       <part>id</part>
     </key>
