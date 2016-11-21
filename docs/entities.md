@@ -30,6 +30,7 @@ We are in the process of creating a diagram (see below) for the Entity Relations
     - refers to a Connection Type
     - has configured properties
     - has a position
+    - has a description
     - has many Tags
 - Connection Type
     - has a name

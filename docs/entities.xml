@@ -52,13 +52,13 @@
       <datatype>MEDIUMTEXT</datatype>
       <default>NULL</default><comment>Properties that have been enabled for this connection with their default values as configured by the Expert User</comment>
     </row>
+    <row name="description" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
     <row name="position" null="1" autoincrement="0">
       <datatype>SET</datatype>
       <default>NULL</default><comment>If the connector can be from, to, or either</comment>
     </row>
-    <row name="description" null="1" autoincrement="0">
-      <datatype>VARCHAR</datatype>
-      <default>NULL</default></row>
     <key type="PRIMARY" name="">
       <part>id</part>
     </key>
