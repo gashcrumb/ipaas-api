@@ -1,22 +1,15 @@
-// Connection Model
+// StepType model
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('Connection', {
+  return sequelize.define('StepType', {
     name: {
       type: DataTypes.STRING(50),
       unique: true
     },
-    description: {
-      type: DataTypes.TEXT
-    },
     icon: {
       type: DataTypes.STRING(50)
     },
-    configuredProperties: {
+    properties: {
       type: DataTypes.TEXT
-    },
-    position: {
-      type: DataTypes.ENUM,
-      values: ['Anywhere', 'From', 'To']
     }
   }, {
     classMethods: {
@@ -27,8 +20,6 @@ module.exports = function(sequelize, DataTypes) {
     timestamps: true
   }, {
     getterMethods: {},
-
     setterMethods: {}
   });
 };
-

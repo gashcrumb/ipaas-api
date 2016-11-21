@@ -1,34 +1,24 @@
-// Connection Model
+// ConnectionType model
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('Connection', {
+  return sequelize.define('ConnectionType', {
     name: {
       type: DataTypes.STRING(50),
       unique: true
     },
-    description: {
-      type: DataTypes.TEXT
-    },
     icon: {
       type: DataTypes.STRING(50)
     },
-    configuredProperties: {
+    properties: {
       type: DataTypes.TEXT
-    },
-    position: {
-      type: DataTypes.ENUM,
-      values: ['Anywhere', 'From', 'To']
     }
   }, {
     classMethods: {
       associate: function(models) {}
     }
   }, {
-    // Enable timestamps
-    timestamps: true
+    typestamps: true
   }, {
     getterMethods: {},
-
     setterMethods: {}
   });
 };
-

@@ -1,22 +1,17 @@
-// Connection Model
+// Integration model
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('Connection', {
+  return sequelize.define('Integration', {
     name: {
       type: DataTypes.STRING(50),
       unique: true
     },
-    description: {
+    configuration: {
       type: DataTypes.TEXT
     },
-    icon: {
-      type: DataTypes.STRING(50)
-    },
-    configuredProperties: {
-      type: DataTypes.TEXT
-    },
-    position: {
+    state: {
       type: DataTypes.ENUM,
-      values: ['Anywhere', 'From', 'To']
+      // TODO define these
+      values: ['draft', 'running', 'stopped', 'error']
     }
   }, {
     classMethods: {
@@ -27,8 +22,6 @@ module.exports = function(sequelize, DataTypes) {
     timestamps: true
   }, {
     getterMethods: {},
-
     setterMethods: {}
   });
 };
-
