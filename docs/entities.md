@@ -31,15 +31,18 @@ We are in the process of creating a diagram (see below) for the Entity Relations
     - has configured properties
     - has a position
     - has a description
+    - has an icon
     - has many Tags
 - Connection Type
     - has a name
+    - has an icon
     - has properties
 - Step
     - has configured properties
     - refers to a Step Type
 - Step Type
     - has a name
+    - has an icon
     - has properties
 - Environment
     - has a name

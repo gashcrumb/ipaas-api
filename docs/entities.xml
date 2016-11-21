@@ -37,7 +37,7 @@
       <type label="SET" quote="" sql="SET" length="1"/>
       <type label="Bit" quote="" sql="bit" length="0"/>
     </group>
-    </datatypes><table x="1525" y="315" name="Connections">
+    </datatypes><table x="1520" y="295" name="Connections">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -52,8 +52,11 @@
       <datatype>MEDIUMTEXT</datatype>
       <default>NULL</default><comment>Properties that have been enabled for this connection with their default values as configured by the Expert User</comment>
     </row>
-    <row name="description" null="1" autoincrement="0">
+    <row name="icon" null="1" autoincrement="0">
       <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
+    <row name="description" null="1" autoincrement="0">
+      <datatype>MEDIUMTEXT</datatype>
       <default>NULL</default></row>
     <row name="position" null="1" autoincrement="0">
       <datatype>SET</datatype>
@@ -73,6 +76,9 @@
     <row name="name" null="0" autoincrement="0">
       <datatype>VARCHAR</datatype>
       <default>'NULL'</default></row>
+    <row name="icon" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
     <row name="properties" null="0" autoincrement="0">
       <datatype>MEDIUMTEXT</datatype>
       <default>'NULL'</default><comment>All available settings for the underlying component, in json since it could be any number of fields</comment>
@@ -126,6 +132,12 @@
   <table x="1815" y="580" name="StepTypes">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="name" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
+    <row name="icon" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
       <default>NULL</default></row>
     <row name="properties" null="0" autoincrement="0">
       <datatype>MEDIUMTEXT</datatype>
@@ -290,7 +302,7 @@
     </key>
     <comment>Tags that have been created by users</comment>
   </table>
-  <table x="1265" y="220" name="TagsConnections">
+  <table x="1270" y="200" name="TagsConnections">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -307,7 +319,7 @@
     </key>
     <comment>Relates Tags to Connections</comment>
   </table>
-  <table x="1185" y="110" name="TagsIntegrationTemplates">
+  <table x="1185" y="100" name="TagsIntegrationTemplates">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
