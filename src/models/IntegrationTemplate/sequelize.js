@@ -10,7 +10,16 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     classMethods: {
-      associate: function(models) {}
+      associate: function(models) {
+        const IntegrationTemplate = models['IntegrationTemplate'];
+        const Connection = models['Connection'];
+        const Step = models['Step'];
+        const Tag = models['Tag'];
+        IntegrationTemplate.hasMany(Connection);
+        IntegrationTemplate.hasMany(Step);
+        Tag.belongsToMany(IntegrationTemplate, { through: 'TagsIntegrationTemplates' });
+        IntegrationTemplate.hasMany(Tag);
+      }
     }
   }, {
     // Enable timestamps

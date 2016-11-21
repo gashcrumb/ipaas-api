@@ -7,18 +7,19 @@ We are in the process of creating a diagram (see below) for the Entity Relations
     - has many Connections
     - has many Integration Templates
     - has many Users
-    - has many Environments
 - User
     - has a name
-    - has many Organizations
+    - belongs to many Organizations
     - has many Integrations
 - Integration
     - has a name
     - has a configuration
-    - has a state
-    - refers to an Integration Template
+    - has an Integration Template
+    - has many IntegrationRuntimes
     - has many Tags
-    - has many Environments
+- IntegrationRuntime
+    - has a state
+    - has an Environment
 - Integration Template
     - has a name
     - has a step order
@@ -27,11 +28,11 @@ We are in the process of creating a diagram (see below) for the Entity Relations
     - has many Tags
 - Connection
     - has a name
-    - refers to a Connection Type
+    - has an icon
     - has configured properties
     - has a position
     - has a description
-    - has an icon
+    - has a ConnectionType
     - has many Tags
 - Connection Type
     - has a name
@@ -47,10 +48,11 @@ We are in the process of creating a diagram (see below) for the Entity Relations
 - Environment
     - has a name
     - has an EnvironmentKind
-    - has many Integrations
-    - has many Organizations
+    - belongs to many Organizations
 - EnvironmentKind
     - has a name
+- Tag
+  - has a name
 
 
 <!-- TODO wanna keep this handy for now

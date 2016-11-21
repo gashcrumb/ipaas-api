@@ -88,7 +88,7 @@
     </key>
     <comment>Components that are available to create a Connection</comment>
   </table>
-  <table x="625" y="450" name="Integrations">
+  <table x="625" y="460" name="Integrations">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -102,10 +102,6 @@
     <row name="configuration" null="1" autoincrement="0">
       <datatype>MEDIUMTEXT</datatype>
       <default>NULL</default><comment>Instance configuration for the involved Connection and Steps</comment>
-    </row>
-    <row name="state" null="1" autoincrement="0">
-      <datatype>SET</datatype>
-      <default>NULL</default><comment>Integration state, if it's a draft, complete, running, or error</comment>
     </row>
     <key type="PRIMARY" name="">
       <part>id</part>
@@ -177,27 +173,6 @@
     <key type="PRIMARY" name="">
       <part>id</part>
     </key>
-  </table>
-  <table x="1165" y="400" name="IntegrationTemplatesConnectionsSteps">
-    <row name="id" null="1" autoincrement="1">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default></row>
-    <row name="id_IntegrationTemplates" null="1" autoincrement="0">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default><relation table="IntegrationTemplates" row="id" />
-    </row>
-    <row name="id_Connections" null="1" autoincrement="0">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default><relation table="Connections" row="id" />
-    </row>
-    <row name="id_Steps" null="1" autoincrement="0">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default><relation table="Steps" row="id" />
-    </row>
-    <key type="PRIMARY" name="">
-      <part>id</part>
-    </key>
-    <comment>Associates Integration Templates to Connections and Steps, an Integration Template can have many Connections and many Steps</comment>
   </table>
   <table x="925" y="400" name="IntegrationTemplates">
     <row name="id" null="1" autoincrement="1">
@@ -353,7 +328,7 @@
     </key>
     <comment>Relates Tags to Integrations</comment>
   </table>
-  <table x="1345" y="640" name="Environments">
+  <table x="1465" y="685" name="Environments">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -369,24 +344,7 @@
     </key>
     <comment>An environment has Integrations running in it</comment>
   </table>
-  <table x="1015" y="565" name="EnvironmentsIntegrations">
-    <row name="id" null="1" autoincrement="1">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default></row>
-    <row name="id_Environments" null="1" autoincrement="0">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default><relation table="Environments" row="id" />
-    </row>
-    <row name="id_Integrations" null="1" autoincrement="0">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default><relation table="Integrations" row="id" />
-    </row>
-    <key type="PRIMARY" name="">
-      <part>id</part>
-    </key>
-    <comment>An Integration can be running in multiple Environments, multiple Integrations can be running in an Environment</comment>
-  </table>
-  <table x="1015" y="690" name="EnvironmentsOrganizations">
+  <table x="1115" y="790" name="EnvironmentsOrganizations">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -403,7 +361,7 @@
     </key>
     <comment>An environment can be associated with multiple organizations, an Organization can have multiple environments</comment>
   </table>
-  <table x="1600" y="700" name="EnvironmentKinds">
+  <table x="1755" y="745" name="EnvironmentKinds">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -414,6 +372,57 @@
       <part>id</part>
     </key>
     <comment>User defined types of Environments, like 'production', 'testing', etc.</comment>
+  </table>
+  <table x="1190" y="345" name="IntegrationTemplatesConnections">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="id_Connections" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Connections" row="id" />
+    </row>
+    <row name="id_IntegrationTemplates" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="IntegrationTemplates" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="1210" y="455" name="IntegrationTemplatesSteps">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="id_Steps" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Steps" row="id" />
+    </row>
+    <row name="id_IntegrationTemplates" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="IntegrationTemplates" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="1015" y="590" name="IntegrationRuntime">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="state" null="1" autoincrement="0">
+      <datatype>SET</datatype>
+      <default>NULL</default></row>
+    <row name="id_Integrations" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Integrations" row="id" />
+    </row>
+    <row name="id_Environments" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Environments" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
   </table>
 </sql>
 

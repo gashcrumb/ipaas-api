@@ -20,7 +20,14 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     classMethods: {
-      associate: function(models) {}
+      associate: function(models) {
+        const Connection = models['Connection'];
+        const ConnectionType = models['ConnectionType'];
+        const Tag = models['Tag'];
+        Connection.hasOne(ConnectionType, { as: 'Type' });
+        Tag.belongsToMany(Connection, { through: 'TagsConnections' });
+        Connection.hasMany(Tag);
+      }
     }
   }, {
     // Enable timestamps

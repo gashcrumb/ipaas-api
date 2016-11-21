@@ -3,6 +3,7 @@
 // ---------------------- Dependencies & Setup ---->>
 
 var Sequelize = require('sequelize');
+var _ = require('lodash');
 
 //console.log('Initializing database connection with Sequelize...');
 
@@ -48,21 +49,20 @@ function Models() {
           // console.log('File: ' + JSON.stringify(file));
 
           var model = sequelize.import(path.join(__dirname, eachDir, file));
-          db[model.name] = model;
+          models[model.name] = model;
         });
-
     });
-
-    setTimeout(function() {
-      Object.keys(models).forEach(function(modelName) {
-        if ('associate' in models[modelName]) {
-          db[modelName].associate(models);
-        }
-      });
-    }, 2000);
-
+    console.log("Models: ", models);
+    _.forOwn(models, function (model, name) {
+      if ('associate' in model) {
+        console.log("Calling associate for model: ", name);
+        model.associate(models);
+        model.sync().then(function() {
+          console.log(name + " synced");
+        });
+      }
+    });
   }
-
   return db;
 }
 

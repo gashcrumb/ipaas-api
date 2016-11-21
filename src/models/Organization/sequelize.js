@@ -7,7 +7,13 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     classMethods: {
-      associate: function(models) {}
+      associate: function(models) {
+        const Organization = models['Organization'];
+        const Connection = models['Connection'];
+        const IntegrationTemplate = models['IntegrationTemplate'];
+        Organization.hasMany(Connection);
+        Organization.hasMany(IntegrationTemplate);
+      }
     }
   }, {
     // Enable timestamps

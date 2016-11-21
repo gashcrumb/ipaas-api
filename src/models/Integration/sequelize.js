@@ -7,15 +7,19 @@ module.exports = function(sequelize, DataTypes) {
     },
     configuration: {
       type: DataTypes.TEXT
-    },
-    state: {
-      type: DataTypes.ENUM,
-      // TODO define these
-      values: ['draft', 'running', 'stopped', 'error']
     }
   }, {
     classMethods: {
-      associate: function(models) {}
+      associate: function(models) {
+        const Integration = models['Integration'];
+        const IntegrationRuntime = models['IntegrationRuntime'];
+        const IntegrationTemplate = models['IntegrationTemplate'];
+        const Tag = models['Tag'];
+        Integration.hasMany(IntegrationRuntime);
+        Integration.hasOne(IntegrationTemplate);
+        Tag.belongsToMany(Integration, { through: 'TagsIntegrations' });
+        Integration.hasMany(Tag);
+      }
     }
   }, {
     // Enable timestamps
