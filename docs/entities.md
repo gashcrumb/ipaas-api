@@ -19,6 +19,7 @@ We are in the process of creating a diagram (see below) for the Entity Relations
     - has many Tags
 - IntegrationRuntime
     - has a state
+    - has an Integration
     - has an Environment
 - Integration Template
     - has a name
