@@ -23,10 +23,17 @@ module.exports = function(sequelize, DataTypes) {
       associate: function(models) {
         const Connection = models['Connection'];
         const ConnectionType = models['ConnectionType'];
+        const Organization = models['Organization'];
         const Tag = models['Tag'];
+
+        Connection.belongsTo(Organization);
+        Organization.hasMany(Connection);
+
         Connection.hasOne(ConnectionType, { as: 'Type' });
+        ConnectionType.belongsTo(Connection);
+
         Tag.belongsToMany(Connection, { through: 'TagsConnections' });
-        Connection.hasMany(Tag);
+        Connection.belongsToMany(Tag, { through: 'TagsConnections' });
       }
     }
   }, {

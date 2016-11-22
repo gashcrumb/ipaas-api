@@ -33,7 +33,7 @@ We are in the process of creating a diagram (see below) for the Entity Relations
     - has configured properties
     - has a position
     - has a description
-    - has a ConnectionType
+    - has one ConnectionType
     - has many Tags
 - Connection Type
     - has a name

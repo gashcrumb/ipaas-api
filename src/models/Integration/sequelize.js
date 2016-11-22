@@ -17,8 +17,10 @@ module.exports = function(sequelize, DataTypes) {
         const Tag = models['Tag'];
         Integration.hasMany(IntegrationRuntime);
         Integration.hasOne(IntegrationTemplate);
+        /*
         Tag.belongsToMany(Integration, { through: 'TagsIntegrations' });
         Integration.hasMany(Tag);
+        */
       }
     }
   }, {
