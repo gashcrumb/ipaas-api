@@ -11,8 +11,12 @@ module.exports = function(sequelize, DataTypes) {
         const Environment = models['Environment'];
         const EnvironmentKind = models['EnvironmentKind'];
         const Organization = models['Organization'];
+
         Environment.belongsToMany(Organization, { through: 'EnvironmentsOrganizations' });
-        Environment.hasOne(EnvironmentKind, { as: 'Type' });
+        Organization.belongsToMany(Environment, { through: 'EnvironmentsOrganizations' });
+
+        Environment.belongsTo(EnvironmentKind);
+        EnvironmentKind.hasMany(Environment);
       }
     }
   }, {

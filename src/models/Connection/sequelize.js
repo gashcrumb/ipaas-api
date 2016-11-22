@@ -29,8 +29,8 @@ module.exports = function(sequelize, DataTypes) {
         Connection.belongsTo(Organization);
         Organization.hasMany(Connection);
 
-        Connection.hasOne(ConnectionType, { as: 'Type' });
-        ConnectionType.belongsTo(Connection);
+        Connection.belongsTo(ConnectionType);
+        ConnectionType.hasMany(Connection);
 
         Tag.belongsToMany(Connection, { through: 'TagsConnections' });
         Connection.belongsToMany(Tag, { through: 'TagsConnections' });

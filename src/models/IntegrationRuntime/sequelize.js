@@ -9,9 +9,11 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
+        const Integration = models['Integration'];
         const IntegrationRuntime = models['IntegrationRuntime'];
         const Environment = models['Environment'];
-        IntegrationRuntime.hasOne(Environment);
+        IntegrationRuntime.belongsTo(Environment);
+        IntegrationRuntime.belongsTo(Integration);
       }
     }
   }, {

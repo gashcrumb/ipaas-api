@@ -53,14 +53,18 @@ function Models() {
         });
     });
     console.log("Models: ", models);
+    // First create all of the model associations
     _.forOwn(models, function (model, name) {
       if ('associate' in model) {
         console.log("Calling associate for model: ", name);
         model.associate(models);
-        model.sync().then(function() {
-          console.log(name + " synced");
-        });
       }
+    });
+    // Synchronize all associations to the DB
+    _.forOwn(models, function (model, name) {
+      model.sync().then(function() {
+        console.log(name + " synced");
+      });
     });
   }
   return db;

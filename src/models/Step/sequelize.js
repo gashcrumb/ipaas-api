@@ -10,7 +10,14 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     classMethods: {
-      associate: function(models) {}
+      associate: function(models) {
+        const Step = models['Step'];
+        const StepType = models['StepType'];
+
+        Step.hasOne(StepType);
+        StepType.belongsTo(Step);
+      
+      }
     }
   }, {
     // Enable timestamps
