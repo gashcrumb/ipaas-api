@@ -27,7 +27,11 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        History.belongsTo(models.User);
+        const User = models['User'];
+        const Organization = models['Organization'];
+
+        Organization.belongsToMany(User, { through: 'OrganizationUsers' });
+        User.belongsToMany(Organization, { through: 'OrganizationUsers' });
       }
     }
   }, {

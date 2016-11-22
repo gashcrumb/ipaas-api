@@ -1,7 +1,62 @@
 # Entity Relationships
-We are in the process of creating a diagram for the Entity Relationships in iPaaS. Below is what we currently have, which is pretty incomplete and under continuous development. Please feel free to edit this document as necessary.
+We are in the process of creating a diagram (see below) for the Entity Relationships in iPaaS. Below is a description of we are currently developing. Please feel free to edit this document as necessary.
 
 ## Models/Entities:
+- Organization
+    - has a name
+    - has many Connections
+    - has many Integration Templates
+    - has many Users
+- User
+    - has a name
+    - belongs to many Organizations
+    - has many Integrations
+- Integration
+    - has a name
+    - has a configuration
+    - has an Integration Template
+    - has many IntegrationRuntimes
+    - has many Tags
+- IntegrationRuntime
+    - has a state
+    - has an Integration
+    - has an Environment
+- Integration Template
+    - has a name
+    - has a step order
+    - has many Connections
+    - has many Steps
+    - has many Tags
+- Connection
+    - has a name
+    - has an icon
+    - has configured properties
+    - has a position
+    - has a description
+    - has one ConnectionType
+    - has many Tags
+- Connection Type
+    - has a name
+    - has an icon
+    - has properties
+- Step
+    - has configured properties
+    - refers to a Step Type
+- Step Type
+    - has a name
+    - has an icon
+    - has properties
+- Environment
+    - has a name
+    - has an EnvironmentKind
+    - belongs to many Organizations
+- EnvironmentKind
+    - has a name
+- Tag
+  - has a name
+
+
+<!-- TODO wanna keep this handy for now
 - Connection
     - belongs to Organization
     - has many Tags (many-to-many)
@@ -31,5 +86,10 @@ We are in the process of creating a diagram for the Entity Relationships in iPaa
     - has many Integrations
     - has many Reports (or should this be under Integrations instead?)
     - has many Settings
+    -->
 
 Again, this list may not be up-to-date, or may be under development. Please see the active list of models by viewing the [`src/models`](../src/models/index.js) file.
+
+## Visual entity graph
+
+![Visual entity graph picture](./entities.png)
