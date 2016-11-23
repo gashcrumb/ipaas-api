@@ -9,3 +9,7 @@ dependencies:
   pre:
     - npm install update prune
 
+test:
+  pre:
+    - cp config/testing_example.json config/test.json
+

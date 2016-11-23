@@ -2,27 +2,27 @@
 
 // ---------------------- Dependencies & Setup ---->>
 
-var Sequelize = require('sequelize');
-var _ = require('lodash');
+const Sequelize = require('sequelize');
+const _ = require('lodash');
 
 //console.log('Initializing database connection with Sequelize...');
 
-var app = require('../../server.js');
-var config = require('../../config/' + app.get('env') + '.json');
-var db = {};
-var fs = require('fs');
-var path = require('path');
+const app = require('../../app.js');
+const config = require('../../config/' + app.get('env') + '.json');
+const db = {};
+const fs = require('fs');
+const path = require('path');
 
 
 // ---------------------- Database Initialization ---->>
 
-var sequelize = new Sequelize(config['db']['database'], config['db']['username'], config['db']['password'], config['db']['options']);
+const sequelize = new Sequelize(config['db']['database'], config['db']['username'], config['db']['password'], config['db']['options']);
 
 
 // ---------------------- Models ---->>
+const models = {};
 
-
-var models = {};
+db.models = models;
 db.sequelize = sequelize;
 
 function Models() {
@@ -73,4 +73,4 @@ function Models() {
 module.exports = Models;
 
 // Export Individual Database Connections
-exports.sequelize = sequelize;
+// exports.sequelize = sequelize;
