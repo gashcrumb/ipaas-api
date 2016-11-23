@@ -1,16 +1,14 @@
 
 const nodeunit = require('nodeunit');
-const _ = require('lodash');
-const Models = require('../../src/models');
-const db = new Models();
+const db = require(__dirname + '/setup-models.js');
 const sequelize = db.sequelize;
 const models = db.models;
 
-module.exports = {
+const self = {
   setUp: function (callback) {
-    sequelize.sync({ force: true }).then(function() {
-      const Connection = this.Connection = models['Connection'];
-      const ConnectionType = this.ConnectionType = models['ConnectionType'];
+    db.setUp(function() {
+      const Connection = self.Connection = models['Connection'];
+      const ConnectionType = self.ConnectionType = models['ConnectionType'];
       var connectionType = ConnectionType.build({
         name: 'foo'
       }).save().then(function(connectionType) {
@@ -25,7 +23,7 @@ module.exports = {
     });
   },
   testConnectionAndConnectionTypeAssociation: function(test) {
-    Connection
+    self.Connection
       .findOne({ where: { name: 'bar' }})
       .then(function(connection) {
         test.equals(connection.name, 'bar');
@@ -36,5 +34,7 @@ module.exports = {
       });
   }
 };
+
+module.exports = self;
 
 
