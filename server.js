@@ -10,7 +10,7 @@ const path = require('path');
 
 
 // ---------------------- Other Initialization Tasks ---->>
-const app = module.exports = express();
+const app = module.exports = require(__dirname + '/app.js');
 const router = express.Router();
 const routes = require('./router.js');
 const config = require(__dirname + '/config/' + app.get('env') + '.json');

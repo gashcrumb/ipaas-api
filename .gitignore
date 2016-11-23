@@ -5,6 +5,7 @@ build/Release
 
 # Data
 *.sqlite
+*.sqlite-journal
 
 # Dependencies
 /node_modules
