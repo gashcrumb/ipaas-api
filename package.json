@@ -33,6 +33,7 @@
   "devDependencies": {
     "nodeunit": "^0.10.2",
     "onchange": "^3.0.2",
+    "recursive-readdir": "^2.1.0",
     "sequelize-fixtures": "0.5.5",
     "sqlite3": "3.1.8"
   }
