@@ -8,9 +8,9 @@ module.exports = exports.router = function Route(router, app) {
 
   // API / Data / Actions
   var api = {
-    configs: require(path.join(prefix, 'configs.js')),
+    configs: require('./src/api/configs.js'),
     configGroups: require('./src/api/configGroups.js'),
-    configTypes: require('/src/api/configTypes.js'),
+    configTypes: require('./src/api/configTypes.js'),
     connections: require('./src/api/connections.js'),
     connectionTypes: require('./src/api/connectionTypes.js'),
     environments: require('./src/api/environments.js'),
