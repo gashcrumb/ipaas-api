@@ -5,7 +5,7 @@ We are in the process of creating a diagram (see below) for the Entity Relations
 - Organization
     - has a name
     - has many Connections
-    - has many Integration Templates
+    - has many IntegrationTemplates
     - has many Users
 - User
     - has a name
@@ -14,14 +14,14 @@ We are in the process of creating a diagram (see below) for the Entity Relations
 - Integration
     - has a name
     - has a configuration
-    - has an Integration Template
+    - has an IntegrationTemplate
     - has many IntegrationRuntimes
     - has many Tags
 - IntegrationRuntime
     - has a state
     - has an Integration
     - has an Environment
-- Integration Template
+- IntegrationTemplate
     - has a name
     - has a step order
     - has many Connections
@@ -35,14 +35,14 @@ We are in the process of creating a diagram (see below) for the Entity Relations
     - has a description
     - has one ConnectionType
     - has many Tags
-- Connection Type
+- ConnectionType
     - has a name
     - has an icon
     - has properties
 - Step
     - has configured properties
-    - refers to a Step Type
-- Step Type
+    - refers to a StepType
+- StepType
     - has a name
     - has an icon
     - has properties
