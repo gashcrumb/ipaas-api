@@ -1,4 +1,4 @@
-// EnvironmentKind Repository
+// EnvironmentType Repository
 'use strict';
 
 // ---------------------- Dependencies ---->>
@@ -9,13 +9,13 @@ var Models = require('../models/index.js');
 
 // ---------------------- Class/Constructor ---->>
 
-function EnvironmentKindRepository(params) {
+function EnvironmentTypeRepository(params) {
   // Instantiate new Models Layer
   var Model = new Models();
 
-  this.layerName = 'EnvironmentKindRepository';
-  this.model = Model.EnvironmentKind;
-  this.modelName = 'EnvironmentKind';
+  this.layerName = 'EnvironmentTypeRepository';
+  this.model = Model.EnvironmentType;
+  this.modelName = 'EnvironmentType';
   this.params = params;
 }
 
@@ -28,6 +28,6 @@ function extend(Child, Parent) {
   Child.uber = Parent.prototype;
 }
 
-extend(EnvironmentKindRepository, BaseRepository);
+extend(EnvironmentTypeRepository, BaseRepository);
 
-module.exports = EnvironmentKindRepository;
+module.exports = EnvironmentTypeRepository;
