@@ -15,6 +15,16 @@ exports.ConfigGroupService = require('./ConfigGroupService.js');
 exports.ConfigService = require('./ConfigService.js');
 exports.ConfigTypeService = require('./ConfigTypeService.js');
 exports.ConnectionService = require('./ConnectionService.js');
+exports.ConnectionTypeService = require('./ConnectionTypeService.js');
+exports.EnvironmentKindService = require('./EnvironmentKindService.js');
+exports.EnvironmentService = require('./EnvironmentService.js');
+exports.IntegrationService = require('./IntegrationService.js');
+exports.IntegrationRuntimeService = require('./IntegrationRuntimeService.js');
+exports.IntegrationTemplateService = require('./IntegrationTemplateService.js');
+exports.OrganizationService = require('./OrganizationService.js');
+exports.StepService = require('./StepService.js');
+exports.StepTypeService = require('./StepTypeService.js');
+exports.TagService = require('./TagService.js');
 exports.UserService = require('./UserService.js');
 
 /*
