@@ -9,14 +9,14 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         const Environment = models['Environment'];
-        const EnvironmentKind = models['EnvironmentKind'];
+        const EnvironmentType = models['EnvironmentType'];
         const Organization = models['Organization'];
 
         Environment.belongsToMany(Organization, { through: 'EnvironmentsOrganizations' });
         Organization.belongsToMany(Environment, { through: 'EnvironmentsOrganizations' });
 
-        Environment.belongsTo(EnvironmentKind);
-        EnvironmentKind.hasMany(Environment);
+        Environment.belongsTo(EnvironmentType);
+        EnvironmentType.hasMany(Environment);
       }
     }
   }, {
