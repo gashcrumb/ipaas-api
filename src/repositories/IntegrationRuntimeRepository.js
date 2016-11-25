@@ -1,4 +1,4 @@
-// Connection Repository
+// IntegrationRuntime Repository
 'use strict';
 
 // ---------------------- Dependencies ---->>
@@ -9,26 +9,25 @@ var Models = require('../models/index.js');
 
 // ---------------------- Class/Constructor ---->>
 
-function ConnectionRepository(params) {
+function IntegrationRuntimeRepository(params) {
   // Instantiate new Models Layer
   var Model = new Models();
 
-  this.layerName = 'ConnectionRepository';
-  this.model = Model.Connection;
-  this.modelName = 'Connection';
+  this.layerName = 'IntegrationRuntimeRepository';
+  this.model = Model.IntegrationRuntime;
+  this.modelName = 'IntegrationRuntime';
   this.params = params;
 }
 
 // Inherit from BaseRepository
 function extend(Child, Parent) {
-  var F = function() {
-  };
+  var F = function () {};
   F.prototype = Parent.prototype;
   Child.prototype = new F();
   Child.prototype.constructor = Child;
   Child.uber = Parent.prototype;
 }
 
-extend(ConnectionRepository, BaseRepository);
+extend(IntegrationRuntimeRepository, BaseRepository);
 
-module.exports = ConnectionRepository;
+module.exports = IntegrationRuntimeRepository;

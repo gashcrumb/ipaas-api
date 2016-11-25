@@ -1,4 +1,4 @@
-// Connection Repository
+// Organization Repository
 'use strict';
 
 // ---------------------- Dependencies ---->>
@@ -9,13 +9,13 @@ var Models = require('../models/index.js');
 
 // ---------------------- Class/Constructor ---->>
 
-function ConnectionRepository(params) {
+function OrganizationRepository(params) {
   // Instantiate new Models Layer
   var Model = new Models();
 
-  this.layerName = 'ConnectionRepository';
-  this.model = Model.Connection;
-  this.modelName = 'Connection';
+  this.layerName = 'OrganizationRepository';
+  this.model = Model.Organization;
+  this.modelName = 'Organization';
   this.params = params;
 }
 
@@ -29,6 +29,6 @@ function extend(Child, Parent) {
   Child.uber = Parent.prototype;
 }
 
-extend(ConnectionRepository, BaseRepository);
+extend(OrganizationRepository, BaseRepository);
 
-module.exports = ConnectionRepository;
+module.exports = OrganizationRepository;

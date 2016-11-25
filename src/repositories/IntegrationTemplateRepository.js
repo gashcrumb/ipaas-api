@@ -1,4 +1,4 @@
-// Connection Repository
+// IntegrationTemplate Repository
 'use strict';
 
 // ---------------------- Dependencies ---->>
@@ -9,26 +9,25 @@ var Models = require('../models/index.js');
 
 // ---------------------- Class/Constructor ---->>
 
-function ConnectionRepository(params) {
+function IntegrationTemplateRepository(params) {
   // Instantiate new Models Layer
   var Model = new Models();
 
-  this.layerName = 'ConnectionRepository';
-  this.model = Model.Connection;
-  this.modelName = 'Connection';
+  this.layerName = 'IntegrationTemplateRepository';
+  this.model = Model.IntegrationTemplate;
+  this.modelName = 'IntegrationTemplate';
   this.params = params;
 }
 
 // Inherit from BaseRepository
 function extend(Child, Parent) {
-  var F = function() {
-  };
+  var F = function () {};
   F.prototype = Parent.prototype;
   Child.prototype = new F();
   Child.prototype.constructor = Child;
   Child.uber = Parent.prototype;
 }
 
-extend(ConnectionRepository, BaseRepository);
+extend(IntegrationTemplateRepository, BaseRepository);
 
-module.exports = ConnectionRepository;
+module.exports = IntegrationTemplateRepository;

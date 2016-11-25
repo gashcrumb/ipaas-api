@@ -1,4 +1,4 @@
-// Connection Repository
+// Environment Repository
 'use strict';
 
 // ---------------------- Dependencies ---->>
@@ -9,13 +9,13 @@ var Models = require('../models/index.js');
 
 // ---------------------- Class/Constructor ---->>
 
-function ConnectionRepository(params) {
+function EnvironmentRepository(params) {
   // Instantiate new Models Layer
   var Model = new Models();
 
-  this.layerName = 'ConnectionRepository';
-  this.model = Model.Connection;
-  this.modelName = 'Connection';
+  this.layerName = 'EnvironmentRepository';
+  this.model = Model.Environment;
+  this.modelName = 'Environment';
   this.params = params;
 }
 
@@ -29,6 +29,6 @@ function extend(Child, Parent) {
   Child.uber = Parent.prototype;
 }
 
-extend(ConnectionRepository, BaseRepository);
+extend(EnvironmentRepository, BaseRepository);
 
-module.exports = ConnectionRepository;
+module.exports = EnvironmentRepository;
