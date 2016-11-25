@@ -69,7 +69,28 @@ module.exports = exports.router = function Route(router, app) {
   // ---------------------- API ---->>
 
   //router.all('/v1/*', checkAdmin);
-  
+
+  // ConfigGroups
+  router.get('/v1/config-groups', api.configGroups.findAll);
+  router.get('/v1/config-groups/:id', api.configGroups.find);
+  router.post('/v1/config-groups', api.configGroups.add);
+  router.put('/v1/config-groups/:id', api.configGroups.save);
+  router.delete('/v1/config-groups/:id', api.configGroups.del);
+
+  // Configs
+  router.get('/v1/configs', api.configs.findAll);
+  router.get('/v1/configs/:id', api.configs.find);
+  router.post('/v1/configs', api.configs.add);
+  router.put('/v1/configs/:id', api.configs.save);
+  router.delete('/v1/configs/:id', api.configs.del);
+
+  // ConfigTypes
+  router.get('/v1/config-types', api.configTypes.findAll);
+  router.get('/v1/config-types/:id', api.configTypes.find);
+  router.post('/v1/config-types', api.configTypes.add);
+  router.put('/v1/config-types/:id', api.configTypes.save);
+  router.delete('/v1/config-types/:id', api.configTypes.del);
+
   // Connections
   router.get('/v1/connections', api.connections.findAll);
   router.get('/v1/connections/:id', api.connections.find);
