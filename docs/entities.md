@@ -2,58 +2,59 @@
 We are in the process of creating a diagram (see below) for the Entity Relationships in iPaaS. Below is a description of we are currently developing. Please feel free to edit this document as necessary.
 
 ## Models/Entities:
-- Organization
-    - has a name
-    - has many Connections
-    - has many IntegrationTemplates
-    - has many Users
-- User
-    - has a name
-    - belongs to many Organizations
-    - has many Integrations
-- Integration
-    - has a name
-    - has a configuration
-    - has an IntegrationTemplate
-    - has many IntegrationRuntimes
-    - has many Tags
-- IntegrationRuntime
-    - has a state
-    - has an Integration
-    - has an Environment
-- IntegrationTemplate
-    - has a name
-    - has a step order
-    - has many Connections
-    - has many Steps
-    - has many Tags
+
+
 - Connection
-    - has a name
-    - has an icon
-    - has configured properties
-    - has a position
-    - has a description
-    - has one ConnectionType
-    - has many Tags
+    - attributes: `name`, `icon`, `configuredProperties`, `position`, `description`
+    - belongs to ConnectionType
+    - has many Tag (many-to-many)
 - ConnectionType
-    - has a name
-    - has an icon
-    - has properties
-- Step
-    - has configured properties
-    - refers to a StepType
-- StepType
-    - has a name
-    - has an icon
-    - has properties
+    - attributes: `name`, `icon`, `properties`
+    - has many Connection
 - Environment
-    - has a name
-    - has an EnvironmentKind
-    - belongs to many Organizations
+    - attributes: `name`
+    - belongs to an EnvironmentKind
+    - belongs to an Organization
+    - has many IntegrationRuntime
 - EnvironmentKind
-    - has a name
+    - attributes: `name`
+    - has many Environment
+- Integration
+    - attributes: `name`, `configuration`
+    - has one IntegrationTemplate (through JOIN IntegrationTemplatesIntegrations))
+    - has many IntegrationRuntime
+    - has many Tag (many-to-many)
+    - belongs to a User
+- IntegrationRuntime
+    - attributes: `state`
+    - belongs to an Integration
+    - belongs to an Environment
+- IntegrationTemplate
+    - attributes: `name`, `step order`
+    - has many Connection
+    - has many Step
+    - has many Tag
+- Organization
+    - attributes: `name`
+    - has many Connection
+    - has many Environment
+    - has many IntegrationTemplate
+    - has many User
+- Step
+    - has `configuredProperties`
+    - belongs to a StepType
+    - has many IntegrationTemplate (through JOIN IntegrationTemplateSteps)
+- StepType
+    - attributes: `name`, `icon`, `properties`
+    - has many Step
 - Tag
-  - has a name
+    - attributes: `label`, `value`
+    - has many Connection (many-to-many)
+    - has many Integration (many-to-many)
+- User
+    - attributes: `name`
+    - belongs to many Organization
+    - has many Integrations
 
 
 <!-- TODO wanna keep this handy for now
