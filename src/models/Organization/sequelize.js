@@ -8,11 +8,16 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        const Organization = models['Organization'];
         const Connection = models['Connection'];
+        const Environment = models['Environment'];
         const IntegrationTemplate = models['IntegrationTemplate'];
+        const Organization = models['Organization'];
+        const User = models['User'];
+
         Organization.hasMany(Connection);
         Organization.hasMany(IntegrationTemplate);
+        Organization.belongsToMany(Environment, { through: 'EnvironmentsOrganizations' });
+        Organization.belongsToMany(User, {through: 'UsersOrganizations'});
       }
     }
   }, {

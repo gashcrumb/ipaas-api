@@ -1,20 +1,19 @@
-// Step model
+// Role model
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('Step', {
+  return sequelize.define('Role', {
     name: {
       type: DataTypes.STRING(50),
       unique: true
-    },
-    configuredProperties: {
-      type: DataTypes.TEXT
     }
   }, {
     classMethods: {
       associate: function(models) {
-        const Step = models['Step'];
-        const StepType = models['StepType'];
+        const Permission = models['Permission'];
+        const Role = models['Role'];
+        const User = models['User'];
 
-        Step.belongsTo(StepType);
+        Role.belongsToMany(User, {through: 'UsersRoles'});
+        Role.belongsToMany(Permission, {through: 'RolesPermissions'});
       }
     }
   }, {

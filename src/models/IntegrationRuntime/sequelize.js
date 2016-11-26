@@ -12,6 +12,7 @@ module.exports = function(sequelize, DataTypes) {
         const Integration = models['Integration'];
         const IntegrationRuntime = models['IntegrationRuntime'];
         const Environment = models['Environment'];
+
         IntegrationRuntime.belongsTo(Environment);
         IntegrationRuntime.belongsTo(Integration);
       }

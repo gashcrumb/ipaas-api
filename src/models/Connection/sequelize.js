@@ -23,16 +23,14 @@ module.exports = function(sequelize, DataTypes) {
       associate: function(models) {
         const Connection = models['Connection'];
         const ConnectionType = models['ConnectionType'];
+        const IntegrationTemplate = models['IntegrationTemplate'];
         const Organization = models['Organization'];
         const Tag = models['Tag'];
 
         Connection.belongsTo(Organization);
-        Organization.hasMany(Connection);
-
         Connection.belongsTo(ConnectionType);
-        ConnectionType.hasMany(Connection);
 
-        Tag.belongsToMany(Connection, { through: 'TagsConnections' });
+        Connection.belongsToMany(IntegrationTemplate, { through: 'IntegrationTemplatesConnections' });
         Connection.belongsToMany(Tag, { through: 'TagsConnections' });
       }
     }

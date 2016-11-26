@@ -23,9 +23,7 @@ module.exports = function(sequelize, DataTypes) {
         Integration.hasMany(IntegrationRuntime);
 
         Integration.belongsTo(IntegrationTemplate);
-        IntegrationTemplate.hasMany(Integration);
 
-        Tag.belongsToMany(Integration, { through: 'TagsIntegrations' });
         Integration.belongsToMany(Tag, { through: 'TagsIntegrations' });
       }
     }

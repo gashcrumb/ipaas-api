@@ -14,6 +14,10 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
+        const Connection = models['Connection'];
+        const ConnectionType = models['ConnectionType'];
+
+        ConnectionType.hasMany(Connection);
       }
     }
   }, {

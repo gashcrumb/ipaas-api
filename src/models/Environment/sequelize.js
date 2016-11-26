@@ -13,10 +13,7 @@ module.exports = function(sequelize, DataTypes) {
         const Organization = models['Organization'];
 
         Environment.belongsToMany(Organization, { through: 'EnvironmentsOrganizations' });
-        Organization.belongsToMany(Environment, { through: 'EnvironmentsOrganizations' });
-
         Environment.belongsTo(EnvironmentType);
-        EnvironmentType.hasMany(Environment);
       }
     }
   }, {

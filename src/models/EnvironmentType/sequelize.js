@@ -7,7 +7,12 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     classMethods: {
-      associate: function(models) {}
+      associate: function(models) {
+        const Environment = models['Environment'];
+        const EnvironmentType = models['EnvironmentType'];
+
+        EnvironmentType.hasMany(Environment);
+      }
     }
   }, {
     // Enable timestamps
