@@ -34,7 +34,7 @@ module.exports = function(sequelize, DataTypes) {
 
         User.belongsToMany(Organization, {through: 'UsersOrganizations'});
         User.belongsToMany(Role, {through: 'UsersRoles'});
-        User.hasMany(Integration);
+        User.belongsToMany(Integration, { through: 'UsersIntegrations' });
       }
     }
   }, {

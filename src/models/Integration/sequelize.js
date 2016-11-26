@@ -17,14 +17,12 @@ module.exports = function(sequelize, DataTypes) {
         const User = models['User'];
         const Tag = models['Tag'];
 
-        Integration.belongsToMany(User, { through: 'UsersIntegrations' });
-        User.belongsToMany(Integration, { through: 'UsersIntegrations' });
-
-        Integration.hasMany(IntegrationRuntime);
-
         Integration.belongsTo(IntegrationTemplate);
 
         Integration.belongsToMany(Tag, { through: 'TagsIntegrations' });
+        Integration.belongsToMany(User, { through: 'UsersIntegrations' });
+
+        Integration.hasMany(IntegrationRuntime);
       }
     }
   }, {
