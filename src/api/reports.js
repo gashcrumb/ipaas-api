@@ -1,24 +1,24 @@
-// Roles API
+// Reports API
 'use strict';
 
 // ---------------------- Dependencies ---->>
 
 var Services = require('../services/index.js');
 var UserService = Services.UserService;
-var RoleService = Services.RoleService;
+var ReportService = Services.ReportService;
 
 
 // ---------------------- API ---->>
 
 exports.add = function(req, res) {
   var params = req.body;
-  if (req.role) {
-    params.RoleId = req.role.id
+  if (req.report) {
+    params.ReportId = req.report.id
   }
 
-  var Role = new RoleService(params);
+  var Report = new ReportService(params);
 
-  Role
+  Report
     .create()
     .then(function(result) {
       res.json(result);
@@ -31,11 +31,11 @@ exports.add = function(req, res) {
 
 exports.del = function(req, res) {
   var params = {id: req.params.id};
-  params.RoleId = req.role.id;
+  params.ReportId = req.report.id;
 
-  var Role = new RoleService(params);
+  var Report = new ReportService(params);
 
-  Role
+  Report
     .destroy()
     .then(function(result) {
       res.json(result);
@@ -65,9 +65,9 @@ exports.find = function(req, res) {
     params.include = includes;
   }
 
-  var Role = new RoleService(params);
+  var Report = new ReportService(params);
 
-  Role
+  Report
     .find()
     .then(function(result) {
       res.json(result);
@@ -94,9 +94,9 @@ exports.findAll = function(req, res) {
     params.include = includes;
   }
 
-  var Role = new RoleService(params);
+  var Report = new ReportService(params);
 
-  Role
+  Report
     .findAll()
     .then(function(result) {
       res.json(result);
@@ -108,13 +108,13 @@ exports.findAll = function(req, res) {
 
 exports.save = function(req, res) {
   var params = req.body;
-  if (req.role) {
-    params.RoleId = req.role.id
+  if (req.report) {
+    params.ReportId = req.report.id
   }
 
-  var Role = new RoleService(params);
+  var Report = new ReportService(params);
 
-  Role
+  Report
     .save()
     .then(function(result) {
       res.json(result);
