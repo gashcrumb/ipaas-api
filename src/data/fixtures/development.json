@@ -30,6 +30,38 @@
     }
   },
   {
+    "model": "ConnectionType",
+    "data": {
+      "name": "Cloud",
+      "icon": "cloud",
+      "properties": "",
+    }
+  },
+  {
+    "model": "ConnectionType",
+    "data": {
+      "name": "API Integration",
+      "icon": "api",
+      "properties": "",
+    }
+  },
+  {
+    "model": "ConnectionType",
+    "data": {
+      "name": "Traditional",
+      "icon": "traditional",
+      "properties": "",
+    }
+  },
+  {
+    "model": "ConnectionType",
+    "data": {
+      "name": "Camel",
+      "icon": "camel",
+      "properties": "",
+    }
+  },
+  {
     "model": "User",
     "data": {
       "hasAdminRight": true,
