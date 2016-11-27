@@ -2,8 +2,7 @@
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('Connection', {
     name: {
-      type: DataTypes.STRING(50),
-      unique: true
+      type: DataTypes.STRING(50)
     },
     description: {
       type: DataTypes.TEXT

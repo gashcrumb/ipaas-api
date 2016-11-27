@@ -14,7 +14,7 @@ module.exports = function(sequelize, DataTypes) {
         const Permission = models['Permission'];
         const Role = models['Role'];
 
-        Permission.belongsToMany(Role, {through: 'PermissionsRoles'});
+        Permission.belongsToMany(Role, {through: 'RolesPermissions'});
       }
     }
   }, {
