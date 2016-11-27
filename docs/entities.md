@@ -3,56 +3,48 @@ We are in the process of creating a diagram (see below) for the Entity Relations
 
 ## Models/Entities:
 
-
 - Connection
-    - attributes: `name`, `icon`, `configuredProperties`, `position`, `description`
     - belongs to ConnectionType
-    - has many Tag (many-to-many)
+    - has many Tags (many-to-many)
 - ConnectionType
-    - attributes: `name`, `icon`, `properties`
-    - has many Connection
+    - has many Connections
 - Environment
-    - attributes: `name`
-    - belongs to an EnvironmentKind
+    - belongs to an EnvironmentType
     - belongs to an Organization
-    - has many IntegrationRuntime
-- EnvironmentKind
-    - attributes: `name`
-    - has many Environment
+    - has many IntegrationRuntimes
+- EnvironmentType
+    - has many Environments
 - Integration
-    - attributes: `name`, `configuration`
-    - has one IntegrationTemplate (through JOIN IntegrationTemplatesIntegrations))
-    - has many IntegrationRuntime
-    - has many Tag (many-to-many)
+    - has one IntegrationTemplates (through JOIN IntegrationTemplatesIntegrations))
+    - has many IntegrationRuntimes
+    - has many Tags (many-to-many)
     - belongs to a User
 - IntegrationRuntime
-    - attributes: `state`
     - belongs to an Integration
     - belongs to an Environment
 - IntegrationTemplate
-    - attributes: `name`, `step order`
-    - has many Connection
-    - has many Step
-    - has many Tag
+    - has many Connections
+    - has many Steps
+    - has many Tags
 - Organization
-    - attributes: `name`
-    - has many Connection
-    - has many Environment
-    - has many IntegrationTemplate
-    - has many User
+    - has many Connections
+    - has many Environments
+    - has many IntegrationTemplates
+    - has many Users
+- Permission
+- Report (if we want them persisted to a hard disk)
+	- belongs to many Organizations
+    - belongs to many Users
+- Role
 - Step
-    - has `configuredProperties`
     - belongs to a StepType
-    - has many IntegrationTemplate (through JOIN IntegrationTemplateSteps)
+    - has many IntegrationTemplates (through JOIN IntegrationTemplateSteps)
 - StepType
-    - attributes: `name`, `icon`, `properties`
-    - has many Step
+    - has many Steps
 - Tag
-    - attributes: `label`, `value`
-    - has many Connection (many-to-many)
-    - has many Integration (many-to-many)
+    - has many Connections (many-to-many)
+    - has many Integrations (many-to-many)
 - User
-    - attributes: `name`
     - belongs to many Organization
     - has many Integrations
 
