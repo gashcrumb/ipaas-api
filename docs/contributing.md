@@ -15,9 +15,9 @@ Pull requests are always welcome. Please be sure to read through this entire gui
 ## Data Layer
 
 ### SQLite
-If you will be working on this project locally, it is likely you'll want to use SQLite as the data store. We recommend downloading a GUI for SQLite, such as [DB Browser for SQLite](http://sqlitebrowser.org/), to be able to view and edit the data easily.
+If you will be working on this project locally, it is likely you'll want to use SQLite as the data store. We recommend downloading a GUI for SQLite, such as [DB Browser for SQLite](http://sqlitebrowser.org/), to be able to view and edit the data easily. Open the application, press the 'Open Database' button and select the generated `./db.development.sqlite` from the root of the project. You can view the database structure, browse through and edit data. Still, the best way to add dummy data is through JSON files in `/data/fixtures/{environemnt}.json` and enabling `seedDataOnInit` in your `/config/{environment}.json` file.
 
-When running `npm start`, the SQLite database and tables will be created, and the database will then be seeded with dummy data. We provide a set of seed JSON files to populate the database, which you can enable to occur automatically on starting up the server by going to `/config/{environment}.json` and changing `db.options.seedDataOnInit` from `false` to `true`. Note that by default it will automatically use the JSON file located at `/src/data/fixtures/development.json` to populate the database, which you can change in the same configuration file under `db.options.seederStoragePath`.
+When running `npm start`, the SQLite database and tables will be created, and the database will then be seeded with dummy data. We provide a set of seed JSON files to populate the database, which you can enable to occur automatically on starting up the server by going to `/config/{environment}.json` and changing `db.options.seedDataOnInit` from `false` to `true`. Note that by default it will automatically use the JSON file located at `/src/data/fixtures/development.json` to populate the database, which you can change in the same configuration file under `db.options.seederStoragePath`. The sqlite file is generated in the root of the project at `/db.development.sqlite`.
 
 
 ## Guidelines

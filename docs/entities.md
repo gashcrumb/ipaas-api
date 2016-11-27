@@ -2,58 +2,51 @@
 We are in the process of creating a diagram (see below) for the Entity Relationships in iPaaS. Below is a description of we are currently developing. Please feel free to edit this document as necessary.
 
 ## Models/Entities:
-- Organization
-    - has a name
+
+- Connection
+    - belongs to ConnectionType
+    - has many Tags (many-to-many)
+- ConnectionType
     - has many Connections
-    - has many Integration Templates
-    - has many Users
-- User
-    - has a name
-    - belongs to many Organizations
-    - has many Integrations
-- Integration
-    - has a name
-    - has a configuration
-    - has an Integration Template
+- Environment
+    - belongs to an EnvironmentType
+    - belongs to an Organization
     - has many IntegrationRuntimes
-    - has many Tags
+- EnvironmentType
+    - has many Environments
+- Integration
+    - has one IntegrationTemplates (through JOIN IntegrationTemplatesIntegrations))
+    - has many IntegrationRuntimes
+    - has many Tags (many-to-many)
+    - belongs to a User
 - IntegrationRuntime
-    - has a state
-    - has an Integration
-    - has an Environment
-- Integration Template
-    - has a name
-    - has a step order
+    - belongs to an Integration
+    - belongs to an Environment
+- IntegrationTemplate
     - has many Connections
     - has many Steps
     - has many Tags
-- Connection
-    - has a name
-    - has an icon
-    - has configured properties
-    - has a position
-    - has a description
-    - has one ConnectionType
-    - has many Tags
-- Connection Type
-    - has a name
-    - has an icon
-    - has properties
+- Organization
+    - has many Connections
+    - has many Environments
+    - has many IntegrationTemplates
+    - has many Users
+- Permission
+- Report (if we want them persisted to a hard disk)
+	- belongs to many Organizations
+    - belongs to many Users
+- Role
 - Step
-    - has configured properties
-    - refers to a Step Type
-- Step Type
-    - has a name
-    - has an icon
-    - has properties
-- Environment
-    - has a name
-    - has an EnvironmentKind
-    - belongs to many Organizations
-- EnvironmentKind
-    - has a name
+    - belongs to a StepType
+    - has many IntegrationTemplates (through JOIN IntegrationTemplateSteps)
+- StepType
+    - has many Steps
 - Tag
-  - has a name
+    - has many Connections (many-to-many)
+    - has many Integrations (many-to-many)
+- User
+    - belongs to many Organization
+    - has many Integrations
 
 
 <!-- TODO wanna keep this handy for now

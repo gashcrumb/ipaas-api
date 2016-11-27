@@ -2,9 +2,63 @@
   {
     "model": "Connection",
     "data": {
-      "hasAdminRight": true,
-      "fullName": "Luke Skywalker",
-      "username": "lskywalker"
+      "name": "Twitter",
+      "description": "A connection to or from Twitter.",
+      "icon": "twitter",
+      "configuredProperties": "{}",
+      "position": "Anywhere"
+    }
+  },
+  {
+    "model": "Connection",
+    "data": {
+      "name": "Twitter",
+      "description": "A connection to Twitter.",
+      "icon": "twitter",
+      "configuredProperties": "{}",
+      "position": "To"
+    }
+  },
+  {
+    "model": "Connection",
+    "data": {
+      "name": "Twitter",
+      "description": "A connection from Twitter.",
+      "icon": "twitter",
+      "configuredProperties": "{}",
+      "position": "From"
+    }
+  },
+  {
+    "model": "ConnectionType",
+    "data": {
+      "name": "Cloud",
+      "icon": "cloud",
+      "properties": "",
+    }
+  },
+  {
+    "model": "ConnectionType",
+    "data": {
+      "name": "API Integration",
+      "icon": "api",
+      "properties": "",
+    }
+  },
+  {
+    "model": "ConnectionType",
+    "data": {
+      "name": "Traditional",
+      "icon": "traditional",
+      "properties": "",
+    }
+  },
+  {
+    "model": "ConnectionType",
+    "data": {
+      "name": "Camel",
+      "icon": "camel",
+      "properties": "",
     }
   },
   {
@@ -34,7 +88,6 @@
   {
     "model": "User",
     "data": {
-      "hasAdminRight": false,
       "fullName": "Owen Lars",
       "username": "olars"
     }
@@ -42,7 +95,6 @@
   {
     "model": "User",
     "data": {
-      "hasAdminRight": false,
       "fullName": "Beru Whitesun lars",
       "username": "blars"
     }
@@ -50,7 +102,6 @@
   {
     "model": "User",
     "data": {
-      "hasAdminRight": false,
       "fullName": "R2-D2",
       "username": "r2d2"
     }

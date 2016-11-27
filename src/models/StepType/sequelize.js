@@ -13,7 +13,12 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     classMethods: {
-      associate: function(models) {}
+      associate: function(models) {
+        const Step = models['Step'];
+        const StepType = models['StepType'];
+
+        StepType.hasMany(Step);
+      }
     }
   }, {
     // Enable timestamps

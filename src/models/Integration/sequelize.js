@@ -7,6 +7,13 @@ module.exports = function(sequelize, DataTypes) {
     },
     configuration: {
       type: DataTypes.TEXT
+    },
+    description: {
+      type: DataTypes.TEXT
+    },
+    verified: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
     }
   }, {
     classMethods: {
@@ -17,16 +24,12 @@ module.exports = function(sequelize, DataTypes) {
         const User = models['User'];
         const Tag = models['Tag'];
 
+        Integration.belongsTo(IntegrationTemplate);
+
+        Integration.belongsToMany(Tag, { through: 'TagsIntegrations' });
         Integration.belongsToMany(User, { through: 'UsersIntegrations' });
-        User.belongsToMany(Integration, { through: 'UsersIntegrations' });
 
         Integration.hasMany(IntegrationRuntime);
-
-        Integration.belongsTo(IntegrationTemplate);
-        IntegrationTemplate.hasMany(Integration);
-
-        Tag.belongsToMany(Integration, { through: 'TagsIntegrations' });
-        Integration.belongsToMany(Tag, { through: 'TagsIntegrations' });
       }
     }
   }, {

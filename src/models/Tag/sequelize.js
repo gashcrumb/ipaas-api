@@ -7,7 +7,16 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     classMethods: {
-      associate: function(models) { }
+      associate: function(models) {
+        const Connection = models['Connection'];
+        const Integration = models['Integration'];
+        const IntegrationTemplate = models['IntegrationTemplate'];
+        const Tag = models['Tag'];
+
+        Tag.belongsToMany(Connection, { through: 'TagsConnections' });
+        Tag.belongsToMany(Integration, { through: 'TagsIntegrations' });
+        Tag.belongsToMany(IntegrationTemplate, { through: 'TagsIntegrationTemplates' });
+      }
     }
   }, {
 

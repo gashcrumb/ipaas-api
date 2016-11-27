@@ -14,9 +14,7 @@ module.exports = function(sequelize, DataTypes) {
         const Step = models['Step'];
         const StepType = models['StepType'];
 
-        Step.hasOne(StepType);
-        StepType.belongsTo(Step);
-      
+        Step.belongsTo(StepType);
       }
     }
   }, {

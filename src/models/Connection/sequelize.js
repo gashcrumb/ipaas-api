@@ -2,8 +2,7 @@
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('Connection', {
     name: {
-      type: DataTypes.STRING(50),
-      unique: true
+      type: DataTypes.STRING(50)
     },
     description: {
       type: DataTypes.TEXT
@@ -17,22 +16,24 @@ module.exports = function(sequelize, DataTypes) {
     position: {
       type: DataTypes.ENUM,
       values: ['Anywhere', 'From', 'To']
+    },
+    verified: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
     }
   }, {
     classMethods: {
       associate: function(models) {
         const Connection = models['Connection'];
         const ConnectionType = models['ConnectionType'];
+        const IntegrationTemplate = models['IntegrationTemplate'];
         const Organization = models['Organization'];
         const Tag = models['Tag'];
 
         Connection.belongsTo(Organization);
-        Organization.hasMany(Connection);
-
         Connection.belongsTo(ConnectionType);
-        ConnectionType.hasMany(Connection);
 
-        Tag.belongsToMany(Connection, { through: 'TagsConnections' });
+        Connection.belongsToMany(IntegrationTemplate, { through: 'IntegrationTemplatesConnections' });
         Connection.belongsToMany(Tag, { through: 'TagsConnections' });
       }
     }

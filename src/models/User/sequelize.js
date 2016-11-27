@@ -27,11 +27,16 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        const User = models['User'];
+        const Integration = models['Integration'];
         const Organization = models['Organization'];
+        const Report = models['Report'];
+        const Role = models['Role'];
+        const User = models['User'];
 
-        Organization.belongsToMany(User, { through: 'OrganizationUsers' });
-        User.belongsToMany(Organization, { through: 'OrganizationUsers' });
+        User.belongsToMany(Organization, {through: 'UsersOrganizations'});
+        User.belongsToMany(Report, {through: 'ReportsUsers'});
+        User.belongsToMany(Role, {through: 'UsersRoles'});
+        User.belongsToMany(Integration, { through: 'UsersIntegrations' });
       }
     }
   }, {

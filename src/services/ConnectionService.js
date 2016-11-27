@@ -38,12 +38,4 @@ function inheritPrototype(ConnectionService, ConnectionRepository) {
 
 inheritPrototype(ConnectionService, ConnectionRepository);
 
-// Find One Instance with its Associations
-ConnectionService.prototype.findWithAssociations = function findWithAssociations(superDone) {};
-
-ConnectionService.prototype.fetchAllWithAssociations = function fetchAssociations(done) {};
-
-// Set Associations
-ConnectionService.prototype.setAssociations = function setAssociations(original, superDone) {};
-
 module.exports = ConnectionService;

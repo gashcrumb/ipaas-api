@@ -83,6 +83,7 @@ Some ideas I came up with for the API and some issues that were presented in the
 - Working with model associations (and their associations):
     - Associations should be defined in the service layer, because that is where you can reference other service layers and still have decoupling. The `BaseRepository` should be as simple as possible.
     - In each service the following methods are provided by default: `destroyAssociations`, `findAllWithAssociations`, `findAllWithAssociationsForEach` (may not be needing this), `findWithAssociations`, `setAssociations`, `unsetAssociations`. 
+<!--
     - Maybe I can add a reference to `setAssociations` / `unsetAssociations` if the prototype exists.
     - Challenges: setting associations, unsetting associations, fetching associations that require a JOIN
     - Having separate routes for each association (ex: `/users/:id/notes`) would make passing parameters much easier, but requires a lot of work and is not very maintainable. The only way this would work is if I were to use route templates, such as the following: `/users/:id/:resource/:resourceId` (mentioned previously). However, calling that resource’s service would be difficult. It would be easier to work with the original model’s service, and would also make the code more maintainable. This could call the ‘setAssociations’ method for the original model from its service. Then, maybe the association models could be passed as a parameter.
@@ -91,5 +92,6 @@ Some ideas I came up with for the API and some issues that were presented in the
 
 ## Miscellaneous Notes
 - For Express + Everyauth: `params.createdAt = moment().format('dddd, MMMM Do YYYY, h:mm:ss a');`
+-->
 
 
