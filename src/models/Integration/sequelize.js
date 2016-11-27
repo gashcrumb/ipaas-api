@@ -7,6 +7,13 @@ module.exports = function(sequelize, DataTypes) {
     },
     configuration: {
       type: DataTypes.TEXT
+    },
+    description: {
+      type: DataTypes.TEXT
+    },
+    verified: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
     }
   }, {
     classMethods: {

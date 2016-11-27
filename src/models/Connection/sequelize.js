@@ -16,6 +16,10 @@ module.exports = function(sequelize, DataTypes) {
     position: {
       type: DataTypes.ENUM,
       values: ['Anywhere', 'From', 'To']
+    },
+    verified: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
     }
   }, {
     classMethods: {
