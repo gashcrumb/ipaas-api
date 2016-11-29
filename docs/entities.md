@@ -7,14 +7,17 @@ We are in the process of creating a diagram (see below) for the Entity Relations
     - belongs to Component
     - has many Tags (many-to-many)
     - belongs to an Organization
+
 - Component
     - has many Connections
-- Environment
-    - belongs to an EnvironmentType
-    - has many Organizations
-    - has many IntegrationRuntimes
-- EnvironmentType
-    - has many Environments
+
+- Step
+  - belongs to an IntegrationPattern
+  - has many IntegrationTemplates (through JOIN IntegrationTemplateSteps)
+
+- IntegrationPatterns
+  - has many Steps
+
 - Integration
     - has one IntegrationTemplates 
     - has many IntegrationRuntimes
@@ -22,47 +25,65 @@ We are in the process of creating a diagram (see below) for the Entity Relations
     - belongs to a User
     - has many Connections through IntegrationConnectionStep
     - has many Steps through IntegrationConnectionStep
+
 - IntegrationRuntime
     - belongs to an Integration
     - belongs to an Environment
+
 - IntegrationTemplate
     - has many Connections through IntegrationTemplateConnectionStep
     - has many Steps through IntegrationTemplateConnectionStep
     - has many Tags
     - belongs to an Organization
+
 - IntegrationTemplateConnectionStep
   - has a previous step ID
   - has a next step ID
   - has a type enum (Connection or Step)
+
 - IntegrationConnectionStep
   - has a previous step ID
   - has a next step ID
   - has a type enum (Connection or Step)
+
 - Organization
     - has many Connections
     - has many Environments
     - has many IntegrationTemplates
     - has many Users
+
+- Environment
+    - belongs to an EnvironmentType
+    - has many Organizations
+    - has many IntegrationRuntimes
+
+- EnvironmentType
+    - has many Environments
+
 - Permission
   - has many Roles (many-to-many)
+
 - Report (if we want them persisted to a hard disk)
 	- belongs to many Organizations
   - belongs to many Users
+
 - Role
   - has many Users (many-to-many)
-- Step
-  - belongs to an IntegrationPattern
-  - has many IntegrationTemplates (through JOIN IntegrationTemplateSteps)
-- IntegrationPatterns
-  - has many Steps
+
 - Tag
   - has many Connections (many-to-many)
   - has many Integrations (many-to-many)
   - has many IntegrationTemplates (many-to-many)
+
 - User
   - belongs to many Organization
-  - has many Integrations
   - has many Roles (many-to-many)
+  - has many Projects
+
+- Project
+  - has many Integrations
+  - has many Connections
+  - has many Users
 
 
 <!-- TODO wanna keep this handy for now

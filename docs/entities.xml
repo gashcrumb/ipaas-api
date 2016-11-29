@@ -96,7 +96,7 @@
     </key>
     <comment>Components that are available to create a Connection</comment>
   </table>
-  <table x="655" y="490" name="Integrations">
+  <table x="775" y="495" name="Integrations">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -155,7 +155,7 @@
     </key>
     <comment>A Step type is an available processor that could be configured for use in an Integration Template</comment>
   </table>
-  <table x="115" y="635" name="User">
+  <table x="60" y="680" name="User">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -165,22 +165,6 @@
     <row name="kind" null="0" autoincrement="0">
       <datatype>SET</datatype>
       <default>NULL</default><comment>The kind of user, i.e. Citizen, Expert, Developer</comment>
-    </row>
-    <key type="PRIMARY" name="">
-      <part>id</part>
-    </key>
-  </table>
-  <table x="315" y="670" name="UsersIntegrations">
-    <row name="id" null="1" autoincrement="1">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default></row>
-    <row name="id_User" null="1" autoincrement="0">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default><relation table="User" row="id" />
-    </row>
-    <row name="id_Integrations" null="1" autoincrement="0">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default><relation table="Integrations" row="id" />
     </row>
     <key type="PRIMARY" name="">
       <part>id</part>
@@ -216,7 +200,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="150" y="475" name="OrganizationsUsers">
+  <table x="25" y="520" name="OrganizationsUsers">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -232,7 +216,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="1515" y="40" name="Tags">
+  <table x="175" y="135" name="Tags">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -244,7 +228,7 @@
     </key>
     <comment>Tags that have been created by users</comment>
   </table>
-  <table x="1230" y="140" name="TagsConnections">
+  <table x="875" y="10" name="TagsConnections">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -261,7 +245,7 @@
     </key>
     <comment>Relates Tags to Connections</comment>
   </table>
-  <table x="880" y="90" name="TagsIntegrationTemplates">
+  <table x="635" y="105" name="TagsIntegrationTemplates">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -278,7 +262,7 @@
     </key>
     <comment>Relates tags to Integration Templates</comment>
   </table>
-  <table x="685" y="15" name="TagsIntegrations">
+  <table x="385" y="210" name="TagsIntegrations">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -544,6 +528,65 @@
     <row name="id_Permissions" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
       <default>NULL</default><relation table="Permissions" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="320" y="510" name="Projects">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="name" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="720" y="210" name="ProjectsConnections">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="id_Projects" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Projects" row="id" />
+    </row>
+    <row name="id_Connections" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Connections" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="535" y="525" name="ProjectsIntegrations">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="id_Projects" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Projects" row="id" />
+    </row>
+    <row name="id_Integrations" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Integrations" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="245" y="655" name="UsersProjects">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="id_User" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="User" row="id" />
+    </row>
+    <row name="id_Projects" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Projects" row="id" />
     </row>
     <key type="PRIMARY" name="">
       <part>id</part>
