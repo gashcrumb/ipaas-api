@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
-<!-- Active URL: http://ondras.zarovi.cz/sql/demo/ -->
+<!-- Active URL: http://ondras.zarovi.cz/sql/demo/?keyword=default -->
 <sql>
-<datatypes db="sqlite">
+  <datatypes db="sqlite">
     <group color="rgb(238,238,170)" label="Numeric">
       <type label="Integer" quote="" sql="INTEGER" length="0"/>
       <type label="TINYINT" quote="" sql="TINYINT" length="0"/>
@@ -37,528 +37,529 @@
       <type label="SET" quote="" sql="SET" length="1"/>
       <type label="Bit" quote="" sql="bit" length="0"/>
     </group>
-    </datatypes><table x="1573" y="192" name="Connections">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="name" null="0" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>'NULL'</default></row>
-<row name="id_Organizations" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Organizations" row="id" />
-</row>
-<row name="id_Components" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Components" row="id" />
-</row>
-<row name="configured_properties" null="1" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
-<default>NULL</default><comment>Properties that have been enabled for this connection with their default values as configured by the Expert User</comment>
-</row>
-<row name="icon" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="description" null="1" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
-<row name="position" null="1" autoincrement="0">
-<datatype>SET</datatype>
-<default>NULL</default><comment>If the connector can be from, to, or either</comment>
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-<key type="INDEX" name="">
-</key>
-<comment>Connections that have been created and set up by an expert user</comment>
-</table>
-<table x="1791" y="380" name="Components">
-<row name="id" null="0" autoincrement="1">
-<datatype>INTEGER</datatype>
-</row>
-<row name="name" null="0" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>'NULL'</default></row>
-<row name="icon" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="properties" null="0" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
-<default>'NULL'</default><comment>All available settings for the underlying component, in json since it could be any number of fields</comment>
-</row>
-<row name="id_ComponentGroups" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="ComponentGroups" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-<comment>Components that are available to create a Connection</comment>
-</table>
-<table x="653" y="491" name="Integrations">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="name" null="0" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>'NULL'</default></row>
-<row name="id_IntegrationTemplate" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="IntegrationTemplates" row="id" />
-</row>
-<row name="configuration" null="1" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
-<default>NULL</default><comment>Instance configuration for the involved Connection and Steps</comment>
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-<comment>An instance of an Integration Template that has been (or is being) configured by a citizen user.</comment>
-</table>
-<table x="1544" y="581" name="Steps">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_IntegrationPatterns" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="IntegrationPatterns" row="id" />
-</row>
-<row name="configured_properties" null="1" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
-<default>NULL</default><comment>Any possible configurable properties for the step as set up by an Expert or Developer User</comment>
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-<comment>A Step is a configured Integration Pattern that is part of an Integration Template or Integration</comment>
-</table>
-<table x="1773" y="642" name="IntegrationPatterns">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="name" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="icon" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="properties" null="0" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
-<default>'NULL'</default></row>
-<row name="id_IntegrationPatternGroups" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="IntegrationPatternGroups" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-<comment>A Step type is an available processor that could be configured for use in an Integration Template</comment>
-</table>
-<table x="145" y="630" name="User">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="name" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="kind" null="0" autoincrement="0">
-<datatype>SET</datatype>
-<default>NULL</default><comment>The kind of user, i.e. Citizen, Expert, Developer</comment>
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="335" y="671" name="UsersIntegrations">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_User" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="User" row="id" />
-</row>
-<row name="id_Integrations" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Integrations" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="886" y="368" name="IntegrationTemplates">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="name" null="0" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>'NULL'</default></row>
-<row name="id_Organizations" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Organizations" row="id" />
-</row>
-<row name="configuration" null="1" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-<comment>The template catalog, each row is an Integration Template that has been created by a user.  An Integration Template needs to track the order of Connections and Steps.</comment>
-</table>
-<table x="152" y="376" name="Organizations">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="name" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="229" y="494" name="OrganizationsUsers">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_Organizations" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Organizations" row="id" />
-</row>
-<row name="id_User" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="User" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="1516" y="38" name="Tags">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="name" null="0" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>'NULL'</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-<comment>Tags that have been created by users</comment>
-</table>
-<table x="1216" y="124" name="TagsConnections">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_Tags" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Tags" row="id" />
-</row>
-<row name="id_Connections" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Connections" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-<comment>Relates Tags to Connections</comment>
-</table>
-<table x="882" y="91" name="TagsIntegrationTemplates">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_Tags" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Tags" row="id" />
-</row>
-<row name="id_IntegrationTemplates" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="IntegrationTemplates" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-<comment>Relates tags to Integration Templates</comment>
-</table>
-<table x="692" y="15" name="TagsIntegrations">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_Tags" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Tags" row="id" />
-</row>
-<row name="id_Integrations" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Integrations" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-<comment>Relates Tags to Integrations</comment>
-</table>
-<table x="1339" y="927" name="Environments">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="name" null="0" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>'NULL'</default></row>
-<row name="id_EnvironmentTypes" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="EnvironmentTypes" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-<comment>An environment has Integrations running in it</comment>
-</table>
-<table x="860" y="931" name="EnvironmentsOrganizations">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_Environments" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Environments" row="id" />
-</row>
-<row name="id_Organizations" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Organizations" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-<comment>An environment can be associated with multiple organizations, an Organization can have multiple environments</comment>
-</table>
-<table x="1658" y="895" name="EnvironmentTypes">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="name" null="0" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>'NULL'</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-<comment>User defined types of Environments, like 'production', 'testing', etc.</comment>
-</table>
-<table x="1168" y="315" name="IntegrationTemplatesConnections">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_Connections" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Connections" row="id" />
-</row>
-<row name="id_IntegrationTemplates" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="IntegrationTemplates" row="id" />
-</row>
-<row name="step_position" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="1187" y="445" name="IntegrationTemplatesSteps">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_Steps" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Steps" row="id" />
-</row>
-<row name="id_IntegrationTemplates" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="IntegrationTemplates" row="id" />
-</row>
-<row name="step_position" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="851" y="774" name="IntegrationRuntime">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="state" null="1" autoincrement="0">
-<datatype>SET</datatype>
-<default>NULL</default></row>
-<row name="id_Integrations" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Integrations" row="id" />
-</row>
-<row name="id_Environments" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Environments" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="1546" y="453" name="ComponentGroups">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="name" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="1225" y="737" name="IntegrationsSteps">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_Steps" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Steps" row="id" />
-</row>
-<row name="id_Integrations" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Integrations" row="id" />
-</row>
-<row name="step_position" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="1190" y="594" name="IntegrationsConnections">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_Integrations" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Integrations" row="id" />
-</row>
-<row name="id_Connections" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Connections" row="id" />
-</row>
-<row name="step_position" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="1484" y="786" name="IntegrationPatternGroups">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="name" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="1281" y="1109" name="ConfigGroup">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="key" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="value" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="id_ConfigType" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="ConfigType" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="1053" y="1134" name="Config">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="key" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="value" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="id_ConfigGroup" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="ConfigGroup" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="1534" y="1166" name="ConfigType">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="name" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="379" y="839" name="Roles">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="name" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="772" y="1082" name="Permissions">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="name" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
-<default>NULL</default></row>
-<row name="description" null="1" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="159" y="826" name="UsersRoles">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_User" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="User" row="id" />
-</row>
-<row name="id_Roles" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Roles" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
-<table x="530" y="966" name="RolesPermissions">
-<row name="id" null="1" autoincrement="1">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="id_Roles" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Roles" row="id" />
-</row>
-<row name="id_Permissions" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Permissions" row="id" />
-</row>
-<key type="PRIMARY" name="">
-<part>id</part>
-</key>
-</table>
+    </datatypes><table x="1575" y="190" name="Connections">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="name" null="0" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>'NULL'</default></row>
+    <row name="id_Organizations" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Organizations" row="id" />
+    </row>
+    <row name="id_Components" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Components" row="id" />
+    </row>
+    <row name="configured_properties" null="1" autoincrement="0">
+      <datatype>MEDIUMTEXT</datatype>
+      <default>NULL</default><comment>Properties that have been enabled for this connection with their default values as configured by the Expert User</comment>
+    </row>
+    <row name="icon" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
+    <row name="description" null="1" autoincrement="0">
+      <datatype>MEDIUMTEXT</datatype>
+      <default>NULL</default></row>
+    <row name="position" null="1" autoincrement="0">
+      <datatype>SET</datatype>
+      <default>NULL</default><comment>If the connector can be from, to, or either</comment>
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+    <key type="INDEX" name="">
+    </key>
+    <comment>Connections that have been created and set up by an expert user</comment>
+  </table>
+  <table x="1790" y="380" name="Components">
+    <row name="id" null="0" autoincrement="1">
+      <datatype>INTEGER</datatype>
+    </row>
+    <row name="name" null="0" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>'NULL'</default></row>
+    <row name="icon" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
+    <row name="properties" null="0" autoincrement="0">
+      <datatype>MEDIUMTEXT</datatype>
+      <default>'NULL'</default><comment>All available settings for the underlying component, in json since it could be any number of fields</comment>
+    </row>
+    <row name="id_ComponentGroups" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="ComponentGroups" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+    <comment>Components that are available to create a Connection</comment>
+  </table>
+  <table x="655" y="490" name="Integrations">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="name" null="0" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>'NULL'</default></row>
+    <row name="id_IntegrationTemplate" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="IntegrationTemplates" row="id" />
+    </row>
+    <row name="configuration" null="1" autoincrement="0">
+      <datatype>MEDIUMTEXT</datatype>
+      <default>NULL</default><comment>Instance configuration for the involved Connection and Steps</comment>
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+    <comment>An instance of an Integration Template that has been (or is being) configured by a citizen user.</comment>
+  </table>
+  <table x="1545" y="580" name="Steps">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="id_IntegrationPatterns" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="IntegrationPatterns" row="id" />
+    </row>
+    <row name="configured_properties" null="1" autoincrement="0">
+      <datatype>MEDIUMTEXT</datatype>
+      <default>NULL</default><comment>Any possible configurable properties for the step as set up by an Expert or Developer User</comment>
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+    <comment>A Step is a configured Integration Pattern that is part of an Integration Template or Integration</comment>
+  </table>
+  <table x="1775" y="640" name="IntegrationPatterns">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="name" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
+    <row name="icon" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
+    <row name="properties" null="0" autoincrement="0">
+      <datatype>MEDIUMTEXT</datatype>
+      <default>'NULL'</default></row>
+    <row name="id_IntegrationPatternGroups" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="IntegrationPatternGroups" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+    <comment>A Step type is an available processor that could be configured for use in an Integration Template</comment>
+  </table>
+  <table x="145" y="630" name="User">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="name" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
+    <row name="kind" null="0" autoincrement="0">
+      <datatype>SET</datatype>
+      <default>NULL</default><comment>The kind of user, i.e. Citizen, Expert, Developer</comment>
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="335" y="670" name="UsersIntegrations">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="id_User" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="User" row="id" />
+    </row>
+    <row name="id_Integrations" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Integrations" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="885" y="370" name="IntegrationTemplates">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="name" null="0" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>'NULL'</default></row>
+    <row name="id_Organizations" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Organizations" row="id" />
+    </row>
+    <row name="configuration" null="1" autoincrement="0">
+      <datatype>MEDIUMTEXT</datatype>
+      <default>NULL</default></row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+    <comment>The template catalog, each row is an Integration Template that has been created by a user.  An Integration Template needs to track the order of Connections and Steps.</comment>
+  </table>
+  <table x="150" y="375" name="Organizations">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="name" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="230" y="495" name="OrganizationsUsers">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="id_Organizations" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Organizations" row="id" />
+    </row>
+    <row name="id_User" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="User" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="1515" y="40" name="Tags">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="name" null="0" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>'NULL'</default></row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+    <comment>Tags that have been created by users</comment>
+  </table>
+  <table x="1215" y="125" name="TagsConnections">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="id_Tags" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Tags" row="id" />
+    </row>
+    <row name="id_Connections" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Connections" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+    <comment>Relates Tags to Connections</comment>
+  </table>
+  <table x="880" y="90" name="TagsIntegrationTemplates">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="id_Tags" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Tags" row="id" />
+    </row>
+    <row name="id_IntegrationTemplates" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="IntegrationTemplates" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+    <comment>Relates tags to Integration Templates</comment>
+  </table>
+  <table x="690" y="15" name="TagsIntegrations">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="id_Tags" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Tags" row="id" />
+    </row>
+    <row name="id_Integrations" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Integrations" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+    <comment>Relates Tags to Integrations</comment>
+  </table>
+  <table x="1340" y="925" name="Environments">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="name" null="0" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>'NULL'</default></row>
+    <row name="id_EnvironmentTypes" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="EnvironmentTypes" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+    <comment>An environment has Integrations running in it</comment>
+  </table>
+  <table x="860" y="930" name="EnvironmentsOrganizations">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="id_Environments" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Environments" row="id" />
+    </row>
+    <row name="id_Organizations" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Organizations" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+    <comment>An environment can be associated with multiple organizations, an Organization can have multiple environments</comment>
+  </table>
+  <table x="1660" y="895" name="EnvironmentTypes">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="name" null="0" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>'NULL'</default></row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+    <comment>User defined types of Environments, like 'production', 'testing', etc.</comment>
+  </table>
+  <table x="1170" y="315" name="IntegrationTemplatesConnections">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="id_Connections" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Connections" row="id" />
+    </row>
+    <row name="id_IntegrationTemplates" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="IntegrationTemplates" row="id" />
+    </row>
+    <row name="step_position" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="1185" y="445" name="IntegrationTemplatesSteps">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="id_Steps" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Steps" row="id" />
+    </row>
+    <row name="id_IntegrationTemplates" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="IntegrationTemplates" row="id" />
+    </row>
+    <row name="step_position" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="850" y="775" name="IntegrationRuntime">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="state" null="1" autoincrement="0">
+      <datatype>SET</datatype>
+      <default>NULL</default></row>
+    <row name="id_Integrations" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Integrations" row="id" />
+    </row>
+    <row name="id_Environments" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Environments" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="1545" y="455" name="ComponentGroups">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="name" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="1225" y="735" name="IntegrationsSteps">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="id_Steps" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Steps" row="id" />
+    </row>
+    <row name="id_Integrations" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Integrations" row="id" />
+    </row>
+    <row name="step_position" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="1190" y="595" name="IntegrationsConnections">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="id_Integrations" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Integrations" row="id" />
+    </row>
+    <row name="id_Connections" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Connections" row="id" />
+    </row>
+    <row name="step_position" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="1485" y="785" name="IntegrationPatternGroups">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="name" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="1280" y="1110" name="ConfigGroup">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="key" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
+    <row name="value" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
+    <row name="id_ConfigType" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="ConfigType" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="1055" y="1135" name="Config">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="key" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
+    <row name="value" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
+    <row name="id_ConfigGroup" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="ConfigGroup" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="1535" y="1165" name="ConfigType">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="name" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="380" y="840" name="Roles">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="name" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="770" y="1080" name="Permissions">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="name" null="1" autoincrement="0">
+      <datatype>VARCHAR</datatype>
+      <default>NULL</default></row>
+    <row name="description" null="1" autoincrement="0">
+      <datatype>MEDIUMTEXT</datatype>
+      <default>NULL</default></row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="160" y="825" name="UsersRoles">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="id_User" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="User" row="id" />
+    </row>
+    <row name="id_Roles" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Roles" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
+  <table x="530" y="965" name="RolesPermissions">
+    <row name="id" null="1" autoincrement="1">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default></row>
+    <row name="id_Roles" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Roles" row="id" />
+    </row>
+    <row name="id_Permissions" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Permissions" row="id" />
+    </row>
+    <key type="PRIMARY" name="">
+      <part>id</part>
+    </key>
+  </table>
 </sql>
+
