@@ -22,7 +22,7 @@ We are in the process of creating a diagram (see below) for the Entity Relations
     - has one IntegrationTemplates 
     - has many IntegrationRuntimes
     - has many Tags (many-to-many)
-    - belongs to a User
+    - belongs to a Project
     - has many Connections through IntegrationConnectionStep
     - has many Steps through IntegrationConnectionStep
 

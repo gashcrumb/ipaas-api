@@ -52,7 +52,7 @@
       <datatype>INTEGER</datatype>
       <default>NULL</default><relation table="Components" row="id" />
     </row>
-    <row name="configured_properties" null="1" autoincrement="0">
+    <row name="configuredProperties" null="1" autoincrement="0">
       <datatype>MEDIUMTEXT</datatype>
       <default>NULL</default><comment>Properties that have been enabled for this connection with their default values as configured by the Expert User</comment>
     </row>
@@ -124,7 +124,7 @@
       <datatype>INTEGER</datatype>
       <default>NULL</default><relation table="IntegrationPatterns" row="id" />
     </row>
-    <row name="configured_properties" null="1" autoincrement="0">
+    <row name="configuredProperties" null="1" autoincrement="0">
       <datatype>MEDIUMTEXT</datatype>
       <default>NULL</default><comment>Any possible configurable properties for the step as set up by an Expert or Developer User</comment>
     </row>
@@ -340,11 +340,11 @@
       <datatype>INTEGER</datatype>
       <default>NULL</default><relation table="Steps" row="id" />
     </row>
-    <row name="previous_step_id" null="1" autoincrement="0">
+    <row name="previousStepId" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
       <default>NULL</default><comment>The id of the step previous to this one or null if it's the first step</comment>
     </row>
-    <row name="next_step_id" null="1" autoincrement="0">
+    <row name="nextStepId" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
       <default>NULL</default><comment>the id of the step after this one or null if this is the last step</comment>
     </row>
@@ -402,11 +402,11 @@
       <datatype>INTEGER</datatype>
       <default>NULL</default><relation table="Steps" row="id" />
     </row>
-    <row name="previous_step_id" null="1" autoincrement="0">
+    <row name="previousStepId" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
       <default>NULL</default><comment>the id of the step previous to this one or null if it's the first step</comment>
     </row>
-    <row name="next_step_id" null="1" autoincrement="0">
+    <row name="nextStepId" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
       <default>NULL</default><comment>the id of the step after this one or null if it's the last step</comment>
     </row>
@@ -560,7 +560,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="535" y="525" name="ProjectsIntegrations">
+  <table x="515" y="530" name="ProjectsIntegrations">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
