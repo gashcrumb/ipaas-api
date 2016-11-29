@@ -16,20 +16,28 @@ We are in the process of creating a diagram (see below) for the Entity Relations
 - EnvironmentType
     - has many Environments
 - Integration
-    - has one IntegrationTemplates (through JOIN IntegrationTemplatesIntegrations))
+    - has one IntegrationTemplates 
     - has many IntegrationRuntimes
     - has many Tags (many-to-many)
     - belongs to a User
-    - has many Connections
-    - has many Steps
+    - has many Connections through IntegrationConnectionStep
+    - has many Steps through IntegrationConnectionStep
 - IntegrationRuntime
     - belongs to an Integration
     - belongs to an Environment
 - IntegrationTemplate
-    - has many Connections
-    - has many Steps
+    - has many Connections through IntegrationTemplateConnectionStep
+    - has many Steps through IntegrationTemplateConnectionStep
     - has many Tags
     - belongs to an Organization
+- IntegrationTemplateConnectionStep
+  - has a previous step ID
+  - has a next step ID
+  - has a type enum (Connection or Step)
+- IntegrationConnectionStep
+  - has a previous step ID
+  - has a next step ID
+  - has a type enum (Connection or Step)
 - Organization
     - has many Connections
     - has many Environments

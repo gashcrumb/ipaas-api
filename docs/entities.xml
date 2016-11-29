@@ -37,7 +37,7 @@
       <type label="SET" quote="" sql="SET" length="1"/>
       <type label="Bit" quote="" sql="bit" length="0"/>
     </group>
-    </datatypes><table x="1575" y="190" name="Connections">
+    </datatypes><table x="1450" y="170" name="Connections">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -73,7 +73,7 @@
     </key>
     <comment>Connections that have been created and set up by an expert user</comment>
   </table>
-  <table x="1790" y="380" name="Components">
+  <table x="1715" y="340" name="Components">
     <row name="id" null="0" autoincrement="1">
       <datatype>INTEGER</datatype>
     </row>
@@ -116,7 +116,7 @@
     </key>
     <comment>An instance of an Integration Template that has been (or is being) configured by a citizen user.</comment>
   </table>
-  <table x="1545" y="580" name="Steps">
+  <table x="1435" y="535" name="Steps">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -133,7 +133,7 @@
     </key>
     <comment>A Step is a configured Integration Pattern that is part of an Integration Template or Integration</comment>
   </table>
-  <table x="1775" y="640" name="IntegrationPatterns">
+  <table x="1680" y="625" name="IntegrationPatterns">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -155,7 +155,7 @@
     </key>
     <comment>A Step type is an available processor that could be configured for use in an Integration Template</comment>
   </table>
-  <table x="145" y="630" name="User">
+  <table x="115" y="635" name="User">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -170,7 +170,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="335" y="670" name="UsersIntegrations">
+  <table x="315" y="670" name="UsersIntegrations">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -186,7 +186,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="885" y="370" name="IntegrationTemplates">
+  <table x="820" y="345" name="IntegrationTemplates">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -205,7 +205,7 @@
     </key>
     <comment>The template catalog, each row is an Integration Template that has been created by a user.  An Integration Template needs to track the order of Connections and Steps.</comment>
   </table>
-  <table x="150" y="375" name="Organizations">
+  <table x="135" y="370" name="Organizations">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -216,7 +216,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="230" y="495" name="OrganizationsUsers">
+  <table x="150" y="475" name="OrganizationsUsers">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -244,7 +244,7 @@
     </key>
     <comment>Tags that have been created by users</comment>
   </table>
-  <table x="1215" y="125" name="TagsConnections">
+  <table x="1230" y="140" name="TagsConnections">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -278,7 +278,7 @@
     </key>
     <comment>Relates tags to Integration Templates</comment>
   </table>
-  <table x="690" y="15" name="TagsIntegrations">
+  <table x="685" y="15" name="TagsIntegrations">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -295,7 +295,7 @@
     </key>
     <comment>Relates Tags to Integrations</comment>
   </table>
-  <table x="1340" y="925" name="Environments">
+  <table x="1120" y="785" name="Environments">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -311,7 +311,7 @@
     </key>
     <comment>An environment has Integrations running in it</comment>
   </table>
-  <table x="860" y="930" name="EnvironmentsOrganizations">
+  <table x="760" y="835" name="EnvironmentsOrganizations">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -328,7 +328,7 @@
     </key>
     <comment>An environment can be associated with multiple organizations, an Organization can have multiple environments</comment>
   </table>
-  <table x="1660" y="895" name="EnvironmentTypes">
+  <table x="1395" y="900" name="EnvironmentTypes">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -340,45 +340,39 @@
     </key>
     <comment>User defined types of Environments, like 'production', 'testing', etc.</comment>
   </table>
-  <table x="1170" y="315" name="IntegrationTemplatesConnections">
+  <table x="1065" y="290" name="IntegrationTemplatesConnectionsSteps">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
+    <row name="id_IntegrationTemplates" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="IntegrationTemplates" row="id" />
+    </row>
     <row name="id_Connections" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
       <default>NULL</default><relation table="Connections" row="id" />
     </row>
-    <row name="id_IntegrationTemplates" null="1" autoincrement="0">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default><relation table="IntegrationTemplates" row="id" />
-    </row>
-    <row name="step_position" null="1" autoincrement="0">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default></row>
-    <key type="PRIMARY" name="">
-      <part>id</part>
-    </key>
-  </table>
-  <table x="1185" y="445" name="IntegrationTemplatesSteps">
-    <row name="id" null="1" autoincrement="1">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default></row>
     <row name="id_Steps" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
       <default>NULL</default><relation table="Steps" row="id" />
     </row>
-    <row name="id_IntegrationTemplates" null="1" autoincrement="0">
+    <row name="previous_step_id" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
-      <default>NULL</default><relation table="IntegrationTemplates" row="id" />
+      <default>NULL</default><comment>The id of the step previous to this one or null if it's the first step</comment>
     </row>
-    <row name="step_position" null="1" autoincrement="0">
+    <row name="next_step_id" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
-      <default>NULL</default></row>
+      <default>NULL</default><comment>the id of the step after this one or null if this is the last step</comment>
+    </row>
+    <row name="type" null="1" autoincrement="0">
+      <datatype>ENUM</datatype>
+      <default>NULL</default><comment>The type of step this is, either a Connection or a Step</comment>
+    </row>
     <key type="PRIMARY" name="">
       <part>id</part>
     </key>
   </table>
-  <table x="850" y="775" name="IntegrationRuntime">
+  <table x="785" y="670" name="IntegrationRuntime">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -397,7 +391,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="1545" y="455" name="ComponentGroups">
+  <table x="1485" y="430" name="ComponentGroups">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -408,26 +402,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="1225" y="735" name="IntegrationsSteps">
-    <row name="id" null="1" autoincrement="1">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default></row>
-    <row name="id_Steps" null="1" autoincrement="0">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default><relation table="Steps" row="id" />
-    </row>
-    <row name="id_Integrations" null="1" autoincrement="0">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default><relation table="Integrations" row="id" />
-    </row>
-    <row name="step_position" null="1" autoincrement="0">
-      <datatype>INTEGER</datatype>
-      <default>NULL</default></row>
-    <key type="PRIMARY" name="">
-      <part>id</part>
-    </key>
-  </table>
-  <table x="1190" y="595" name="IntegrationsConnections">
+  <table x="1095" y="500" name="IntegrationsConnectionsSteps">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -439,14 +414,27 @@
       <datatype>INTEGER</datatype>
       <default>NULL</default><relation table="Connections" row="id" />
     </row>
-    <row name="step_position" null="1" autoincrement="0">
+    <row name="id_Steps" null="1" autoincrement="0">
       <datatype>INTEGER</datatype>
-      <default>NULL</default></row>
+      <default>NULL</default><relation table="Steps" row="id" />
+    </row>
+    <row name="previous_step_id" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><comment>the id of the step previous to this one or null if it's the first step</comment>
+    </row>
+    <row name="next_step_id" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><comment>the id of the step after this one or null if it's the last step</comment>
+    </row>
+    <row name="type" null="1" autoincrement="0">
+      <datatype>ENUM</datatype>
+      <default>NULL</default><comment>The type of step this is, either a Connection or a Step</comment>
+    </row>
     <key type="PRIMARY" name="">
       <part>id</part>
     </key>
   </table>
-  <table x="1485" y="785" name="IntegrationPatternGroups">
+  <table x="1405" y="755" name="IntegrationPatternGroups">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -457,7 +445,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="1280" y="1110" name="ConfigGroup">
+  <table x="1255" y="1105" name="ConfigGroup">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -475,7 +463,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="1055" y="1135" name="Config">
+  <table x="1020" y="1075" name="Config">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -493,7 +481,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="1535" y="1165" name="ConfigType">
+  <table x="1480" y="1130" name="ConfigType">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -504,7 +492,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="380" y="840" name="Roles">
+  <table x="350" y="855" name="Roles">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -515,7 +503,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="770" y="1080" name="Permissions">
+  <table x="750" y="1070" name="Permissions">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
@@ -545,7 +533,7 @@
       <part>id</part>
     </key>
   </table>
-  <table x="530" y="965" name="RolesPermissions">
+  <table x="505" y="920" name="RolesPermissions">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
