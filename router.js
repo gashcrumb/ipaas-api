@@ -17,9 +17,10 @@ module.exports = exports.router = function Route(router, app) {
     environmentTypes: require('./src/api/environmentTypes.js'),
     integrationRuntimes: require('./src/api/integrationRuntimes.js'),
     integrations: require('./src/api/integrations.js'),
-    integrationTemplates: require('./src/api/integrationTemplates'),
+    integrationTemplates: require('./src/api/integrationTemplates.js'),
     organizations: require('./src/api/organizations.js'),
     permissions: require('./src/api/permissions.js'),
+    projects: require('./src/api/projects.js'),
     reports: require('./src/api/reports.js'),
     roles: require('./src/api/roles.js'),
     steps: require('./src/api/steps.js'),
@@ -156,6 +157,13 @@ module.exports = exports.router = function Route(router, app) {
   router.post('/v1/permissions', api.permissions.add);
   router.put('/v1/permissions/:id', api.permissions.save);
   router.delete('/v1/permissions/:id', api.permissions.del);
+
+  // Projects
+  router.get('/v1/projects', api.projects.findAll);
+  router.get('/v1/projects/:id', api.projects.find);
+  router.post('/v1/projects', api.projects.add);
+  router.put('/v1/projects/:id', api.projects.save);
+  router.delete('/v1/projects/:id', api.projects.del);
 
   // Reports
   router.get('/v1/reports', api.reports.findAll);
