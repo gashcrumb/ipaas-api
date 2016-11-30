@@ -533,13 +533,17 @@
       <part>id</part>
     </key>
   </table>
-  <table x="320" y="510" name="Projects">
+  <table x="325" y="440" name="Projects">
     <row name="id" null="1" autoincrement="1">
       <datatype>INTEGER</datatype>
       <default>NULL</default></row>
     <row name="name" null="1" autoincrement="0">
       <datatype>VARCHAR</datatype>
       <default>NULL</default></row>
+    <row name="id_Organizations" null="1" autoincrement="0">
+      <datatype>INTEGER</datatype>
+      <default>NULL</default><relation table="Organizations" row="id" />
+    </row>
     <key type="PRIMARY" name="">
       <part>id</part>
     </key>

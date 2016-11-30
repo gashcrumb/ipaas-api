@@ -45,6 +45,7 @@ We are in the process of creating a diagram (see below) for the Entity Relations
     - has many Environments
     - has many IntegrationTemplates
     - has many Users
+    - has many Projects
 
 - Environment
     - belongs to an EnvironmentType
@@ -78,6 +79,7 @@ We are in the process of creating a diagram (see below) for the Entity Relations
   - has many Integrations
   - has many Connections
   - has many Users
+  - belongs to an Organization
 
 Again, this list may not be up-to-date, or may be under development. Please see the active list of models by viewing the [`src/models`](../src/models/index.js) file.
 
