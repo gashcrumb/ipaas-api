@@ -19,16 +19,14 @@ module.exports = function(sequelize, DataTypes) {
         const Component = models['Component'];
         const ComponentGroup = models['ComponentGroup'];
         const Connection = models['Connection'];
-        const IntegrationTemplate = models['IntegrationTemplate'];
         const Organization = models['Organization'];
-        const Tag = models['Tag'];
 
         Component.belongsTo(ComponentGroup);
+
+        // Components are available at the organizational level
         Component.belongsTo(Organization);
 
-        Component.belongsToMany(IntegrationTemplate, { through: 'IntegrationTemplatesComponents' });
-        Component.belongsToMany(Tag, { through: 'TagsComponents' });
-
+        // Configured Components are called Connections
         Component.hasMany(Connection);
       }
     }

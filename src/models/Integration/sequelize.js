@@ -31,6 +31,9 @@ module.exports = function(sequelize, DataTypes) {
         // Keep track of the project this was created for
         Integration.belongsTo(Project);
 
+        // Keep track of who created this Integration
+        Integration.belongsTo(User);
+
         // Many-to-many relationships
         Integration.belongsToMany(Tag, { through: 'TagsIntegrations' });
         Integration.belongsToMany(User, { through: 'UsersIntegrations' });

@@ -11,6 +11,10 @@ module.exports = function(sequelize, DataTypes) {
         const ComponentGroup = models['ComponentGroup'];
 
         ComponentGroup.hasMany(Component);
+
+        // Note that ComponentGroups are not configurable at the organizational level.
+        // These should be fixed and available as a "type" when an organization decides to
+        // offer / create a new Component.
       }
     }
   }, {

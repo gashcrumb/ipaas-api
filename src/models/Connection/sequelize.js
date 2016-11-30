@@ -28,6 +28,7 @@ module.exports = function(sequelize, DataTypes) {
         const Connection = models['Connection'];
         const IntegrationTemplate = models['IntegrationTemplate'];
         const Organization = models['Organization'];
+        const Step = models['Step'];
         const Tag = models['Tag'];
         const User = models['User'];
 
@@ -39,7 +40,12 @@ module.exports = function(sequelize, DataTypes) {
         // To keep track of the user that created the connection
         Connection.belongsTo(User);
 
-        Connection.belongsToMany(IntegrationTemplate, { through: 'IntegrationTemplatesConnections' });
+        // Many-to-many relationships
+        // `IntegrationTemplatesConnectionsSteps` is a single JOIN table that relates
+        // three models: Connections, IntegrationTemplates, and Steps
+        Connection.belongsToMany(IntegrationTemplate, { through: 'IntegrationTemplatesConnectionsSteps' });
+        Connection.belongsToMany(Step, { through: 'IntegrationTemplatesConnectionsSteps' });
+
         Connection.belongsToMany(Tag, { through: 'TagsConnections' });
       }
     }
