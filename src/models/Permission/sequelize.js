@@ -14,6 +14,8 @@ module.exports = function(sequelize, DataTypes) {
         const Permission = models['Permission'];
         const Role = models['Role'];
 
+        // Each role consists of multiple permissions
+        // The same permission can be common across many roles
         Permission.belongsToMany(Role, {through: 'RolesPermissions'});
       }
     }

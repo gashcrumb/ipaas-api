@@ -22,6 +22,7 @@ exports.IntegrationRuntimeRepository = require('./IntegrationRuntimeRepository.j
 exports.IntegrationTemplateRepository = require('./IntegrationTemplateRepository.js');
 exports.OrganizationRepository = require('./OrganizationRepository.js');
 exports.PermissionRepository = require('./PermissionRepository.js');
+exports.ProjectRepository = require('./ProjectRepository.js');
 exports.ReportRepository = require('./ReportRepository.js');
 exports.RoleRepository = require('./RoleRepository.js');
 exports.StepRepository = require('./StepRepository.js');

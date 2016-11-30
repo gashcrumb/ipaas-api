@@ -1,64 +1,56 @@
 [
   {
-    "model": "Connection",
+    "model": "Component",
     "data": {
       "name": "Twitter",
-      "description": "A connection to or from Twitter.",
+      "description": "A component to or from Twitter.",
       "icon": "twitter",
       "configuredProperties": "{}",
       "position": "Anywhere"
     }
   },
   {
-    "model": "Connection",
+    "model": "Component",
     "data": {
       "name": "Twitter",
-      "description": "A connection to Twitter.",
+      "description": "A component to Twitter.",
       "icon": "twitter",
       "configuredProperties": "{}",
       "position": "To"
     }
   },
   {
-    "model": "Connection",
+    "model": "Component",
     "data": {
       "name": "Twitter",
-      "description": "A connection from Twitter.",
+      "description": "A component from Twitter.",
       "icon": "twitter",
       "configuredProperties": "{}",
       "position": "From"
     }
   },
   {
-    "model": "ConnectionType",
+    "model": "Role",
     "data": {
-      "name": "Cloud",
-      "icon": "cloud",
-      "properties": "",
+      "name": "Admin"
     }
   },
   {
-    "model": "ConnectionType",
+    "model": "Role",
     "data": {
-      "name": "API Integration",
-      "icon": "api",
-      "properties": "",
+      "name": "iPaaS Administrator"
     }
   },
   {
-    "model": "ConnectionType",
+    "model": "Role",
     "data": {
-      "name": "Traditional",
-      "icon": "traditional",
-      "properties": "",
+      "name": "Expert User"
     }
   },
   {
-    "model": "ConnectionType",
+    "model": "Role",
     "data": {
-      "name": "Camel",
-      "icon": "camel",
-      "properties": "",
+      "name": "Citizen User"
     }
   },
   {

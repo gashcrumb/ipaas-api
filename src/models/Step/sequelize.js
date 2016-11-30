@@ -11,10 +11,18 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
+        const Connection = models['Connection'];
+        const IntegrationTemplate = models['IntegrationTemplate'];
         const Step = models['Step'];
         const StepType = models['StepType'];
 
         Step.belongsTo(StepType);
+
+        // Many-to-many relationships
+        // `IntegrationTemplatesConnectionsSteps` is a single JOIN table that relates
+        // three models: Connections, IntegrationTemplates, and Steps
+        Step.belongsToMany(Connection, { through: 'IntegrationTemplatesConnectionsSteps' });
+        Step.belongsToMany(IntegrationTemplate, { through: 'IntegrationTemplatesConnectionsSteps' });
       }
     }
   }, {

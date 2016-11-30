@@ -24,16 +24,28 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
+        const Component = models['Component'];
         const Connection = models['Connection'];
-        const ConnectionType = models['ConnectionType'];
         const IntegrationTemplate = models['IntegrationTemplate'];
         const Organization = models['Organization'];
+        const Step = models['Step'];
         const Tag = models['Tag'];
+        const User = models['User'];
 
+        // Connections should be at the organizational level in
+        // case users ever be kicked out or leave the organization.
         Connection.belongsTo(Organization);
-        Connection.belongsTo(ConnectionType);
+        Connection.belongsTo(Component);
 
-        Connection.belongsToMany(IntegrationTemplate, { through: 'IntegrationTemplatesConnections' });
+        // To keep track of the user that created the connection
+        Connection.belongsTo(User);
+
+        // Many-to-many relationships
+        // `IntegrationTemplatesConnectionsSteps` is a single JOIN table that relates
+        // three models: Connections, IntegrationTemplates, and Steps
+        Connection.belongsToMany(IntegrationTemplate, { through: 'IntegrationTemplatesConnectionsSteps' });
+        Connection.belongsToMany(Step, { through: 'IntegrationTemplatesConnectionsSteps' });
+
         Connection.belongsToMany(Tag, { through: 'TagsConnections' });
       }
     }

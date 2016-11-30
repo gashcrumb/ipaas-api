@@ -1,23 +1,22 @@
-// Role model
+// Project model
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('Report', {
+  return sequelize.define('Project', {
     name: {
       type: DataTypes.STRING(50),
       unique: true
     },
-    type: {
-      type: DataTypes.ENUM,
-      values: ['Integrations', 'Projects', 'Runtimes', 'Users']
+    description: {
+      type: DataTypes.STRING(150)
     }
   }, {
     classMethods: {
       associate: function(models) {
         const Organization = models['Organization'];
-        const Report = models['Report'];
+        const Project = models['Project'];
         const User = models['User'];
 
-        Report.belongsToMany(Organization, {through: 'ReportsOrganizations'});
-        Report.belongsToMany(User, {through: 'ReportsUsers'});
+        Project.belongsTo(Organization);
+        Project.belongsToMany(User, {through: 'UserProjects'});
       }
     }
   }, {
