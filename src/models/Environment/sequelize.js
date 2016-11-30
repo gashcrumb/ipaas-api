@@ -12,6 +12,8 @@ module.exports = function(sequelize, DataTypes) {
         const EnvironmentType = models['EnvironmentType'];
         const Organization = models['Organization'];
 
+        // Environments can be specific to organizations
+        // Not sure how useful this is though instead of being just an ENUM column
         Environment.belongsToMany(Organization, { through: 'EnvironmentsOrganizations' });
         Environment.belongsTo(EnvironmentType);
       }

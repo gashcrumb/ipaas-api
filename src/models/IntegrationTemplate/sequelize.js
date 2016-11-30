@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
         const Tag = models['Tag'];
 
         IntegrationTemplate.belongsTo(Organization);
-        IntegrationTemplate.belongsToMany(Component, { through: 'IntegrationTemplatesComponents' });
+        IntegrationTemplate.belongsToMany(Connection, { through: 'IntegrationTemplatesConnections' });
         IntegrationTemplate.belongsToMany(Step, { through: 'IntegrationTemplatesSteps' });
         IntegrationTemplate.belongsToMany(Tag, { through: 'TagsIntegrationTemplates' });
         IntegrationTemplate.hasMany(Integration);

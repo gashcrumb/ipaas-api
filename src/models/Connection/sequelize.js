@@ -29,11 +29,17 @@ module.exports = function(sequelize, DataTypes) {
         const IntegrationTemplate = models['IntegrationTemplate'];
         const Organization = models['Organization'];
         const Tag = models['Tag'];
+        const User = models['User'];
 
+        // Connections should be at the organizational level in
+        // case users ever be kicked out or leave the organization.
         Connection.belongsTo(Organization);
         Connection.belongsTo(Component);
 
-        Connection.belongsToMany(IntegrationTemplate, { through: 'IntegrationTemplatesComponents' });
+        // To keep track of the user that created the connection
+        Connection.belongsTo(User);
+
+        Connection.belongsToMany(IntegrationTemplate, { through: 'IntegrationTemplatesConnections' });
         Connection.belongsToMany(Tag, { through: 'TagsConnections' });
       }
     }
