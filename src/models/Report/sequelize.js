@@ -4,6 +4,10 @@ module.exports = function(sequelize, DataTypes) {
     name: {
       type: DataTypes.STRING(50),
       unique: true
+    },
+    type: {
+      type: DataTypes.ENUM,
+      values: ['Integrations', 'Projects', 'Runtimes', 'Users']
     }
   }, {
     classMethods: {

@@ -11,15 +11,16 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
+        const Component = models['Component'];
+        const Connection = models['Connection'];
         const Integration = models['Integration'];
         const IntegrationTemplate = models['IntegrationTemplate'];
         const Organization = models['Organization'];
-        const Connection = models['Connection'];
         const Step = models['Step'];
         const Tag = models['Tag'];
 
         IntegrationTemplate.belongsTo(Organization);
-        IntegrationTemplate.belongsToMany(Connection, { through: 'IntegrationTemplatesConnections' });
+        IntegrationTemplate.belongsToMany(Connection, { through: 'IntegrationTemplatesComponents' });
         IntegrationTemplate.belongsToMany(Step, { through: 'IntegrationTemplatesSteps' });
         IntegrationTemplate.belongsToMany(Tag, { through: 'TagsIntegrationTemplates' });
         IntegrationTemplate.hasMany(Integration);
