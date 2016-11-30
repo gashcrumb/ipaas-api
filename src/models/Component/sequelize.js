@@ -18,7 +18,7 @@ module.exports = function(sequelize, DataTypes) {
       associate: function(models) {
         const Component = models['Component'];
         const ComponentGroup = models['ComponentGroup'];
-        const Connections = models['Connections'];
+        const Connection = models['Connection'];
         const IntegrationTemplate = models['IntegrationTemplate'];
         const Organization = models['Organization'];
         const Tag = models['Tag'];
@@ -28,6 +28,8 @@ module.exports = function(sequelize, DataTypes) {
 
         Component.belongsToMany(IntegrationTemplate, { through: 'IntegrationTemplatesComponents' });
         Component.belongsToMany(Tag, { through: 'TagsComponents' });
+
+        Component.hasMany(Connection);
       }
     }
   }, {
