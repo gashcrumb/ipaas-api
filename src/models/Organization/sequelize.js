@@ -12,11 +12,13 @@ module.exports = function(sequelize, DataTypes) {
         const Environment = models['Environment'];
         const IntegrationTemplate = models['IntegrationTemplate'];
         const Organization = models['Organization'];
+        const Project = models['Project'];
         const Report = models['Report'];
         const User = models['User'];
 
         Organization.hasMany(Connection);
         Organization.hasMany(IntegrationTemplate);
+        Organization.hasMany(Project);
         Organization.belongsToMany(Environment, { through: 'EnvironmentsOrganizations' });
         Organization.belongsToMany(Report, {through: 'ReportsOrganizations'});
         Organization.belongsToMany(User, {through: 'UsersOrganizations'});
