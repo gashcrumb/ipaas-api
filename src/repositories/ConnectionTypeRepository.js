@@ -11,7 +11,7 @@ var Models = require('../models/index.js');
 
 function ConnectionTypeRepository(params) {
   // Instantiate new Models Layer
-  var Model = new Models();
+  var Model = new Models().models;
 
   this.layerName = 'ConnectionTypeRepository';
   this.model = Model.ConnectionType;
