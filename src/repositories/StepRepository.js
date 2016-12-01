@@ -11,7 +11,7 @@ var Models = require('../models/index.js');
 
 function StepRepository(params) {
   // Instantiate new Models Layer
-  var Model = new Models();
+  var Model = new Models().models;
 
   this.layerName = 'StepRepository';
   this.model = Model.Step;

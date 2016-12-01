@@ -11,7 +11,7 @@ var Models = require('../models/index.js');
 
 function ReportRepository(params) {
   // Instantiate new Models Layer
-  var Model = new Models();
+  var Model = new Models().models;
 
   this.layerName = 'ReportRepository';
   this.model = Model.Report;

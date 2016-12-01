@@ -11,7 +11,7 @@ var Models = require('../models/index.js');
 
 function StepTypeRepository(params) {
   // Instantiate new Models Layer
-  var Model = new Models();
+  var Model = new Models().models;
 
   this.layerName = 'StepTypeRepository';
   this.model = Model.StepType;
@@ -21,7 +21,8 @@ function StepTypeRepository(params) {
 
 // Inherit from BaseRepository
 function extend(Child, Parent) {
-  var F = function () {};
+  var F = function() {
+  };
   F.prototype = Parent.prototype;
   Child.prototype = new F();
   Child.prototype.constructor = Child;
