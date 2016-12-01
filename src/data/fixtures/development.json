@@ -2,31 +2,405 @@
   {
     "model": "Component",
     "data": {
-      "name": "Twitter",
-      "description": "A component to or from Twitter.",
-      "icon": "twitter",
-      "configuredProperties": "{}",
-      "position": "Anywhere"
+      "name": "Facebook",
+      "icon": "fa-facebook-official",
+      "properties": "",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Gmail",
+      "icon": "fa-google",
+      "description": "Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Pinterest",
+      "icon": "fa-pinterest",
+      "properties": "",
+      "description": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."
     }
   },
   {
     "model": "Component",
     "data": {
       "name": "Twitter",
-      "description": "A component to Twitter.",
-      "icon": "twitter",
-      "configuredProperties": "{}",
-      "position": "To"
+      "icon": "fa-twitter",
+      "properties": "",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
     }
   },
   {
     "model": "Component",
     "data": {
-      "name": "Twitter",
-      "description": "A component from Twitter.",
-      "icon": "twitter",
-      "configuredProperties": "{}",
-      "position": "From"
+      "name": "GitHub",
+      "icon": "fa-github-alt",
+      "properties": "",
+      "description": "Donec id elit non mi porta gravida at eget metus."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Dropbox",
+      "icon": "fa-dropbox",
+      "properties": "",
+      "description": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Google Drive",
+      "icon": "fa-google",
+      "properties": "",
+      "description": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Reddit",
+      "icon": "fa-reddit",
+      "properties": "",
+      "description": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Bitbucket",
+      "icon": "fa-bitbucket",
+      "properties": "",
+      "description": "Pellentesque ornare sem lacinia quam venenatis vestibulum."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Flickr",
+      "icon": "fa-flickr",
+      "properties": "",
+      "description": "Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Pocket",
+      "icon": "fa-get-pocket",
+      "properties": "",
+      "description": "Nullam quis risus eget urna mollis ornare vel eu leo."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "LinkedIn",
+      "icon": "fa-linkedin-square",
+      "properties": "",
+      "description": "Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Foursquare",
+      "icon": "fa-foursquare",
+      "properties": "",
+      "description": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Paypal",
+      "icon": "fa-paypal",
+      "properties": "",
+      "description": "Maecenas sed diam eget risus varius blandit sit amet non magna."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Slack",
+      "icon": "fa-slack",
+      "properties": "",
+      "description": "Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Google Plus",
+      "icon": "fa-google-plus-official",
+      "properties": "",
+      "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Trello",
+      "icon": "fa-trello",
+      "properties": "",
+      "description": "Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "YouTube",
+      "icon": "fa-youtube",
+      "properties": "",
+      "description": "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Vimeo",
+      "icon": "fa-vimeo",
+      "properties": "",
+      "description": "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "OpenID",
+      "icon": "fa-openid",
+      "properties": "",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "WhatsApp",
+      "icon": "fa-whatsapp",
+      "properties": "",
+      "description": "Sed posuere consectetur est at lobortis."
+    }
+  },
+  {
+  "model": "Component",
+  "data": {
+    "name": "Stack Overflow",
+    "icon": "fa-stack-overflow",
+    "properties": "",
+    "description": "Donec sed odio dui. Vestibulum id ligula porta felis euismod semper."
+  }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "StumbleUpon",
+      "icon": "fa-stumbleupon",
+      "properties": "",
+      "description": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Safari",
+      "icon": "fa-safari",
+      "properties": "",
+      "description": "Maecenas sed diam eget risus varius blandit sit amet non magna."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Yahoo",
+      "icon": "fa-yahoo",
+      "properties": "",
+      "description": "Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Wordpress",
+      "icon": "fa-wordpress",
+      "properties": "",
+      "description": "Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Hacker News",
+      "icon": "fa-hacker-news",
+      "properties": "",
+      "description": "Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Medium",
+      "icon": "fa-medium",
+      "properties": "",
+      "description": "Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Download",
+      "icon": "fa-cloud-download",
+      "properties": "",
+      "description": "Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Wikipedia",
+      "icon": "fa-wikipedia-w",
+      "properties": "",
+      "description": "Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Nullam quis risus eget urna mollis ornare vel eu leo."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "jsfiddle",
+      "icon": "fa-jsfiddle",
+      "properties": "",
+      "description": "Nullam id dolor id nibh ultricies vehicula ut id elit."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Instagram",
+      "icon": "fa-instagram",
+      "properties": "",
+      "description": "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Drupal",
+      "icon": "fa-drupal",
+      "properties": "",
+      "description": "Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Google Wallet",
+      "icon": "fa-google-wallet",
+      "properties": "",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Joomla",
+      "icon": "fa-joomla",
+      "properties": "",
+      "description": "Nullam quis risus eget urna mollis ornare vel eu leo."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "MaxCDN",
+      "icon": "fa-maxcdn",
+      "properties": "",
+      "description": "Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Yelp",
+      "icon": "fa-yelp",
+      "properties": "",
+      "description": "Curabitur blandit tempus porttitor. Donec ullamcorper nulla non metus auctor fringilla."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "CodePen",
+      "icon": "fa-codepen",
+      "properties": "",
+      "description": "Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla."
+    }
+  },
+  {
+    "model": "Component",
+    "data": {
+      "name": "Email",
+      "icon": "fa-envelope-o",
+      "properties": "",
+      "description": "Nullam quis risus eget urna mollis ornare vel eu leo."
+    }
+  },
+  {
+    "model": "ComponentGroup",
+    "data": {
+      "name": ""
+    }
+  },
+  {
+    "model": "IntegrationPattern",
+    "data": {
+      "name": "Messaging Systems"
+    }
+  },
+  {
+    "model": "IntegrationPattern",
+    "data": {
+      "name": "Messaging Channels"
+    }
+  },
+  {
+    "model": "IntegrationPattern",
+    "data": {
+      "name": "Message Construction"
+    }
+  },
+  {
+    "model": "IntegrationPattern",
+    "data": {
+      "name": "Message Routing"
+    }
+  },
+  {
+    "model": "IntegrationPattern",
+    "data": {
+      "name": "Message Transformation"
+    }
+  },
+  {
+    "model": "IntegrationPattern",
+    "data": {
+      "name": "Messaging Endpoints"
+    }
+  },
+  {
+    "model": "IntegrationPattern",
+    "data": {
+      "name": "System Management"
+    }
+  },
+  {
+    "model": "Permission",
+    "data": {
+      "name": "Citizen User"
     }
   },
   {
@@ -56,7 +430,6 @@
   {
     "model": "User",
     "data": {
-      "hasAdminRight": true,
       "fullName": "Luke Skywalker",
       "username": "lskywalker"
     }
@@ -64,7 +437,6 @@
   {
     "model": "User",
     "data": {
-      "hasAdminRight": true,
       "fullName": "Darth Vader",
       "username": "dvader"
     }
@@ -72,7 +444,6 @@
   {
     "model": "User",
     "data": {
-      "hasAdminRight": true,
       "fullName": "Leia Organa",
       "username": "lorgana"
     }

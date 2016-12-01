@@ -17,10 +17,6 @@ module.exports = function(sequelize, DataTypes) {
     },
     firstName: {type: DataTypes.STRING(100)},
     hash: {type: DataTypes.STRING(255)},
-    hasAdminRight: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false
-    },
     lastName: {type: DataTypes.STRING(100)},
     password: {type: DataTypes.STRING(75), required: false},
     status: {type: DataTypes.STRING(50)}

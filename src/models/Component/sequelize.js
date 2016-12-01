@@ -10,8 +10,14 @@ module.exports = function(sequelize, DataTypes) {
     icon: {
       type: DataTypes.STRING(50)
     },
-    properties: {
+    parameters: {
       type: DataTypes.TEXT
+    },
+    remaining: {
+      type: DataTypes.STRING(50)
+    },
+    uri: {
+      type: DataTypes.STRING(50)
     }
   }, {
     classMethods: {
