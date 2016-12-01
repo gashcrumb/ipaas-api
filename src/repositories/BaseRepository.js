@@ -22,7 +22,7 @@ BaseRepository.prototype.toString = function toString(done) {
 
   result[result.length] = this.layerName;
 
-  if (done && typeof(done) === "function") {
+  if (done && typeof(done) === 'function') {
     done(result.join(', '));
   } else {
     return result.join(', ');

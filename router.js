@@ -15,8 +15,9 @@ module.exports = exports.router = function Route(router, app) {
     connectionTypes: require('./src/api/connectionTypes.js'),
     environments: require('./src/api/environments.js'),
     environmentTypes: require('./src/api/environmentTypes.js'),
-    integrationRuntimes: require('./src/api/integrationRuntimes.js'),
     integrations: require('./src/api/integrations.js'),
+    integrationPatterns: require('./src/api/integrationPatterns.js'),
+    integrationRuntimes: require('./src/api/integrationRuntimes.js'),
     integrationTemplates: require('./src/api/integrationTemplates.js'),
     organizations: require('./src/api/organizations.js'),
     permissions: require('./src/api/permissions.js'),
@@ -128,6 +129,13 @@ module.exports = exports.router = function Route(router, app) {
   router.post('/v1/integrations', api.integrations.add);
   router.put('/v1/integrations/:id', api.integrations.save);
   router.delete('/v1/integrations/:id', api.integrations.del);
+  
+  // Integration Patterns
+  router.get('/v1/integration-patterns', api.integrationPatterns.findAll);
+  router.get('/v1/integration-patterns/:id', api.integrationPatterns.find);
+  router.post('/v1/integration-patterns', api.integrationPatterns.add);
+  router.put('/v1/integration-patterns/:id', api.integrationPatterns.save);
+  router.delete('/v1/integration-patterns/:id', api.integrationPatterns.del);
 
   // Integration Runtimes
   router.get('/v1/integration-runtimes', api.integrationRuntimes.findAll);

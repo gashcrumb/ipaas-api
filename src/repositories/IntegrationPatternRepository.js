@@ -1,4 +1,4 @@
-// StepType Repository
+// IntegrationPattern Repository
 'use strict';
 
 // ---------------------- Dependencies ---->>
@@ -9,13 +9,13 @@ var Models = require('../models/index.js');
 
 // ---------------------- Class/Constructor ---->>
 
-function StepTypeRepository(params) {
+function IntegrationPatternRepository(params) {
   // Instantiate new Models Layer
   var Model = new Models().models;
 
-  this.layerName = 'StepTypeRepository';
-  this.model = Model.StepType;
-  this.modelName = 'StepType';
+  this.layerName = 'IntegrationPatternRepository';
+  this.model = Model.IntegrationPattern;
+  this.modelName = 'IntegrationPattern';
   this.params = params;
 }
 
@@ -29,6 +29,6 @@ function extend(Child, Parent) {
   Child.uber = Parent.prototype;
 }
 
-extend(StepTypeRepository, BaseRepository);
+extend(IntegrationPatternRepository, BaseRepository);
 
-module.exports = StepTypeRepository;
+module.exports = IntegrationPatternRepository;
