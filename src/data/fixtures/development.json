@@ -350,6 +350,54 @@
     }
   },
   {
+    "model": "ComponentGroup",
+    "data": {
+      "name": "Messaging Systems"
+    }
+  },
+  {
+    "model": "ComponentGroup",
+    "data": {
+      "name": "Messaging Channels"
+    }
+  },
+  {
+    "model": "ComponentGroup",
+    "data": {
+      "name": "Message Construction"
+    }
+  },
+  {
+    "model": "ComponentGroup",
+    "data": {
+      "name": "Message Routing"
+    }
+  },
+  {
+    "model": "ComponentGroup",
+    "data": {
+      "name": "Message Transformation"
+    }
+  },
+  {
+    "model": "ComponentGroup",
+    "data": {
+      "name": "Messaging Endpoints"
+    }
+  },
+  {
+    "model": "ComponentGroup",
+    "data": {
+      "name": "System Management"
+    }
+  },
+  {
+    "model": "Permission",
+    "data": {
+      "name": "Citizen User"
+    }
+  },
+  {
     "model": "Role",
     "data": {
       "name": "Admin"
@@ -376,7 +424,6 @@
   {
     "model": "User",
     "data": {
-      "hasAdminRight": true,
       "fullName": "Luke Skywalker",
       "username": "lskywalker"
     }
@@ -384,7 +431,6 @@
   {
     "model": "User",
     "data": {
-      "hasAdminRight": true,
       "fullName": "Darth Vader",
       "username": "dvader"
     }
@@ -392,7 +438,6 @@
   {
     "model": "User",
     "data": {
-      "hasAdminRight": true,
       "fullName": "Leia Organa",
       "username": "lorgana"
     }
@@ -421,22 +466,43 @@
   {
     "model": "UsersRoles",
     "data": {
-      "RoleId": "R2-D2",
+      "RoleId": "1",
       "UserId": "1"
     }
   },
   {
     "model": "UsersRoles",
     "data": {
-      "RoleId": "R2-D2",
+      "RoleId": "2",
       "UserId": "2"
     }
   },
   {
     "model": "UsersRoles",
     "data": {
-      "RoleId": "R2-D2",
+      "RoleId": "3",
       "UserId": "3"
+    }
+  },
+  {
+    "model": "UsersRoles",
+    "data": {
+      "RoleId": "4",
+      "UserId": "4"
+    }
+  },
+  {
+    "model": "UsersRoles",
+    "data": {
+      "RoleId": "4",
+      "UserId": "5"
+    }
+  },
+  {
+    "model": "UsersRoles",
+    "data": {
+      "RoleId": "4",
+      "UserId": "6"
     }
   }
 ]

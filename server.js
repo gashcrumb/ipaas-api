@@ -79,15 +79,6 @@ app.listen(app.get('port'), function() {
        models.models).then(function() {
         console.log('Database successfully seeded with dummy data.');
       });
-
-      /*
-      sequelizeFixtures.loadFile(path.join(__dirname, '/src/data/', app.get('env'),'/fixtures/*.json'),
-       models.models).then(function(result) {
-        //doStuffAfterLoad();
-        console.log('Dummy data sync result: ' + JSON.stringify(result));
-        //console.log('Database successfully seeded with dummy data.');
-      });
-      */
     }
 
     return console.log(config['settings']['title'] + ' is listening on port ' + app.get('port') + ' in ' + app.get('env') + ' mode.');

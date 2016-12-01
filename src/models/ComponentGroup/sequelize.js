@@ -3,6 +3,9 @@ module.exports = function(sequelize, DataTypes) {
   return sequelize.define('ComponentGroup', {
     name: {
       type: DataTypes.STRING(50)
+    },
+    description: {
+      type: DataTypes.TEXT
     }
   }, {
     classMethods: {
