@@ -11,15 +11,17 @@
 
 // ---------------------- Services ---->>
 
+exports.ComponentService = require('./ComponentService.js');
+exports.ComponentGroupService = require('./ComponentGroupService.js');
 exports.ConfigGroupService = require('./ConfigGroupService.js');
 exports.ConfigService = require('./ConfigService.js');
 exports.ConfigTypeService = require('./ConfigTypeService.js');
 exports.ConnectionService = require('./ConnectionService.js');
-exports.ConnectionTypeService = require('./ConnectionTypeService.js');
 exports.EnvironmentService = require('./EnvironmentService.js');
 exports.EnvironmentTypeService = require('./EnvironmentTypeService.js');
 exports.IntegrationService = require('./IntegrationService.js');
 exports.IntegrationPatternService = require('./IntegrationPatternService.js');
+exports.IntegrationPatternGroupService = require('./IntegrationPatternGroupService.js');
 exports.IntegrationRuntimeService = require('./IntegrationRuntimeService.js');
 exports.IntegrationTemplateService = require('./IntegrationTemplateService.js');
 exports.OrganizationService = require('./OrganizationService.js');

@@ -8,14 +8,16 @@ module.exports = exports.router = function Route(router, app) {
 
   // API / Data / Actions
   var api = {
+    components: require('./src/api/components.js'),
+    componentGroups: require('./src/api/componentGroups.js'),
     configs: require('./src/api/configs.js'),
     configGroups: require('./src/api/configGroups.js'),
     configTypes: require('./src/api/configTypes.js'),
     connections: require('./src/api/connections.js'),
-    connectionTypes: require('./src/api/connectionTypes.js'),
     environments: require('./src/api/environments.js'),
     environmentTypes: require('./src/api/environmentTypes.js'),
     integrations: require('./src/api/integrations.js'),
+    integrationPatternGroups: require('./src/api/integrationPatternGroups.js'),
     integrationPatterns: require('./src/api/integrationPatterns.js'),
     integrationRuntimes: require('./src/api/integrationRuntimes.js'),
     integrationTemplates: require('./src/api/integrationTemplates.js'),
@@ -73,6 +75,20 @@ module.exports = exports.router = function Route(router, app) {
 
   //router.all('/v1/*', checkAdmin);
 
+  // Components
+  router.get('/v1/components', api.components.findAll);
+  router.get('/v1/components/:id', api.components.find);
+  router.post('/v1/components', api.components.add);
+  router.put('/v1/components/:id', api.components.save);
+  router.delete('/v1/components/:id', api.components.del);
+
+  // Component Groups
+  router.get('/v1/component-groups', api.componentGroups.findAll);
+  router.get('/v1/component-groups/:id', api.componentGroups.find);
+  router.post('/v1/component-groups', api.componentGroups.add);
+  router.put('/v1/component-groups/:id', api.componentGroups.save);
+  router.delete('/v1/component-groups/:id', api.componentGroups.del);
+
   // ConfigGroups
   router.get('/v1/config-groups', api.configGroups.findAll);
   router.get('/v1/config-groups/:id', api.configGroups.find);
@@ -101,13 +117,6 @@ module.exports = exports.router = function Route(router, app) {
   router.put('/v1/connections/:id', api.connections.save);
   router.delete('/v1/connections/:id', api.connections.del);
 
-  // Connection Types
-  router.get('/v1/connection-types', api.connectionTypes.findAll);
-  router.get('/v1/connection-types/:id', api.connectionTypes.find);
-  router.post('/v1/connection-types', api.connectionTypes.add);
-  router.put('/v1/connection-types/:id', api.connectionTypes.save);
-  router.delete('/v1/connection-types/:id', api.connectionTypes.del);
-
   // Environments
   router.get('/v1/environments', api.environments.findAll);
   router.get('/v1/environments/:id', api.environments.find);
@@ -135,6 +144,13 @@ module.exports = exports.router = function Route(router, app) {
   router.post('/v1/integration-patterns', api.integrationPatterns.add);
   router.put('/v1/integration-patterns/:id', api.integrationPatterns.save);
   router.delete('/v1/integration-patterns/:id', api.integrationPatterns.del);
+
+  // Integration Patterns
+  router.get('/v1/integration-pattern-groups', api.integrationPatternGroups.findAll);
+  router.get('/v1/integration-pattern-groups/:id', api.integrationPatternGroups.find);
+  router.post('/v1/integration-pattern-groups', api.integrationPatternGroups.add);
+  router.put('/v1/integration-pattern-groups/:id', api.integrationPatternGroups.save);
+  router.delete('/v1/integration-pattern-groups/:id', api.integrationPatternGroups.del);
 
   // Integration Runtimes
   router.get('/v1/integration-runtimes', api.integrationRuntimes.findAll);
