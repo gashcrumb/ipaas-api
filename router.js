@@ -8,11 +8,12 @@ module.exports = exports.router = function Route(router, app) {
 
   // API / Data / Actions
   var api = {
+    components: require('./src/api/components.js'),
+    componentGroups: require('./src/api/componentGroups.js'),
     configs: require('./src/api/configs.js'),
     configGroups: require('./src/api/configGroups.js'),
     configTypes: require('./src/api/configTypes.js'),
     connections: require('./src/api/connections.js'),
-    connectionTypes: require('./src/api/connectionTypes.js'),
     environments: require('./src/api/environments.js'),
     environmentTypes: require('./src/api/environmentTypes.js'),
     integrations: require('./src/api/integrations.js'),
@@ -73,6 +74,20 @@ module.exports = exports.router = function Route(router, app) {
 
   //router.all('/v1/*', checkAdmin);
 
+  // Components
+  router.get('/v1/components', api.component.findAll);
+  router.get('/v1/components/:id', api.component.find);
+  router.post('/v1/components', api.component.add);
+  router.put('/v1/components/:id', api.component.save);
+  router.delete('/v1/components/:id', api.component.del);
+
+  // Component Groups
+  router.get('/v1/component-groups', api.componentGroups.findAll);
+  router.get('/v1/component-groups/:id', api.componentGroups.find);
+  router.post('/v1/component-groups', api.componentGroups.add);
+  router.put('/v1/component-groups/:id', api.componentGroups.save);
+  router.delete('/v1/component-groups/:id', api.componentGroups.del);
+
   // ConfigGroups
   router.get('/v1/config-groups', api.configGroups.findAll);
   router.get('/v1/config-groups/:id', api.configGroups.find);
@@ -100,13 +115,6 @@ module.exports = exports.router = function Route(router, app) {
   router.post('/v1/connections', api.connections.add);
   router.put('/v1/connections/:id', api.connections.save);
   router.delete('/v1/connections/:id', api.connections.del);
-
-  // Connection Types
-  router.get('/v1/connection-types', api.connectionTypes.findAll);
-  router.get('/v1/connection-types/:id', api.connectionTypes.find);
-  router.post('/v1/connection-types', api.connectionTypes.add);
-  router.put('/v1/connection-types/:id', api.connectionTypes.save);
-  router.delete('/v1/connection-types/:id', api.connectionTypes.del);
 
   // Environments
   router.get('/v1/environments', api.environments.findAll);

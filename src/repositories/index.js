@@ -10,11 +10,12 @@
 // ---------------------- Repositories ---->>
 
 exports.BaseRepository = require('./BaseRepository.js');
+exports.ComponentGroupRepository = require('./ComponentGroupRepository.js');
+exports.ComponentRepository = require('./ComponentRepository.js');
 exports.ConfigGroupRepository = require('./ConfigGroupRepository.js');
 exports.ConfigRepository = require('./ConfigRepository.js');
 exports.ConfigTypeRepository = require('./ConfigTypeRepository.js');
 exports.ConnectionRepository = require('./ConnectionRepository.js');
-exports.ConnectionTypeRepository = require('./ConnectionTypeRepository.js');
 exports.EnvironmentRepository = require('./EnvironmentRepository.js');
 exports.EnvironmentTypeRepository = require('./EnvironmentTypeRepository.js');
 exports.IntegrationRepository = require('./IntegrationRepository.js');
@@ -26,7 +27,6 @@ exports.PermissionRepository = require('./PermissionRepository.js');
 exports.ReportRepository = require('./ReportRepository.js');
 exports.RoleRepository = require('./RoleRepository.js');
 exports.StepRepository = require('./StepRepository.js');
-exports.StepTypeRepository = require('./StepTypeRepository.js');
 exports.TagRepository = require('./TagRepository.js');
 exports.UserRepository = require('./UserRepository.js');
 
