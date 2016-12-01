@@ -76,11 +76,11 @@ module.exports = exports.router = function Route(router, app) {
   //router.all('/v1/*', checkAdmin);
 
   // Components
-  router.get('/v1/components', api.component.findAll);
-  router.get('/v1/components/:id', api.component.find);
-  router.post('/v1/components', api.component.add);
-  router.put('/v1/components/:id', api.component.save);
-  router.delete('/v1/components/:id', api.component.del);
+  router.get('/v1/components', api.components.findAll);
+  router.get('/v1/components/:id', api.components.find);
+  router.post('/v1/components', api.components.add);
+  router.put('/v1/components/:id', api.components.save);
+  router.delete('/v1/components/:id', api.components.del);
 
   // Component Groups
   router.get('/v1/component-groups', api.componentGroups.findAll);
