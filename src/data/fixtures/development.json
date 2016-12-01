@@ -352,41 +352,47 @@
   {
     "model": "ComponentGroup",
     "data": {
+      "name": ""
+    }
+  },
+  {
+    "model": "IntegrationPattern",
+    "data": {
       "name": "Messaging Systems"
     }
   },
   {
-    "model": "ComponentGroup",
+    "model": "IntegrationPattern",
     "data": {
       "name": "Messaging Channels"
     }
   },
   {
-    "model": "ComponentGroup",
+    "model": "IntegrationPattern",
     "data": {
       "name": "Message Construction"
     }
   },
   {
-    "model": "ComponentGroup",
+    "model": "IntegrationPattern",
     "data": {
       "name": "Message Routing"
     }
   },
   {
-    "model": "ComponentGroup",
+    "model": "IntegrationPattern",
     "data": {
       "name": "Message Transformation"
     }
   },
   {
-    "model": "ComponentGroup",
+    "model": "IntegrationPattern",
     "data": {
       "name": "Messaging Endpoints"
     }
   },
   {
-    "model": "ComponentGroup",
+    "model": "IntegrationPattern",
     "data": {
       "name": "System Management"
     }
@@ -461,48 +467,6 @@
     "data": {
       "fullName": "R2-D2",
       "username": "r2d2"
-    }
-  },
-  {
-    "model": "UsersRoles",
-    "data": {
-      "RoleId": "1",
-      "UserId": "1"
-    }
-  },
-  {
-    "model": "UsersRoles",
-    "data": {
-      "RoleId": "2",
-      "UserId": "2"
-    }
-  },
-  {
-    "model": "UsersRoles",
-    "data": {
-      "RoleId": "3",
-      "UserId": "3"
-    }
-  },
-  {
-    "model": "UsersRoles",
-    "data": {
-      "RoleId": "4",
-      "UserId": "4"
-    }
-  },
-  {
-    "model": "UsersRoles",
-    "data": {
-      "RoleId": "4",
-      "UserId": "5"
-    }
-  },
-  {
-    "model": "UsersRoles",
-    "data": {
-      "RoleId": "4",
-      "UserId": "6"
     }
   }
 ]
