@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
     icon: {
       type: DataTypes.STRING(50)
     },
-    parameters: {
+    properties: {
       type: DataTypes.TEXT
     },
     remaining: {
@@ -25,12 +25,8 @@ module.exports = function(sequelize, DataTypes) {
         const Component = models['Component'];
         const ComponentGroup = models['ComponentGroup'];
         const Connection = models['Connection'];
-        const Organization = models['Organization'];
 
         Component.belongsTo(ComponentGroup);
-
-        // Components are available at the organizational level
-        Component.belongsTo(Organization);
 
         // Configured Components are called Connections
         Component.hasMany(Connection);

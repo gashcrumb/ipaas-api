@@ -2,6 +2,7 @@
   {
     "model": "Component",
     "data": {
+      "id": 1,
       "name": "Facebook",
       "icon": "fa-facebook-official",
       "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
@@ -11,6 +12,7 @@
   {
     "model": "Component",
     "data": {
+      "id": 2, 
       "name": "Gmail",
       "icon": "fa-google",
       "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
@@ -20,6 +22,7 @@
   {
     "model": "Component",
     "data": {
+      "id": 3,
       "name": "Pinterest",
       "icon": "fa-pinterest",
       "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
@@ -29,6 +32,7 @@
   {
     "model": "Component",
     "data": {
+      "id": 4,
       "name": "Twitter",
       "icon": "fa-twitter",
       "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
@@ -38,6 +42,7 @@
   {
     "model": "Component",
     "data": {
+      "id": 5,
       "name": "GitHub",
       "icon": "fa-github-alt",
       "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
@@ -47,6 +52,7 @@
   {
     "model": "Component",
     "data": {
+      "id": 66,
       "name": "Dropbox",
       "icon": "fa-dropbox",
       "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
@@ -56,15 +62,17 @@
   {
     "model": "Component",
     "data": {
+      "id": 6,
       "name": "Google Drive",
       "icon": "fa-google",
-      "properties": "",
+      "properties": "{}",
       "description": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus."
     }
   },
   {
     "model": "Component",
     "data": {
+      "id": 7,
       "name": "Reddit",
       "icon": "fa-reddit",
       "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
@@ -74,6 +82,7 @@
   {
     "model": "Component",
     "data": {
+      "id": 8,
       "name": "Bitbucket",
       "icon": "fa-bitbucket",
       "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
@@ -83,6 +92,7 @@
   {
     "model": "Component",
     "data": {
+      "id": 9,
       "name": "Flickr",
       "icon": "fa-flickr",
       "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
@@ -92,6 +102,7 @@
   {
     "model": "Component",
     "data": {
+      "id": 10,
       "name": "Pocket",
       "icon": "fa-get-pocket",
       "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
@@ -101,15 +112,17 @@
   {
     "model": "Component",
     "data": {
+      "id": 11,
       "name": "LinkedIn",
       "icon": "fa-linkedin-square",
-      "properties": "",
+      "properties": "{}",
       "description": "Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna."
     }
   },
   {
     "model": "Component",
     "data": {
+      "id": 12,
       "name": "Foursquare",
       "icon": "fa-foursquare",
       "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
@@ -119,6 +132,7 @@
   {
     "model": "Component",
     "data": {
+      "id": 13,
       "name": "Paypal",
       "icon": "fa-paypal",
       "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
@@ -128,6 +142,7 @@
   {
     "model": "Component",
     "data": {
+      "id": 14,
       "name": "Slack",
       "icon": "fa-slack",
       "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
@@ -137,6 +152,7 @@
   {
     "model": "Component",
     "data": {
+      "id": 15,
       "name": "Google Plus",
       "icon": "fa-google-plus-official",
       "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
@@ -146,6 +162,7 @@
   {
     "model": "Component",
     "data": {
+      "id": 16,
       "name": "Trello",
       "icon": "fa-trello",
       "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
@@ -159,7 +176,8 @@
       "configuredProperties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false}}",
       "icon": "fa-twitter",
       "description": "This is my awesome connection",
-      "position": "From"
+      "position": "From",
+      "owner": 4
     }
   },
   {
@@ -167,9 +185,10 @@
     "data": {
       "name": "MyOtherAwesomeConnection",
       "configuredProperties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false}}",
-      "icon": "fa-twitter",
+      "icon": "fa-github",
       "description": "This is my other awesome connection",
-      "position": "To"
+      "position": "To",
+      "owner": 5
     }
   },
   {
