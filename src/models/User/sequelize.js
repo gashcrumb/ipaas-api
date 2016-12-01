@@ -25,13 +25,11 @@ module.exports = function(sequelize, DataTypes) {
       associate: function(models) {
         const Integration = models['Integration'];
         const Organization = models['Organization'];
-        const Project = models['Project'];
         const Report = models['Report'];
         const Role = models['Role'];
         const User = models['User'];
 
         User.belongsToMany(Organization, {through: 'UsersOrganizations'});
-        User.belongsToMany(Project, {through: 'UserProjects'});
         User.belongsToMany(Report, {through: 'ReportsUsers'});
         User.belongsToMany(Role, {through: 'UsersRoles'});
         User.belongsToMany(Integration, { through: 'UsersIntegrations' });
