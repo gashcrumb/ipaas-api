@@ -4,7 +4,7 @@
 module.exports = exports.router = function Route(router, app) {
   var config = require('./config/' + app.get('env') + '.json');
   var path = require('path');
-  var prefix = './src/api/';
+  //var prefix = './src/api/';
 
   // API / Data / Actions
   var api = {
@@ -20,7 +20,6 @@ module.exports = exports.router = function Route(router, app) {
     integrationTemplates: require('./src/api/integrationTemplates.js'),
     organizations: require('./src/api/organizations.js'),
     permissions: require('./src/api/permissions.js'),
-    projects: require('./src/api/projects.js'),
     reports: require('./src/api/reports.js'),
     roles: require('./src/api/roles.js'),
     steps: require('./src/api/steps.js'),
@@ -33,7 +32,7 @@ module.exports = exports.router = function Route(router, app) {
 
   // Check if user is logged in
   var checkAuth = function(req, res, next) {
-    if (config['admin']['login'] === 'off') {
+    if (config['requireLogin'] === false) {
       next();
     } else {
       if (req.loggedIn) {
@@ -67,7 +66,7 @@ module.exports = exports.router = function Route(router, app) {
   //router.all('*', checkAuth);
 
   // Routes that can be accessed by any one
-  router.post('/login', auth.login);
+  //router.post('/login', auth.login);
 
 
   // ---------------------- API ---->>
@@ -154,16 +153,9 @@ module.exports = exports.router = function Route(router, app) {
   // Permissions
   router.get('/v1/permissions', api.permissions.findAll);
   router.get('/v1/permissions/:id', api.permissions.find);
-  router.post('/v1/permissions', api.permissions.add);
-  router.put('/v1/permissions/:id', api.permissions.save);
-  router.delete('/v1/permissions/:id', api.permissions.del);
-
-  // Projects
-  router.get('/v1/projects', api.projects.findAll);
-  router.get('/v1/projects/:id', api.projects.find);
-  router.post('/v1/projects', api.projects.add);
-  router.put('/v1/projects/:id', api.projects.save);
-  router.delete('/v1/projects/:id', api.projects.del);
+  //router.post('/v1/permissions', api.permissions.add);
+  //router.put('/v1/permissions/:id', api.permissions.save);
+  //router.delete('/v1/permissions/:id', api.permissions.del);
 
   // Reports
   router.get('/v1/reports', api.reports.findAll);
@@ -175,9 +167,9 @@ module.exports = exports.router = function Route(router, app) {
   // Roles
   router.get('/v1/roles', api.roles.findAll);
   router.get('/v1/roles/:id', api.roles.find);
-  router.post('/v1/roles', api.roles.add);
-  router.put('/v1/roles/:id', api.roles.save);
-  router.delete('/v1/roles/:id', api.roles.del);
+  //router.post('/v1/roles', api.roles.add);
+  //router.put('/v1/roles/:id', api.roles.save);
+  //router.delete('/v1/roles/:id', api.roles.del);
   
   // Steps
   router.get('/v1/steps', api.steps.findAll);

@@ -46,7 +46,9 @@ app.all('/*', function(req, res, next) {
 });
 
 // Auth Middleware - This will check if the token is valid
-app.all('/v1/*', [require(__dirname + '/src/api/middlewares/validateRequest')]);
+if(config['requireLogin'] === true) {
+  app.all('/v1/*', [require(__dirname + '/src/api/middlewares/validateRequest')]);
+}
 
 
 // Set up Routes

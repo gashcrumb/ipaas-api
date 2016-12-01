@@ -72,7 +72,6 @@ We are in the process of creating a diagram (see below) for the Entity Relations
   - belongs to many Organization
   - has many Roles (many-to-many)
 
-
 Again, this list may not be up-to-date, or may be under development. Please see the active list of models by viewing the [`src/models`](../src/models/index.js) file.
 
 ## Visual entity graph
