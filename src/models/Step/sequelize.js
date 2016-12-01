@@ -14,9 +14,9 @@ module.exports = function(sequelize, DataTypes) {
         const Connection = models['Connection'];
         const IntegrationTemplate = models['IntegrationTemplate'];
         const Step = models['Step'];
-        const StepType = models['StepType'];
+        const IntegrationPattern = models['IntegrationPattern'];
 
-        Step.belongsTo(StepType);
+        Step.belongsTo(IntegrationPattern);
 
         // Many-to-many relationships
         // `IntegrationTemplatesConnectionsSteps` is a single JOIN table that relates

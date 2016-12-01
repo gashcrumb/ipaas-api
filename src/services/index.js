@@ -27,7 +27,6 @@ exports.PermissionService = require('./PermissionService.js');
 exports.ReportService = require('./ReportService.js');
 exports.RoleService = require('./RoleService.js');
 exports.StepService = require('./StepService.js');
-exports.StepTypeService = require('./StepTypeService.js');
 exports.TagService = require('./TagService.js');
 exports.UserService = require('./UserService.js');
 
