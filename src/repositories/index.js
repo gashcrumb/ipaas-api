@@ -20,6 +20,7 @@ exports.EnvironmentRepository = require('./EnvironmentRepository.js');
 exports.EnvironmentTypeRepository = require('./EnvironmentTypeRepository.js');
 exports.IntegrationRepository = require('./IntegrationRepository.js');
 exports.IntegrationPatternRepository = require('./IntegrationPatternRepository.js');
+exports.IntegrationPatternGroupRepository = require('./IntegrationPatternGroupRepository.js');
 exports.IntegrationRuntimeRepository = require('./IntegrationRuntimeRepository.js');
 exports.IntegrationTemplateRepository = require('./IntegrationTemplateRepository.js');
 exports.OrganizationRepository = require('./OrganizationRepository.js');
