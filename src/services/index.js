@@ -19,6 +19,7 @@ exports.ConnectionTypeService = require('./ConnectionTypeService.js');
 exports.EnvironmentService = require('./EnvironmentService.js');
 exports.EnvironmentTypeService = require('./EnvironmentTypeService.js');
 exports.IntegrationService = require('./IntegrationService.js');
+exports.IntegrationPatternService = require('./IntegrationPatternService.js');
 exports.IntegrationRuntimeService = require('./IntegrationRuntimeService.js');
 exports.IntegrationTemplateService = require('./IntegrationTemplateService.js');
 exports.OrganizationService = require('./OrganizationService.js');
