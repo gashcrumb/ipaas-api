@@ -1,4 +1,5 @@
 {
+  "requireLogin": false,
   "db": {
     "options": {
       "host": "127.0.0.1",

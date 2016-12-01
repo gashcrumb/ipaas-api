@@ -21,15 +21,11 @@ module.exports = function(sequelize, DataTypes) {
         const Integration = models['Integration'];
         const IntegrationRuntime = models['IntegrationRuntime'];
         const IntegrationTemplate = models['IntegrationTemplate'];
-        const Project = models['Project'];
         const Tag = models['Tag'];
         const User = models['User'];
 
         // Integrations are all created from a template of some type
         Integration.belongsTo(IntegrationTemplate);
-
-        // Keep track of the project this was created for
-        Integration.belongsTo(Project);
 
         // Keep track of who created this Integration
         Integration.belongsTo(User);

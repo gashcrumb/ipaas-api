@@ -23,7 +23,6 @@ exports.IntegrationRuntimeService = require('./IntegrationRuntimeService.js');
 exports.IntegrationTemplateService = require('./IntegrationTemplateService.js');
 exports.OrganizationService = require('./OrganizationService.js');
 exports.PermissionService = require('./PermissionService.js');
-exports.ProjectService = require('./ProjectService.js');
 exports.ReportService = require('./ReportService.js');
 exports.RoleService = require('./RoleService.js');
 exports.StepService = require('./StepService.js');
