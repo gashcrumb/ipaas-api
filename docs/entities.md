@@ -22,7 +22,6 @@ We are in the process of creating a diagram (see below) for the Entity Relations
     - has one IntegrationTemplates 
     - has many IntegrationRuntimes
     - has many Tags (many-to-many)
-    - belongs to a Project
     - has many Connections through IntegrationConnectionStep
     - has many Steps through IntegrationConnectionStep
 
@@ -45,7 +44,6 @@ We are in the process of creating a diagram (see below) for the Entity Relations
     - has many Environments
     - has many IntegrationTemplates
     - has many Users
-    - has many Projects
 
 - Environment
     - belongs to an EnvironmentType
@@ -73,13 +71,7 @@ We are in the process of creating a diagram (see below) for the Entity Relations
 - User
   - belongs to many Organization
   - has many Roles (many-to-many)
-  - has many Projects
 
-- Project
-  - has many Integrations
-  - has many Connections
-  - has many Users
-  - belongs to an Organization
 
 Again, this list may not be up-to-date, or may be under development. Please see the active list of models by viewing the [`src/models`](../src/models/index.js) file.
 
