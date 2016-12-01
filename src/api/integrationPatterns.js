@@ -10,112 +10,116 @@ var IntegrationPatternService = Services.IntegrationPatternService;
 // ---------------------- API ---->>
 
 exports.add = function(req, res) {
-    var params = req.body;
-    if(req.user) {params.UserId = req.user.id}
+  var params = req.body;
+  if (req.user) {
+    params.UserId = req.user.id
+  }
 
-    var IntegrationPattern = new IntegrationPatternService(params);
+  var IntegrationPattern = new IntegrationPatternService(params);
 
-    IntegrationPattern
-        .create()
-        .then(function(result) {
-            res.json(result);
-        })
-        .catch(function(err) {
-            res.json(err);
-        });
+  IntegrationPattern
+    .create()
+    .then(function(result) {
+      res.json(result);
+    })
+    .catch(function(err) {
+      res.json(err);
+    });
 };
 
 
 exports.del = function(req, res) {
-    var params = {id: req.params.id};
-    params.UserId = req.user.id;
+  var params = {id: req.params.id};
+  params.UserId = req.user.id;
 
-    var IntegrationPattern = new IntegrationPatternService(params);
+  var IntegrationPattern = new IntegrationPatternService(params);
 
-    IntegrationPattern
-        .destroy()
-        .then(function(result) {
-            res.json(result);
-        })
-        .catch(function(err) {
-            res.json(err);
-        });
+  IntegrationPattern
+    .destroy()
+    .then(function(result) {
+      res.json(result);
+    })
+    .catch(function(err) {
+      res.json(err);
+    });
 };
 
 
-exports.find = function (req, res) {
-    var Model, Models;
-    var params = {};
+exports.find = function(req, res) {
+  var Model, Models;
+  var params = {};
 
-    Model = require('../models/index.js');
-    Models = new Model();
+  Model = require('../models/index.js');
+  Models = new Model();
 
-    params.where = { id: req.params.id };
+  params.where = {id: req.params.id};
 
-    // ie: ?include=category&include=file&include=image
-    if(req.query.include) {
-        for(var i = 0; i < req.query.include.length; i++) {
-            var capitalize = req.query.include[i][0].toUpperCase() + req.query.include[i].slice(1);
-            includes.push(Models[capitalize]);
-        }
-
-        params.include = includes;
+  // ie: ?include=category&include=file&include=image
+  if (req.query.include) {
+    for (var i = 0; i < req.query.include.length; i++) {
+      var capitalize = req.query.include[i][0].toUpperCase() + req.query.include[i].slice(1);
+      includes.push(Models[capitalize]);
     }
 
-    var IntegrationPattern = new IntegrationPatternService(params);
+    params.include = includes;
+  }
 
-    IntegrationPattern
-        .find()
-        .then(function(result) {
-            res.json(result);
-        })
-        .catch(function(err) {
-            res.json(err);
-        });
+  var IntegrationPattern = new IntegrationPatternService(params);
+
+  IntegrationPattern
+    .find()
+    .then(function(result) {
+      res.json(result);
+    })
+    .catch(function(err) {
+      res.json(err);
+    });
 };
 
 
-exports.findAll = function (req, res) {
-    var Model = require('../models/index.js');
-    var Models = new Model();
-    var includes = [];
-    var params = {};
+exports.findAll = function(req, res) {
+  var Model = require('../models/index.js');
+  var Models = new Model();
+  var includes = [];
+  var params = {};
 
-    // ie: ?include=category&include=file&include=image
-    if(req.query.include) {
-        for(var i = 0; i < req.query.include.length; i++) {
-            var capitalize = req.query.include[i][0].toUpperCase() + req.query.include[i].slice(1);
-            includes.push(Models[capitalize]);
-        }
-
-        params.include = includes;
+  // ie: ?include=category&include=file&include=image
+  if (req.query.include) {
+    for (var i = 0; i < req.query.include.length; i++) {
+      var capitalize = req.query.include[i][0].toUpperCase() + req.query.include[i].slice(1);
+      includes.push(Models[capitalize]);
     }
 
-    var IntegrationPattern = new IntegrationPatternService(params);
+    params.include = includes;
+  }
 
-    IntegrationPattern
-        .findAll()
-        .then(function(result) {
-            res.json(result);
-        })
-        .catch(function(err) {
-            res.json(err);
-        });
+  var IntegrationPattern = new IntegrationPatternService(params);
+
+  IntegrationPattern
+    .findAll()
+    .then(function(result) {
+      res.json(result);
+    })
+    .catch(function(err) {
+      res.json(err);
+    });
 };
 
 exports.save = function(req, res) {
-    var params = req.body;
-    if(req.user) {params.UserId = req.user.id}
+  var params = req.body;
+  if (req.user) {
+    params.UserId = req.user.id
+  }
 
-    var IntegrationPattern = new IntegrationPatternService(params);
+  var IntegrationPattern = new IntegrationPatternService(params);
 
-    IntegrationPattern
-        .save()
-        .then(function(result) {
-            res.json(result);
-        })
-        .catch(function(err) {
-            res.json(err);
-        });
+  IntegrationPattern
+    .save()
+    .then(function(result) {
+      res.json(result);
+    })
+    .catch(function(err) {
+      res.json(err);
+    });
 };
 

@@ -21,7 +21,8 @@ function IntegrationPatternRepository(params) {
 
 // Inherit from BaseRepository
 function extend(Child, Parent) {
-  var F = function () {};
+  var F = function() {
+  };
   F.prototype = Parent.prototype;
   Child.prototype = new F();
   Child.prototype.constructor = Child;
