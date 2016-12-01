@@ -24,7 +24,6 @@ module.exports = exports.router = function Route(router, app) {
     reports: require('./src/api/reports.js'),
     roles: require('./src/api/roles.js'),
     steps: require('./src/api/steps.js'),
-    stepTypes: require('./src/api/stepTypes.js'),
     tags: require('./src/api/tags.js'),
     users: require('./src/api/users.js')
   };
@@ -185,13 +184,6 @@ module.exports = exports.router = function Route(router, app) {
   router.post('/v1/steps', api.steps.add);
   router.put('/v1/steps/:id', api.steps.save);
   router.delete('/v1/steps/:id', api.steps.del);
-
-  // Step Types
-  router.get('/v1/step-types', api.stepTypes.findAll);
-  router.get('/v1/step-types/:id', api.stepTypes.find);
-  router.post('/v1/step-types', api.stepTypes.add);
-  router.put('/v1/step-types/:id', api.stepTypes.save);
-  router.delete('/v1/step-types/:id', api.stepTypes.del);
 
   // Tags
   router.get('/v1/tags', api.tags.findAll);
