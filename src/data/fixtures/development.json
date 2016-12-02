@@ -311,7 +311,19 @@
   {
     "model": "Permission",
     "data": {
-      "name": "Citizen User"
+      "name": "View list of Components"
+    }
+  },
+  {
+    "model": "Permission",
+    "data": {
+      "name": "View list of Connections"
+    }
+  },
+  {
+    "model": "Permission",
+    "data": {
+      "name": "View list of Integrations"
     }
   },
   {
