@@ -1,42 +1,18 @@
 [
   {
-    "model": "IntegrationPatternGroup",
-    "data": {
-      "id": 1,
-      "name": "Message Transformation"
-    }
-  },
-  {
-    "model": "IntegrationPatternGroup",
-    "id": 2,
-    "data": {
-      "name": "Message Routing"
-    }
-  },
-  {
-    "model": "IntegrationPatternGroup",
-    "id": 3,
-    "data": {
-      "name": "System Management"
-    }
-  },
-  {
     "model": "ComponentGroup",
-    "id": 1,
     "data": {
       "name": "Cloudy Stuff"
     }
   },
   {
     "model": "ComponentGroup",
-    "id": 2,
     "data": {
       "name": "Less Cloudy Stuff"
     }
   },
   {
     "model": "ComponentGroup",
-    "id": 3,
     "data": {
       "name": "Magic Box 'O Tricks"
     }
@@ -232,10 +208,10 @@
   {
     "model": "Connection",
     "data": {
-      "name": "MyAwesomeConnection",
+      "name": "From Twitter",
       "configuredProperties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false}}",
       "icon": "fa-twitter",
-      "description": "This is my awesome connection",
+      "description": "A connection that communicates with Twitter.",
       "position": "From",
       "Component": 4
     }
@@ -243,10 +219,10 @@
   {
     "model": "Connection",
     "data": {
-      "name": "MyOtherAwesomeConnection",
+      "name": "To GitHub",
       "configuredProperties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false}}",
       "icon": "fa-github",
-      "description": "This is my other awesome connection",
+      "description": "A connection that communicates with GitHub.",
       "position": "To",
       "Component": 5
     }
@@ -315,9 +291,39 @@
     "IntegrationPatternGroup": 1
   },
   {
+    "model": "IntegrationPatternGroup",
+    "data": {
+      "name": "Message Transformation"
+    }
+  },
+  {
+    "model": "IntegrationPatternGroup",
+    "data": {
+      "name": "Message Routing"
+    }
+  },
+  {
+    "model": "IntegrationPatternGroup",
+    "data": {
+      "name": "System Management"
+    }
+  },
+  {
     "model": "Permission",
     "data": {
-      "name": "Citizen User"
+      "name": "View list of Components"
+    }
+  },
+  {
+    "model": "Permission",
+    "data": {
+      "name": "View list of Connections"
+    }
+  },
+  {
+    "model": "Permission",
+    "data": {
+      "name": "View list of Integrations"
     }
   },
   {
