@@ -1,4 +1,4 @@
-// Config Service
+// Component Service
 'use strict';
 
 // ---------------------- Dependencies ---->>
@@ -6,16 +6,16 @@
 var _ = require('lodash');
 
 var async = require('async');
-var ConfigRepository = require('../repositories/ConfigRepository.js');
-var ConfigGroupRepository = require('../repositories/ConfigGroupRepository.js');
-var ConfigTypeRepository = require('../repositories/ConfigTypeRepository.js');
+var ComponentRepository = require('../repositories/ComponentRepository.js');
+var ComponentGroupRepository = require('../repositories/ComponentGroupRepository.js');
+var ComponentTypeRepository = require('../repositories/ComponentTypeRepository.js');
 
 
 // ---------------------- Class/Constructor ---->>
 
-function ConfigService(model, modelName, params) {
-    ConfigRepository.call(this, model, modelName, params);
-    this.layerName = 'ConfigService';
+function ComponentService(model, modelName, params) {
+    ComponentRepository.call(this, model, modelName, params);
+    this.layerName = 'ComponentService';
     //this.params = params;
 
     this.mix = function mix() {
@@ -33,27 +33,27 @@ function ConfigService(model, modelName, params) {
 
 // ---------------------- Prototypes ---->>
 
-function inheritPrototype(ConfigService, ConfigRepository) {
-    var prototype = Object.create(ConfigRepository.prototype); // Create Object
-    prototype.constructor = ConfigService; // Augment Object
-    ConfigService.prototype = prototype; // Assign Object
+function inheritPrototype(ComponentService, ComponentRepository) {
+    var prototype = Object.create(ComponentRepository.prototype); // Create Object
+    prototype.constructor = ComponentService; // Augment Object
+    ComponentService.prototype = prototype; // Assign Object
 }
 
-inheritPrototype(ConfigService, ConfigRepository);
+inheritPrototype(ComponentService, ComponentRepository);
 
 // Find One Instance with its Associations
-ConfigService.prototype.findWithAssociations = function findWithAssociations(superDone) {
+ComponentService.prototype.findWithAssociations = function findWithAssociations(superDone) {
     this.find(function(instance) {
         var cleanObject = JSON.parse(JSON.stringify(instance));
 
         async.parallel([
             function(callback) {
-                // ConfigGroups
+                // ComponentGroups
                 instance
-                    .getConfigGroup()
-                    .success(function(configGroup) {
-                        if (configGroup) {cleanObject.configGroup = configGroup;}
-                        callback(null, configGroup);
+                    .getComponentGroup()
+                    .success(function(componentGroup) {
+                        if (componentGroup) {cleanObject.componentGroup = componentGroup;}
+                        callback(null, componentGroup);
                     })
                     .error(function(err) {
                         callback(err);
@@ -87,14 +87,14 @@ ConfigService.prototype.findWithAssociations = function findWithAssociations(sup
     });
 };
 
-ConfigService.prototype.fetchAllWithAssociations = function fetchAssociations(done) {
+ComponentService.prototype.fetchAllWithAssociations = function fetchAssociations(done) {
     var self = this;
-    // Get All ConfigTypes
-    new ConfigGroupRepository().findAll(function(types) {
+    // Get All ComponentTypes
+    new ComponentGroupRepository().findAll(function(types) {
         var typeArray = [];
         _(types).forEach(function(type) {
-            var params = {where: {ConfigTypeId: type.id}};
-            new ConfigService(params).findAll(function(groupResults) {
+            var params = {where: {ComponentTypeId: type.id}};
+            new ComponentService(params).findAll(function(groupResults) {
                 var cake = self.mix(
                     {groupList: groupResults},
                     {type: type}
@@ -112,16 +112,16 @@ ConfigService.prototype.fetchAllWithAssociations = function fetchAssociations(do
 
 
 // Set Associations
-ConfigService.prototype.setAssociations = function setAssociations(original, superDone) {
+ComponentService.prototype.setAssociations = function setAssociations(original, superDone) {
     var that = this;
 
     async.parallel({
-        configGroups: function(callback) {
-            if(that.params.associations.ConfigGroupId) {
-                var ConfigGroupService = require('./ConfigGroupService.js');
-                new ConfigGroupService({id: that.params.associations.ConfigGroupId}).find(function(configGroup) {
+        componentGroups: function(callback) {
+            if(that.params.associations.ComponentGroupId) {
+                var ComponentGroupService = require('./ComponentGroupService.js');
+                new ComponentGroupService({id: that.params.associations.ComponentGroupId}).find(function(componentGroup) {
                     original
-                        .setConfigGroup(configGroup)
+                        .setComponentGroup(componentGroup)
                         .success(function() {
                             callback(null);
                         })
@@ -166,4 +166,4 @@ ConfigService.prototype.setAssociations = function setAssociations(original, sup
     });
 };
 
-module.exports = ConfigService;
+module.exports = ComponentService;
