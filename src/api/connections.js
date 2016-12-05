@@ -3,6 +3,7 @@
 
 // ---------------------- Dependencies ---->>
 
+const _ = require('lodash');
 var Services = require('../services/index.js');
 var ConnectionService = Services.ConnectionService;
 
@@ -50,7 +51,7 @@ exports.find = function(req, res) {
   var params = {};
 
   Model = require('../models/index.js');
-  Models = new Model();
+  Models = new Model().models;
 
   params.where = {id: req.params.id};
 
@@ -60,7 +61,6 @@ exports.find = function(req, res) {
       var capitalize = req.query.include[i][0].toUpperCase() + req.query.include[i].slice(1);
       includes.push(Models[capitalize]);
     }
-
     params.include = includes;
   }
 
@@ -79,19 +79,36 @@ exports.find = function(req, res) {
 
 exports.findAll = function(req, res) {
   var Model = require('../models/index.js');
-  var Models = new Model();
+  var Models = new Model().models;
   var includes = [];
   var params = {};
 
   // ie: ?include=category&include=file&include=image
+  console.log("Req.query.include: ", req.query.include);
+  if (req.query.include) {
+    var include = req.query.include;
+    if (_.isArray(include)) {
+      includes = _.clone(req.query.include);
+    } else {
+      includes.push(include);
+    }
+    includes = _.map(includes, (include) => {
+      return {
+        model: Models[_.capitalize(include)]
+      };
+    });
+    params.include = includes;
+  }
+  /*
   if (req.query.include) {
     for (var i = 0; i < req.query.include.length; i++) {
       var capitalize = req.query.include[i][0].toUpperCase() + req.query.include[i].slice(1);
       includes.push(Models[capitalize]);
     }
-
     params.include = includes;
   }
+  */
+  console.log("Params: ", params);
 
   var Connection = new ConnectionService(params);
 
