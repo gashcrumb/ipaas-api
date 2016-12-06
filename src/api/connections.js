@@ -2,6 +2,8 @@
 'use strict';
 
 // ---------------------- Dependencies ---->>
+const _ = require('lodash');
+const Helpers = require('./helpers.js');
 
 var Services = require('../services/index.js');
 var ConnectionService = Services.ConnectionService;
@@ -46,26 +48,13 @@ exports.del = function(req, res) {
 
 
 exports.find = function(req, res) {
-  var Model, Models;
-  var params = {};
-
-  Model = require('../models/index.js');
-  Models = new Model();
-
+  const Model = require('../models/index.js');
+  const models = new Model().models;
+  const params = {};
   params.where = {id: req.params.id};
-
   // ie: ?include=category&include=file&include=image
-  if (req.query.include) {
-    for (var i = 0; i < req.query.include.length; i++) {
-      var capitalize = req.query.include[i][0].toUpperCase() + req.query.include[i].slice(1);
-      includes.push(Models[capitalize]);
-    }
-
-    params.include = includes;
-  }
-
+  Helpers.applyModelIncludes(params, req, models);
   var Connection = new ConnectionService(params);
-
   Connection
     .find()
     .then(function(result) {
@@ -79,22 +68,11 @@ exports.find = function(req, res) {
 
 exports.findAll = function(req, res) {
   var Model = require('../models/index.js');
-  var Models = new Model();
-  var includes = [];
+  const models = new Model().models;
   var params = {};
-
   // ie: ?include=category&include=file&include=image
-  if (req.query.include) {
-    for (var i = 0; i < req.query.include.length; i++) {
-      var capitalize = req.query.include[i][0].toUpperCase() + req.query.include[i].slice(1);
-      includes.push(Models[capitalize]);
-    }
-
-    params.include = includes;
-  }
-
+  Helpers.applyModelIncludes(params, req, models);
   var Connection = new ConnectionService(params);
-
   Connection
     .findAll()
     .then(function(result) {
