@@ -1,401 +1,930 @@
 [
   {
-    "model": "ComponentGroup",
     "data": {
-      "name": "Cloudy Stuff"
-    }
+      "name": "Acme",
+      "id": 1
+    },
+    "model": "Organization"
   },
   {
-    "model": "ComponentGroup",
     "data": {
-      "name": "Less Cloudy Stuff"
-    }
+      "name": "iPaaS Administrator",
+      "id": 1
+    },
+    "model": "Role"
   },
   {
-    "model": "ComponentGroup",
-    "data": {
-      "name": "Magic Box 'O Tricks"
-    }
-  },
-  {
-    "model": "IntegrationPatternGroup",
-    "data": {
-      "id": 1,
-      "name": "Message Transformation"
-    }
-  },
-  {
-    "model": "IntegrationPatternGroup",
-    "data": {
-      "id": 2,
-      "name": "Message Routing"
-    }
-  },
-  {
-    "model": "IntegrationPatternGroup",
-    "data": {
-      "id": 3,
-      "name": "System Management"
-    }
-  },
-  {
-    "model": "Component",
-    "data": {
-      "id": 1,
-      "name": "Facebook",
-      "icon": "fa-facebook-official",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.",
-      "ComponentGroupId": 1
-    }
-  },
-  {
-    "model": "Component",
-    "data": {
-      "id": 2, 
-      "name": "Gmail",
-      "icon": "fa-google",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "description": "Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum.",
-      "ComponentGroupId": 3
-    }
-  },
-  {
-    "model": "Component",
-    "data": {
-      "id": 3,
-      "name": "Pinterest",
-      "icon": "fa-pinterest",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "description": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
-      "ComponentGroup": 1
-    }
-  },
-  {
-    "model": "Component",
-    "data": {
-      "id": 4,
-      "name": "Twitter",
-      "icon": "fa-twitter",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.",
-      "ComponentGroup": 1
-    }
-  },
-  {
-    "model": "Component",
-    "data": {
-      "id": 5,
-      "name": "GitHub",
-      "icon": "fa-github-alt",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "description": "Donec id elit non mi porta gravida at eget metus.",
-      "ComponentGroup": 1
-
-    }
-  },
-  {
-    "model": "Component",
-    "data": {
-      "id": 66,
-      "name": "Dropbox",
-      "icon": "fa-dropbox",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "description": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et.",
-      "ComponentGroup": 1
-    }
-  },
-  {
-    "model": "Component",
-    "data": {
-      "id": 6,
-      "name": "Google Drive",
-      "icon": "fa-google",
-      "properties": "{}",
-      "description": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus.",
-      "ComponentGroup": 2
-    }
-  },
-  {
-    "model": "Component",
-    "data": {
-      "id": 7,
-      "name": "Reddit",
-      "icon": "fa-reddit",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "description": "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
-      "ComponentGroup": 1
-    }
-  },
-  {
-    "model": "Component",
-    "data": {
-      "id": 8,
-      "name": "Bitbucket",
-      "icon": "fa-bitbucket",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "description": "Pellentesque ornare sem lacinia quam venenatis vestibulum.",
-      "ComponentGroup": 3
-    }
-  },
-  {
-    "model": "Component",
-    "data": {
-      "id": 9,
-      "name": "Flickr",
-      "icon": "fa-flickr",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "description": "Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.",
-      "ComponentGroup": 3 
-    }
-  },
-  {
-    "model": "Component",
-    "data": {
-      "id": 10,
-      "name": "Pocket",
-      "icon": "fa-get-pocket",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "description": "Nullam quis risus eget urna mollis ornare vel eu leo.",
-      "ComponentGroup": 1
-    }
-  },
-  {
-    "model": "Component",
-    "data": {
-      "id": 11,
-      "name": "LinkedIn",
-      "icon": "fa-linkedin-square",
-      "properties": "{}",
-      "description": "Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna.",
-      "ComponentGroup": 2
-    }
-  },
-  {
-    "model": "Component",
-    "data": {
-      "id": 12,
-      "name": "Foursquare",
-      "icon": "fa-foursquare",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "description": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna.",
-      "ComponentGroup": 3
-    }
-  },
-  {
-    "model": "Component",
-    "data": {
-      "id": 13,
-      "name": "Paypal",
-      "icon": "fa-paypal",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "description": "Maecenas sed diam eget risus varius blandit sit amet non magna.",
-      "ComponentGroup": 2
-    }
-  },
-  {
-    "model": "Component",
-    "data": {
-      "id": 14,
-      "name": "Slack",
-      "icon": "fa-slack",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "description": "Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-      "ComponentGroup": 1
-    }
-  },
-  {
-    "model": "Component",
-    "data": {
-      "id": 15,
-      "name": "Google Plus",
-      "icon": "fa-google-plus-official",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-      "ComponentGroup": 2
-    }
-  },
-  {
-    "model": "Component",
-    "data": {
-      "id": 16,
-      "name": "Trello",
-      "icon": "fa-trello",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "description": "Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna.",
-      "ComponentGroup": 1
-    }
-  },
-  {
-    "model": "Connection",
-    "data": {
-      "name": "From Twitter",
-      "configuredProperties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false}}",
-      "icon": "fa-twitter",
-      "description": "A connection that communicates with Twitter.",
-      "position": "From",
-      "Component": 4
-    }
-  },
-  {
-    "model": "Connection",
-    "data": {
-      "name": "To GitHub",
-      "configuredProperties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false}}",
-      "icon": "fa-github",
-      "description": "A connection that communicates with GitHub.",
-      "position": "To",
-      "Component": 5
-    }
-  },
-  {
-    "model": "IntegrationPattern",
-    "data": {
-      "name": "Dynamic Router",
-      "icon": "fa-puzzle-piece",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "IntegrationPatternGroup": 2
-    }
-  },
-  {
-    "model": "IntegrationPattern",
-    "data": {
-      "name": "Content Based Router",
-      "icon": "fa-puzzle-piece",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "IntegrationPatternGroup": 2
-    }
-  },
-  {
-    "model": "IntegrationPattern",
-    "data": {
-      "name": "Splitter",
-      "icon": "fa-puzzle-piece",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "IntegrationPatternGroup": 2
-    }
-  },
-  {
-    "model": "IntegrationPattern",
-    "data": {
-      "name": "Aggregator",
-      "icon": "fa-puzzle-piece",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "IntegrationPatternGroup": 2
-    }
-  },
-  {
-    "model": "IntegrationPattern",
-    "data": {
-      "name": "Content Filter",
-      "icon": "fa-puzzle-piece",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "IntegrationPatternGroup": 1
-    }
-  },
-  {
-    "model": "IntegrationPattern",
-    "data": {
-      "name": "Wiretap",
-      "icon": "fa-puzzle-piece",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "IntegrationPatternGroup": 3
-    }
-  },
-  {
-    "model": "IntegrationPattern",
-    "data": {
-      "name": "Content Enricher",
-      "icon": "fa-puzzle-piece",
-      "properties": "{\"accessToken\":{\"name\":\"accessToken\",\"description\":\"The access token\",\"title\":\"Access Token\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"accessTokenSecret\":{\"name\":\"accessTokenSecret\",\"description\":\"The access token secret\",\"title\":\"Access Token Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerKey\":{\"name\":\"consumerKey\",\"description\":\"The consumer key\",\"title\":\"Consumer Key\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"consumerSecret\":{\"name\":\"consumerSecret\",\"description\":\"The consumer secret\",\"title\":\"Consumer Secret\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyHost\":{\"name\":\"httpProxyHost\",\"description\":\"The http proxy host which can be used for the camel-twitter.\",\"title\":\"Http Proxy Host\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyUser\":{\"name\":\"httpProxyUser\",\"description\":\"The http proxy user which can be used for the camel-twitter.\",\"title\":\"Http Proxy User\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPassword\":{\"name\":\"httpProxyPassword\",\"description\":\"The http proxy password which can be used for the camel-twitter.\",\"title\":\"Http Proxy Password\",\"javaType\":\"java.lang.String\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"httpProxyPort\":{\"name\":\"httpProxyPort\",\"description\":\"The http proxy port which can be used for the camel-twitter.\",\"title\":\"Http Proxy Port\",\"javaType\":\"java.lang.Integer\",\"type\":\"integer\",\"enabled\":true,\"required\":false}}",
-      "IntegrationPatternGroup": 1
-    }
-  },
-  {
-    "model": "Permission",
-    "data": {
-      "name": "View list of Components"
-    }
-  },
-  {
-    "model": "Permission",
-    "data": {
-      "name": "View list of Connections"
-    }
-  },
-  {
-    "model": "Permission",
-    "data": {
-      "name": "View list of Integrations"
-    }
-  },
-  {
-    "model": "Role",
-    "data": {
-      "name": "Admin"
-    }
-  },
-  {
-    "model": "Role",
-    "data": {
-      "name": "iPaaS Administrator"
-    }
-  },
-  {
-    "model": "Role",
     "data": {
       "name": "Expert User"
-    }
+    },
+    "id": 2,
+    "model": "Role"
   },
   {
-    "model": "Role",
     "data": {
-      "name": "Citizen User"
-    }
+      "name": "Citizen User",
+      "id": 3
+    },
+    "model": "Role"
   },
   {
-    "model": "User",
     "data": {
-      "fullName": "Luke Skywalker",
-      "username": "lskywalker"
-    }
+      "role": 2,
+      "username": "rwest",
+      "lastName": "West",
+      "firstName": "Raquel"
+    },
+    "model": "User"
   },
   {
-    "model": "User",
     "data": {
-      "fullName": "Darth Vader",
-      "username": "dvader"
-    }
+      "role": 3,
+      "username": "cmontoya",
+      "lastName": "Montoya",
+      "firstName": "Colon"
+    },
+    "model": "User"
   },
   {
-    "model": "User",
     "data": {
-      "fullName": "Leia Organa",
-      "username": "lorgana"
-    }
+      "role": 2,
+      "username": "sperkins",
+      "lastName": "Perkins",
+      "firstName": "Shelton"
+    },
+    "model": "User"
   },
   {
-    "model": "User",
     "data": {
-      "firstName": "Owen",
-      "lastName": "Lars",
-      "username": "olars"
-    }
+      "role": 3,
+      "username": "wnicholson",
+      "lastName": "Nicholson",
+      "firstName": "Walsh"
+    },
+    "model": "User"
   },
   {
-    "model": "User",
     "data": {
-      "fullName": "Beru Whitesun",
-      "lastName": "Lars",
-      "username": "blars"
-    }
+      "role": 3,
+      "username": "kware",
+      "lastName": "Ware",
+      "firstName": "Kerry"
+    },
+    "model": "User"
   },
   {
-    "model": "User",
     "data": {
-      "fullName": "R2-D2",
-      "lastName": "",
-      "username": "r2d2"
-    }
+      "role": 3,
+      "username": "wtodd",
+      "lastName": "Todd",
+      "firstName": "Winters"
+    },
+    "model": "User"
+  },
+  {
+    "data": {
+      "role": 1,
+      "username": "kdavenport",
+      "lastName": "Davenport",
+      "firstName": "Kari"
+    },
+    "model": "User"
+  },
+  {
+    "data": {
+      "role": 1,
+      "username": "cfields",
+      "lastName": "Fields",
+      "firstName": "Cabrera"
+    },
+    "model": "User"
+  },
+  {
+    "data": {
+      "role": 2,
+      "username": "spayne",
+      "lastName": "Payne",
+      "firstName": "Sherri"
+    },
+    "model": "User"
+  },
+  {
+    "data": {
+      "role": 1,
+      "username": "pphillips",
+      "lastName": "Phillips",
+      "firstName": "Parks"
+    },
+    "model": "User"
+  },
+  {
+    "data": {
+      "name": "irure",
+      "id": 1
+    },
+    "model": "ComponentGroup"
+  },
+  {
+    "data": {
+      "name": "id",
+      "id": 2
+    },
+    "model": "ComponentGroup"
+  },
+  {
+    "data": {
+      "name": "exercitation",
+      "id": 3
+    },
+    "model": "ComponentGroup"
+  },
+  {
+    "data": {
+      "name": "minim",
+      "id": 4
+    },
+    "model": "ComponentGroup"
+  },
+  {
+    "data": {
+      "name": "aliquip",
+      "id": 5
+    },
+    "model": "ComponentGroup"
+  },
+  {
+    "data": {
+      "name": "nostrud",
+      "id": 6
+    },
+    "model": "ComponentGroup"
+  },
+  {
+    "data": {
+      "name": "laborum",
+      "id": 7
+    },
+    "model": "ComponentGroup"
+  },
+  {
+    "data": {
+      "name": "pariatur",
+      "id": 8
+    },
+    "model": "ComponentGroup"
+  },
+  {
+    "data": {
+      "name": "laborum",
+      "id": 9
+    },
+    "model": "ComponentGroup"
+  },
+  {
+    "data": {
+      "name": "aute",
+      "id": 10
+    },
+    "model": "ComponentGroup"
+  },
+  {
+    "data": {
+      "name": "anim",
+      "id": 1
+    },
+    "model": "IntegrationPatternGroup"
+  },
+  {
+    "data": {
+      "name": "consequat",
+      "id": 2
+    },
+    "model": "IntegrationPatternGroup"
+  },
+  {
+    "data": {
+      "name": "ullamco",
+      "id": 3
+    },
+    "model": "IntegrationPatternGroup"
+  },
+  {
+    "data": {
+      "name": "pariatur",
+      "id": 4
+    },
+    "model": "IntegrationPatternGroup"
+  },
+  {
+    "data": {
+      "name": "proident",
+      "id": 5
+    },
+    "model": "IntegrationPatternGroup"
+  },
+  {
+    "data": {
+      "name": "adipisicing",
+      "id": 6
+    },
+    "model": "IntegrationPatternGroup"
+  },
+  {
+    "data": {
+      "name": "proident2",
+      "id": 7
+    },
+    "model": "IntegrationPatternGroup"
+  },
+  {
+    "data": {
+      "name": "ex",
+      "id": 8
+    },
+    "model": "IntegrationPatternGroup"
+  },
+  {
+    "data": {
+      "name": "consectetur",
+      "id": 9
+    },
+    "model": "IntegrationPatternGroup"
+  },
+  {
+    "data": {
+      "name": "esse",
+      "id": 10
+    },
+    "model": "IntegrationPatternGroup"
+  },
+  {
+    "data": {
+      "ComponentGroup": 6,
+      "description": "commodo pariatur veniam est cillum non nostrud labore duis laborum",
+      "properties": "{\"duis\":{\"name\":\"duis\",\"title\":\"duis\",\"description\":\"nisi non fugiat mollit sit\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"ullamco\":{\"name\":\"ullamco\",\"title\":\"ullamco\",\"description\":\"ullamco pariatur eu proident commodo\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"proident\":{\"name\":\"proident\",\"title\":\"proident\",\"description\":\"labore dolor labore amet et\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"consectetur\":{\"name\":\"consectetur\",\"title\":\"consectetur\",\"description\":\"nostrud officia magna reprehenderit magna\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"deserunt\":{\"name\":\"deserunt\",\"title\":\"deserunt\",\"description\":\"amet nulla est elit nisi\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"nulla\":{\"name\":\"nulla\",\"title\":\"nulla\",\"description\":\"excepteur est ad anim exercitation\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"aliquip\":{\"name\":\"aliquip\",\"title\":\"aliquip\",\"description\":\"veniam quis velit labore est\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"qui\":{\"name\":\"qui\",\"title\":\"qui\",\"description\":\"eu nulla ea velit cupidatat\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"commodo\":{\"name\":\"commodo\",\"title\":\"commodo\",\"description\":\"Lorem voluptate consectetur nostrud exercitation\",\"type\":\"password\",\"enabled\":true,\"required\":false}}",
+      "icon": "",
+      "name": "enim",
+      "id": 1
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 8,
+      "description": "sint ullamco laboris mollit esse eiusmod enim id excepteur ullamco",
+      "properties": "{\"ea\":{\"name\":\"ea\",\"title\":\"ea\",\"description\":\"ad fugiat sunt aliquip sunt\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"excepteur\":{\"name\":\"excepteur\",\"title\":\"excepteur\",\"description\":\"enim dolore enim incididunt occaecat\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"cupidatat\":{\"name\":\"cupidatat\",\"title\":\"cupidatat\",\"description\":\"officia sunt do esse id\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"id\":{\"name\":\"id\",\"title\":\"id\",\"description\":\"incididunt nisi proident sit nostrud\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"sint\":{\"name\":\"sint\",\"title\":\"sint\",\"description\":\"non consequat velit proident sit\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"aute\":{\"name\":\"aute\",\"title\":\"aute\",\"description\":\"aliqua pariatur proident amet enim\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"deserunt\":{\"name\":\"deserunt\",\"title\":\"deserunt\",\"description\":\"qui cupidatat nostrud labore minim\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"dolore\":{\"name\":\"dolore\",\"title\":\"dolore\",\"description\":\"ex ad nisi laboris esse\",\"type\":\"boolean\",\"enabled\":true,\"required\":false}}",
+      "icon": "",
+      "name": "tempor",
+      "id": 2
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 10,
+      "description": "mollit proident tempor voluptate sit ea voluptate voluptate laborum ex",
+      "properties": "{\"eu\":{\"name\":\"eu\",\"title\":\"eu\",\"description\":\"adipisicing do sunt ad proident\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"excepteur\":{\"name\":\"excepteur\",\"title\":\"excepteur\",\"description\":\"et adipisicing mollit ullamco enim\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"est\":{\"name\":\"est\",\"title\":\"est\",\"description\":\"sunt dolore quis magna aliquip\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"ullamco\":{\"name\":\"ullamco\",\"title\":\"ullamco\",\"description\":\"nulla cillum irure nisi deserunt\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"laborum\":{\"name\":\"laborum\",\"title\":\"laborum\",\"description\":\"ea quis sunt nostrud incididunt\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"minim\":{\"name\":\"minim\",\"title\":\"minim\",\"description\":\"sunt amet aute excepteur culpa\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"incididunt\":{\"name\":\"incididunt\",\"title\":\"incididunt\",\"description\":\"et pariatur nostrud laboris aliquip\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"elit\":{\"name\":\"elit\",\"title\":\"elit\",\"description\":\"et exercitation culpa fugiat do\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"voluptate\":{\"name\":\"voluptate\",\"title\":\"voluptate\",\"description\":\"sint mollit ut est reprehenderit\",\"type\":\"string\",\"enabled\":true,\"required\":false}}",
+      "icon": "",
+      "name": "veniam",
+      "id": 3
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 9,
+      "description": "nisi in eu fugiat quis officia magna commodo anim laboris",
+      "properties": "{\"irure\":{\"name\":\"irure\",\"title\":\"irure\",\"description\":\"ut nisi proident labore in\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"sit\":{\"name\":\"sit\",\"title\":\"sit\",\"description\":\"tempor sunt ipsum esse ipsum\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"elit\":{\"name\":\"elit\",\"title\":\"elit\",\"description\":\"aliqua velit ullamco ex adipisicing\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"eu\":{\"name\":\"eu\",\"title\":\"eu\",\"description\":\"occaecat eiusmod pariatur eiusmod culpa\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"amet\":{\"name\":\"amet\",\"title\":\"amet\",\"description\":\"aliqua et nostrud consectetur consectetur\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"magna\":{\"name\":\"magna\",\"title\":\"magna\",\"description\":\"quis incididunt proident anim nisi\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"Lorem\":{\"name\":\"Lorem\",\"title\":\"Lorem\",\"description\":\"eiusmod velit sit aute pariatur\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"exercitation\":{\"name\":\"exercitation\",\"title\":\"exercitation\",\"description\":\"tempor id ex irure incididunt\",\"type\":\"string\",\"enabled\":true,\"required\":true}}",
+      "icon": "",
+      "name": "nisi",
+      "id": 4
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 2,
+      "description": "aliquip incididunt do ipsum proident veniam eiusmod id aliquip exercitation",
+      "properties": "{\"dolore\":{\"name\":\"dolore\",\"title\":\"dolore\",\"description\":\"velit ut excepteur non nostrud\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"culpa\":{\"name\":\"culpa\",\"title\":\"culpa\",\"description\":\"cupidatat sunt in consectetur deserunt\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"fugiat\":{\"name\":\"fugiat\",\"title\":\"fugiat\",\"description\":\"duis et amet exercitation officia\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"pariatur\":{\"name\":\"pariatur\",\"title\":\"pariatur\",\"description\":\"ipsum dolor aliqua proident do\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"laboris\":{\"name\":\"laboris\",\"title\":\"laboris\",\"description\":\"ut ea occaecat mollit nostrud\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"deserunt\":{\"name\":\"deserunt\",\"title\":\"deserunt\",\"description\":\"aliquip ipsum et irure velit\",\"type\":\"string\",\"enabled\":true,\"required\":true}}",
+      "icon": "",
+      "name": "sint",
+      "id": 5
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 2,
+      "description": "aute velit id reprehenderit nisi sunt esse adipisicing labore amet",
+      "properties": "{\"culpa\":{\"name\":\"culpa\",\"title\":\"culpa\",\"description\":\"Lorem sunt anim qui sunt\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"non\":{\"name\":\"non\",\"title\":\"non\",\"description\":\"fugiat sint velit enim elit\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"est\":{\"name\":\"est\",\"title\":\"est\",\"description\":\"laboris commodo sit non proident\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"consequat\":{\"name\":\"consequat\",\"title\":\"consequat\",\"description\":\"tempor aliquip aute Lorem do\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"aliqua\":{\"name\":\"aliqua\",\"title\":\"aliqua\",\"description\":\"ullamco adipisicing tempor ea elit\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"ex\":{\"name\":\"ex\",\"title\":\"ex\",\"description\":\"ex veniam aliqua laborum laborum\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"minim\":{\"name\":\"minim\",\"title\":\"minim\",\"description\":\"est consequat enim eu elit\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"eiusmod\":{\"name\":\"eiusmod\",\"title\":\"eiusmod\",\"description\":\"commodo aliqua do dolore consectetur\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"exercitation\":{\"name\":\"exercitation\",\"title\":\"exercitation\",\"description\":\"ipsum mollit ipsum ad quis\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"amet\":{\"name\":\"amet\",\"title\":\"amet\",\"description\":\"eiusmod reprehenderit exercitation velit consequat\",\"type\":\"boolean\",\"enabled\":true,\"required\":false}}",
+      "icon": "",
+      "name": "consectetur",
+      "id": 6
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 4,
+      "description": "velit consectetur velit Lorem ea eiusmod laborum quis sint eiusmod",
+      "properties": "{\"magna\":{\"name\":\"magna\",\"title\":\"magna\",\"description\":\"sit veniam nulla aute excepteur\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"laboris\":{\"name\":\"laboris\",\"title\":\"laboris\",\"description\":\"laborum incididunt excepteur proident ullamco\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"esse\":{\"name\":\"esse\",\"title\":\"esse\",\"description\":\"Lorem est tempor aliqua aliqua\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"velit\":{\"name\":\"velit\",\"title\":\"velit\",\"description\":\"occaecat reprehenderit aliqua dolor elit\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"officia\":{\"name\":\"officia\",\"title\":\"officia\",\"description\":\"Lorem deserunt voluptate dolor id\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"sunt\":{\"name\":\"sunt\",\"title\":\"sunt\",\"description\":\"excepteur amet fugiat incididunt cillum\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"mollit\":{\"name\":\"mollit\",\"title\":\"mollit\",\"description\":\"est deserunt et est quis\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"aute\":{\"name\":\"aute\",\"title\":\"aute\",\"description\":\"excepteur fugiat nostrud dolor velit\",\"type\":\"string\",\"enabled\":true,\"required\":true}}",
+      "icon": "",
+      "name": "commodo",
+      "id": 7
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 2,
+      "description": "ea est deserunt do consectetur aliquip ut nisi aliquip nulla",
+      "properties": "{\"Lorem\":{\"name\":\"Lorem\",\"title\":\"Lorem\",\"description\":\"qui commodo labore Lorem do\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"culpa\":{\"name\":\"culpa\",\"title\":\"culpa\",\"description\":\"fugiat mollit magna ullamco officia\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"aute\":{\"name\":\"aute\",\"title\":\"aute\",\"description\":\"culpa eu reprehenderit et duis\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"ad\":{\"name\":\"ad\",\"title\":\"ad\",\"description\":\"sint et proident voluptate tempor\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"mollit\":{\"name\":\"mollit\",\"title\":\"mollit\",\"description\":\"incididunt enim minim et pariatur\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"officia\":{\"name\":\"officia\",\"title\":\"officia\",\"description\":\"irure labore consequat laboris enim\",\"type\":\"number\",\"enabled\":true,\"required\":false}}",
+      "icon": "",
+      "name": "consequat",
+      "id": 8
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 4,
+      "description": "culpa nulla tempor aliquip minim commodo incididunt occaecat nulla eu",
+      "properties": "{\"eu\":{\"name\":\"eu\",\"title\":\"eu\",\"description\":\"sint non labore id nulla\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"voluptate\":{\"name\":\"voluptate\",\"title\":\"voluptate\",\"description\":\"consectetur cillum ea laborum consectetur\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"incididunt\":{\"name\":\"incididunt\",\"title\":\"incididunt\",\"description\":\"labore veniam velit nostrud exercitation\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"deserunt\":{\"name\":\"deserunt\",\"title\":\"deserunt\",\"description\":\"Lorem ipsum ea officia eiusmod\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"in\":{\"name\":\"in\",\"title\":\"in\",\"description\":\"mollit officia culpa ea deserunt\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"nostrud\":{\"name\":\"nostrud\",\"title\":\"nostrud\",\"description\":\"in eu ut enim commodo\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"excepteur\":{\"name\":\"excepteur\",\"title\":\"excepteur\",\"description\":\"quis cupidatat sit commodo cillum\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"aute\":{\"name\":\"aute\",\"title\":\"aute\",\"description\":\"nostrud Lorem excepteur elit Lorem\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"ex\":{\"name\":\"ex\",\"title\":\"ex\",\"description\":\"tempor veniam elit minim aliquip\",\"type\":\"boolean\",\"enabled\":true,\"required\":true}}",
+      "icon": "",
+      "name": "nisi",
+      "id": 9
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 7,
+      "description": "sit ipsum in cillum adipisicing occaecat aute quis Lorem cupidatat",
+      "properties": "{\"deserunt\":{\"name\":\"deserunt\",\"title\":\"deserunt\",\"description\":\"ullamco magna aute qui nisi\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"amet\":{\"name\":\"amet\",\"title\":\"amet\",\"description\":\"ipsum est irure elit pariatur\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"ea\":{\"name\":\"ea\",\"title\":\"ea\",\"description\":\"exercitation culpa reprehenderit amet aliqua\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"nulla\":{\"name\":\"nulla\",\"title\":\"nulla\",\"description\":\"cupidatat proident consectetur proident quis\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"nisi\":{\"name\":\"nisi\",\"title\":\"nisi\",\"description\":\"cillum consectetur adipisicing aliquip veniam\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"ut\":{\"name\":\"ut\",\"title\":\"ut\",\"description\":\"reprehenderit qui pariatur occaecat id\",\"type\":\"boolean\",\"enabled\":true,\"required\":false}}",
+      "icon": "",
+      "name": "laboris",
+      "id": 10
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 3,
+      "description": "cillum nostrud aliquip consequat elit deserunt in ut reprehenderit proident",
+      "properties": "{\"aliquip\":{\"name\":\"aliquip\",\"title\":\"aliquip\",\"description\":\"esse pariatur id ullamco reprehenderit\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"fugiat\":{\"name\":\"fugiat\",\"title\":\"fugiat\",\"description\":\"amet qui aliqua esse pariatur\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"anim\":{\"name\":\"anim\",\"title\":\"anim\",\"description\":\"voluptate cupidatat deserunt ut proident\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"amet\":{\"name\":\"amet\",\"title\":\"amet\",\"description\":\"pariatur exercitation reprehenderit mollit consequat\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"aute\":{\"name\":\"aute\",\"title\":\"aute\",\"description\":\"commodo fugiat dolore voluptate quis\",\"type\":\"number\",\"enabled\":true,\"required\":false}}",
+      "icon": "",
+      "name": "cupidatat",
+      "id": 11
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 3,
+      "description": "Lorem non commodo veniam veniam incididunt reprehenderit mollit sint nulla",
+      "properties": "{\"laboris\":{\"name\":\"laboris\",\"title\":\"laboris\",\"description\":\"sunt et ut sunt ex\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"duis\":{\"name\":\"duis\",\"title\":\"duis\",\"description\":\"adipisicing fugiat adipisicing ullamco laboris\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"velit\":{\"name\":\"velit\",\"title\":\"velit\",\"description\":\"id cupidatat proident mollit excepteur\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"nisi\":{\"name\":\"nisi\",\"title\":\"nisi\",\"description\":\"aliqua deserunt nulla anim sunt\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"nulla\":{\"name\":\"nulla\",\"title\":\"nulla\",\"description\":\"mollit consequat laborum nisi eu\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"qui\":{\"name\":\"qui\",\"title\":\"qui\",\"description\":\"ipsum ipsum nisi eu incididunt\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"ea\":{\"name\":\"ea\",\"title\":\"ea\",\"description\":\"cillum sit irure excepteur nulla\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"sit\":{\"name\":\"sit\",\"title\":\"sit\",\"description\":\"sit incididunt laboris voluptate consequat\",\"type\":\"string\",\"enabled\":true,\"required\":true}}",
+      "icon": "",
+      "name": "excepteur",
+      "id": 12
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 1,
+      "description": "adipisicing ad aliquip ex ex amet anim ut ad ad",
+      "properties": "{\"excepteur\":{\"name\":\"excepteur\",\"title\":\"excepteur\",\"description\":\"minim nisi laboris minim labore\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"do\":{\"name\":\"do\",\"title\":\"do\",\"description\":\"in ad eiusmod consequat do\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"officia\":{\"name\":\"officia\",\"title\":\"officia\",\"description\":\"labore adipisicing elit irure anim\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"minim\":{\"name\":\"minim\",\"title\":\"minim\",\"description\":\"velit aliqua cillum incididunt officia\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"eiusmod\":{\"name\":\"eiusmod\",\"title\":\"eiusmod\",\"description\":\"ut adipisicing id commodo officia\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"amet\":{\"name\":\"amet\",\"title\":\"amet\",\"description\":\"aliquip nulla qui aute duis\",\"type\":\"string\",\"enabled\":true,\"required\":false}}",
+      "icon": "",
+      "name": "minim",
+      "id": 13
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 6,
+      "description": "do consequat amet do officia id id deserunt proident labore",
+      "properties": "{\"ut\":{\"name\":\"ut\",\"title\":\"ut\",\"description\":\"laborum laboris enim sunt reprehenderit\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"voluptate\":{\"name\":\"voluptate\",\"title\":\"voluptate\",\"description\":\"anim aute do voluptate nulla\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"est\":{\"name\":\"est\",\"title\":\"est\",\"description\":\"adipisicing cupidatat enim aliqua eiusmod\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"laborum\":{\"name\":\"laborum\",\"title\":\"laborum\",\"description\":\"dolore amet nisi cillum voluptate\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"eu\":{\"name\":\"eu\",\"title\":\"eu\",\"description\":\"sunt laboris ut est mollit\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"ex\":{\"name\":\"ex\",\"title\":\"ex\",\"description\":\"dolore nulla qui quis fugiat\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"excepteur\":{\"name\":\"excepteur\",\"title\":\"excepteur\",\"description\":\"dolor sunt dolor reprehenderit et\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"quis\":{\"name\":\"quis\",\"title\":\"quis\",\"description\":\"consequat incididunt reprehenderit nisi cillum\",\"type\":\"password\",\"enabled\":true,\"required\":false}}",
+      "icon": "",
+      "name": "et",
+      "id": 14
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 6,
+      "description": "minim labore elit quis quis aliquip duis enim consequat ex",
+      "properties": "{\"et\":{\"name\":\"et\",\"title\":\"et\",\"description\":\"laborum aliqua sint et laborum\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"cupidatat\":{\"name\":\"cupidatat\",\"title\":\"cupidatat\",\"description\":\"labore aute in non in\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"nisi\":{\"name\":\"nisi\",\"title\":\"nisi\",\"description\":\"magna ipsum deserunt magna tempor\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"elit\":{\"name\":\"elit\",\"title\":\"elit\",\"description\":\"nulla excepteur nisi laboris nulla\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"ad\":{\"name\":\"ad\",\"title\":\"ad\",\"description\":\"laboris occaecat fugiat nisi duis\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"qui\":{\"name\":\"qui\",\"title\":\"qui\",\"description\":\"ullamco eiusmod non occaecat do\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"fugiat\":{\"name\":\"fugiat\",\"title\":\"fugiat\",\"description\":\"nisi amet tempor fugiat occaecat\",\"type\":\"boolean\",\"enabled\":true,\"required\":true}}",
+      "icon": "",
+      "name": "anim",
+      "id": 15
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 5,
+      "description": "nisi anim nulla officia fugiat nisi ex consequat in qui",
+      "properties": "{\"esse\":{\"name\":\"esse\",\"title\":\"esse\",\"description\":\"adipisicing nostrud culpa nulla culpa\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"dolore\":{\"name\":\"dolore\",\"title\":\"dolore\",\"description\":\"officia ut velit sit anim\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"consequat\":{\"name\":\"consequat\",\"title\":\"consequat\",\"description\":\"eiusmod reprehenderit irure qui quis\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"ad\":{\"name\":\"ad\",\"title\":\"ad\",\"description\":\"est do voluptate qui officia\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"eiusmod\":{\"name\":\"eiusmod\",\"title\":\"eiusmod\",\"description\":\"ipsum pariatur veniam veniam dolor\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"anim\":{\"name\":\"anim\",\"title\":\"anim\",\"description\":\"sint do sint pariatur enim\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"ea\":{\"name\":\"ea\",\"title\":\"ea\",\"description\":\"incididunt reprehenderit ea velit cupidatat\",\"type\":\"password\",\"enabled\":true,\"required\":false}}",
+      "icon": "",
+      "name": "occaecat",
+      "id": 16
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 9,
+      "description": "enim eiusmod veniam incididunt non Lorem nisi cupidatat cupidatat tempor",
+      "properties": "{\"ut\":{\"name\":\"ut\",\"title\":\"ut\",\"description\":\"velit cillum fugiat cupidatat aliqua\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"pariatur\":{\"name\":\"pariatur\",\"title\":\"pariatur\",\"description\":\"dolore Lorem reprehenderit est do\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"incididunt\":{\"name\":\"incididunt\",\"title\":\"incididunt\",\"description\":\"quis minim aliquip nostrud quis\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"duis\":{\"name\":\"duis\",\"title\":\"duis\",\"description\":\"esse officia sunt pariatur sint\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"velit\":{\"name\":\"velit\",\"title\":\"velit\",\"description\":\"ut id consequat enim voluptate\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"aliqua\":{\"name\":\"aliqua\",\"title\":\"aliqua\",\"description\":\"ea est aute eu laboris\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"enim\":{\"name\":\"enim\",\"title\":\"enim\",\"description\":\"esse occaecat deserunt tempor non\",\"type\":\"password\",\"enabled\":true,\"required\":false}}",
+      "icon": "",
+      "name": "incididunt",
+      "id": 17
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 1,
+      "description": "labore sit nisi nostrud aliquip cillum ipsum enim veniam eiusmod",
+      "properties": "{\"proident\":{\"name\":\"proident\",\"title\":\"proident\",\"description\":\"cillum et excepteur in veniam\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"ex\":{\"name\":\"ex\",\"title\":\"ex\",\"description\":\"nisi elit Lorem mollit dolore\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"ut\":{\"name\":\"ut\",\"title\":\"ut\",\"description\":\"magna esse pariatur excepteur labore\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"elit\":{\"name\":\"elit\",\"title\":\"elit\",\"description\":\"quis et pariatur sunt dolore\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"est\":{\"name\":\"est\",\"title\":\"est\",\"description\":\"aute duis id consequat id\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"ad\":{\"name\":\"ad\",\"title\":\"ad\",\"description\":\"nisi irure aliquip ad nostrud\",\"type\":\"password\",\"enabled\":true,\"required\":false}}",
+      "icon": "",
+      "name": "consequat",
+      "id": 18
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 4,
+      "description": "ullamco fugiat fugiat consectetur ea anim mollit esse fugiat nostrud",
+      "properties": "{\"Lorem\":{\"name\":\"Lorem\",\"title\":\"Lorem\",\"description\":\"irure incididunt nostrud do aute\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"et\":{\"name\":\"et\",\"title\":\"et\",\"description\":\"incididunt consequat esse adipisicing ullamco\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"anim\":{\"name\":\"anim\",\"title\":\"anim\",\"description\":\"officia magna esse ea ex\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"fugiat\":{\"name\":\"fugiat\",\"title\":\"fugiat\",\"description\":\"elit amet dolore sunt Lorem\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"deserunt\":{\"name\":\"deserunt\",\"title\":\"deserunt\",\"description\":\"labore proident elit occaecat labore\",\"type\":\"number\",\"enabled\":true,\"required\":true}}",
+      "icon": "",
+      "name": "culpa",
+      "id": 19
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 3,
+      "description": "id ad pariatur aliquip dolore veniam dolore mollit ea aliqua",
+      "properties": "{\"in\":{\"name\":\"in\",\"title\":\"in\",\"description\":\"nulla incididunt minim voluptate aliquip\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"non\":{\"name\":\"non\",\"title\":\"non\",\"description\":\"elit officia irure ad Lorem\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"et\":{\"name\":\"et\",\"title\":\"et\",\"description\":\"voluptate veniam magna ex ex\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"sit\":{\"name\":\"sit\",\"title\":\"sit\",\"description\":\"labore aliqua eu consectetur ad\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"qui\":{\"name\":\"qui\",\"title\":\"qui\",\"description\":\"amet veniam veniam ut mollit\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"ipsum\":{\"name\":\"ipsum\",\"title\":\"ipsum\",\"description\":\"reprehenderit eu ipsum voluptate tempor\",\"type\":\"string\",\"enabled\":true,\"required\":false}}",
+      "icon": "",
+      "name": "consectetur",
+      "id": 20
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 9,
+      "description": "occaecat ullamco velit laboris commodo amet tempor dolor excepteur labore",
+      "properties": "{\"officia\":{\"name\":\"officia\",\"title\":\"officia\",\"description\":\"commodo est deserunt eu laboris\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"consequat\":{\"name\":\"consequat\",\"title\":\"consequat\",\"description\":\"occaecat sit magna ad veniam\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"sit\":{\"name\":\"sit\",\"title\":\"sit\",\"description\":\"velit nostrud duis consequat mollit\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"non\":{\"name\":\"non\",\"title\":\"non\",\"description\":\"aliqua nostrud mollit in nostrud\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"laborum\":{\"name\":\"laborum\",\"title\":\"laborum\",\"description\":\"eu occaecat eu voluptate excepteur\",\"type\":\"boolean\",\"enabled\":true,\"required\":false}}",
+      "icon": "",
+      "name": "duis",
+      "id": 21
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 10,
+      "description": "cillum cillum est laboris incididunt est ad eu quis fugiat",
+      "properties": "{\"veniam\":{\"name\":\"veniam\",\"title\":\"veniam\",\"description\":\"occaecat esse aliquip sit duis\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"proident\":{\"name\":\"proident\",\"title\":\"proident\",\"description\":\"dolor ad qui laboris ad\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"pariatur\":{\"name\":\"pariatur\",\"title\":\"pariatur\",\"description\":\"tempor proident incididunt sunt nulla\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"laborum\":{\"name\":\"laborum\",\"title\":\"laborum\",\"description\":\"esse duis deserunt dolor ea\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"Lorem\":{\"name\":\"Lorem\",\"title\":\"Lorem\",\"description\":\"irure qui excepteur adipisicing non\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"quis\":{\"name\":\"quis\",\"title\":\"quis\",\"description\":\"et consectetur est laboris aliqua\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"aliqua\":{\"name\":\"aliqua\",\"title\":\"aliqua\",\"description\":\"dolore officia anim nisi in\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"consequat\":{\"name\":\"consequat\",\"title\":\"consequat\",\"description\":\"qui velit qui laborum ipsum\",\"type\":\"boolean\",\"enabled\":true,\"required\":false}}",
+      "icon": "",
+      "name": "culpa",
+      "id": 22
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 7,
+      "description": "amet voluptate proident occaecat eiusmod aliquip quis aliquip magna fugiat",
+      "properties": "{\"commodo\":{\"name\":\"commodo\",\"title\":\"commodo\",\"description\":\"cupidatat pariatur veniam consectetur in\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"pariatur\":{\"name\":\"pariatur\",\"title\":\"pariatur\",\"description\":\"aute nulla labore nostrud sit\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"aliquip\":{\"name\":\"aliquip\",\"title\":\"aliquip\",\"description\":\"qui tempor pariatur laborum veniam\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"nostrud\":{\"name\":\"nostrud\",\"title\":\"nostrud\",\"description\":\"id magna cupidatat in ea\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"ex\":{\"name\":\"ex\",\"title\":\"ex\",\"description\":\"magna fugiat ut amet esse\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"occaecat\":{\"name\":\"occaecat\",\"title\":\"occaecat\",\"description\":\"elit nulla pariatur aliqua ut\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"exercitation\":{\"name\":\"exercitation\",\"title\":\"exercitation\",\"description\":\"esse est incididunt ullamco ipsum\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"eu\":{\"name\":\"eu\",\"title\":\"eu\",\"description\":\"proident mollit aliquip aliqua dolor\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"dolore\":{\"name\":\"dolore\",\"title\":\"dolore\",\"description\":\"eiusmod cupidatat consequat nulla tempor\",\"type\":\"password\",\"enabled\":true,\"required\":false}}",
+      "icon": "",
+      "name": "est",
+      "id": 23
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 1,
+      "description": "dolor consequat est proident proident incididunt ullamco consectetur esse sint",
+      "properties": "{\"qui\":{\"name\":\"qui\",\"title\":\"qui\",\"description\":\"laborum duis ullamco ea est\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"quis\":{\"name\":\"quis\",\"title\":\"quis\",\"description\":\"amet exercitation laborum officia Lorem\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"exercitation\":{\"name\":\"exercitation\",\"title\":\"exercitation\",\"description\":\"proident sit cupidatat ipsum nulla\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"eu\":{\"name\":\"eu\",\"title\":\"eu\",\"description\":\"duis labore nostrud magna mollit\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"fugiat\":{\"name\":\"fugiat\",\"title\":\"fugiat\",\"description\":\"magna aute non pariatur qui\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"tempor\":{\"name\":\"tempor\",\"title\":\"tempor\",\"description\":\"esse excepteur labore Lorem eu\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"dolore\":{\"name\":\"dolore\",\"title\":\"dolore\",\"description\":\"consectetur est ad elit consequat\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"voluptate\":{\"name\":\"voluptate\",\"title\":\"voluptate\",\"description\":\"est ullamco duis commodo cupidatat\",\"type\":\"string\",\"enabled\":true,\"required\":true}}",
+      "icon": "",
+      "name": "id",
+      "id": 24
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 7,
+      "description": "ipsum reprehenderit excepteur velit sit aliquip ea ex ipsum non",
+      "properties": "{\"fugiat\":{\"name\":\"fugiat\",\"title\":\"fugiat\",\"description\":\"culpa incididunt in aute id\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"adipisicing\":{\"name\":\"adipisicing\",\"title\":\"adipisicing\",\"description\":\"anim dolore voluptate nulla veniam\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"irure\":{\"name\":\"irure\",\"title\":\"irure\",\"description\":\"ut nisi excepteur velit laborum\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"ipsum\":{\"name\":\"ipsum\",\"title\":\"ipsum\",\"description\":\"deserunt est adipisicing amet proident\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"occaecat\":{\"name\":\"occaecat\",\"title\":\"occaecat\",\"description\":\"sit aliqua duis irure veniam\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"est\":{\"name\":\"est\",\"title\":\"est\",\"description\":\"incididunt cupidatat labore ut consectetur\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"deserunt\":{\"name\":\"deserunt\",\"title\":\"deserunt\",\"description\":\"elit officia non tempor nulla\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"tempor\":{\"name\":\"tempor\",\"title\":\"tempor\",\"description\":\"ipsum proident sint consectetur est\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"sunt\":{\"name\":\"sunt\",\"title\":\"sunt\",\"description\":\"ipsum commodo qui sunt consequat\",\"type\":\"boolean\",\"enabled\":true,\"required\":true}}",
+      "icon": "",
+      "name": "exercitation",
+      "id": 25
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 3,
+      "description": "aliqua voluptate culpa reprehenderit consectetur pariatur ad sint ea amet",
+      "properties": "{\"amet\":{\"name\":\"amet\",\"title\":\"amet\",\"description\":\"voluptate enim ullamco non ad\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"occaecat\":{\"name\":\"occaecat\",\"title\":\"occaecat\",\"description\":\"commodo veniam occaecat occaecat dolor\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"quis\":{\"name\":\"quis\",\"title\":\"quis\",\"description\":\"in non non Lorem ullamco\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"consectetur\":{\"name\":\"consectetur\",\"title\":\"consectetur\",\"description\":\"dolor anim cillum ipsum esse\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"nulla\":{\"name\":\"nulla\",\"title\":\"nulla\",\"description\":\"eiusmod nulla officia qui officia\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"in\":{\"name\":\"in\",\"title\":\"in\",\"description\":\"ut do excepteur consequat reprehenderit\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"elit\":{\"name\":\"elit\",\"title\":\"elit\",\"description\":\"commodo aute incididunt pariatur reprehenderit\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"et\":{\"name\":\"et\",\"title\":\"et\",\"description\":\"et ea anim dolor aute\",\"type\":\"password\",\"enabled\":true,\"required\":true}}",
+      "icon": "",
+      "name": "ea",
+      "id": 26
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 2,
+      "description": "amet cupidatat duis do dolor eu velit ipsum exercitation id",
+      "properties": "{\"anim\":{\"name\":\"anim\",\"title\":\"anim\",\"description\":\"ad id incididunt in do\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"sit\":{\"name\":\"sit\",\"title\":\"sit\",\"description\":\"exercitation pariatur nulla tempor irure\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"esse\":{\"name\":\"esse\",\"title\":\"esse\",\"description\":\"ex enim qui irure labore\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"fugiat\":{\"name\":\"fugiat\",\"title\":\"fugiat\",\"description\":\"cillum aliquip consectetur enim elit\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"deserunt\":{\"name\":\"deserunt\",\"title\":\"deserunt\",\"description\":\"nulla consequat dolore do nisi\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"aute\":{\"name\":\"aute\",\"title\":\"aute\",\"description\":\"ea ullamco culpa enim duis\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"exercitation\":{\"name\":\"exercitation\",\"title\":\"exercitation\",\"description\":\"sit Lorem reprehenderit ullamco ea\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"nostrud\":{\"name\":\"nostrud\",\"title\":\"nostrud\",\"description\":\"deserunt eiusmod pariatur tempor tempor\",\"type\":\"boolean\",\"enabled\":true,\"required\":false}}",
+      "icon": "",
+      "name": "eu",
+      "id": 27
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 9,
+      "description": "velit culpa aliqua laboris do Lorem Lorem aute esse veniam",
+      "properties": "{\"nostrud\":{\"name\":\"nostrud\",\"title\":\"nostrud\",\"description\":\"anim sunt duis esse labore\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"mollit\":{\"name\":\"mollit\",\"title\":\"mollit\",\"description\":\"officia id irure ea adipisicing\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"aliqua\":{\"name\":\"aliqua\",\"title\":\"aliqua\",\"description\":\"aute in mollit sint mollit\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"enim\":{\"name\":\"enim\",\"title\":\"enim\",\"description\":\"tempor pariatur pariatur tempor et\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"exercitation\":{\"name\":\"exercitation\",\"title\":\"exercitation\",\"description\":\"aute excepteur esse ullamco dolor\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"ipsum\":{\"name\":\"ipsum\",\"title\":\"ipsum\",\"description\":\"aliquip occaecat dolore ea sunt\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"labore\":{\"name\":\"labore\",\"title\":\"labore\",\"description\":\"labore cillum in laborum proident\",\"type\":\"boolean\",\"enabled\":true,\"required\":false}}",
+      "icon": "",
+      "name": "dolor",
+      "id": 28
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 1,
+      "description": "consectetur consequat aliquip fugiat fugiat proident eiusmod cillum cillum mollit",
+      "properties": "{\"nostrud\":{\"name\":\"nostrud\",\"title\":\"nostrud\",\"description\":\"mollit sunt nisi esse anim\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"esse\":{\"name\":\"esse\",\"title\":\"esse\",\"description\":\"nisi ad quis ullamco dolore\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"aute\":{\"name\":\"aute\",\"title\":\"aute\",\"description\":\"laborum nostrud minim cupidatat amet\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"consequat\":{\"name\":\"consequat\",\"title\":\"consequat\",\"description\":\"nostrud consequat tempor reprehenderit id\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"reprehenderit\":{\"name\":\"reprehenderit\",\"title\":\"reprehenderit\",\"description\":\"laborum officia do incididunt elit\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"incididunt\":{\"name\":\"incididunt\",\"title\":\"incididunt\",\"description\":\"duis aliqua incididunt mollit sint\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"qui\":{\"name\":\"qui\",\"title\":\"qui\",\"description\":\"incididunt laboris nisi id enim\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"cupidatat\":{\"name\":\"cupidatat\",\"title\":\"cupidatat\",\"description\":\"culpa adipisicing amet officia ut\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"elit\":{\"name\":\"elit\",\"title\":\"elit\",\"description\":\"qui magna eu mollit consectetur\",\"type\":\"password\",\"enabled\":true,\"required\":true}}",
+      "icon": "",
+      "name": "elit",
+      "id": 29
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "ComponentGroup": 3,
+      "description": "ex ex eiusmod aliqua quis esse do consectetur quis veniam",
+      "properties": "{\"laborum\":{\"name\":\"laborum\",\"title\":\"laborum\",\"description\":\"eiusmod occaecat minim ullamco magna\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"velit\":{\"name\":\"velit\",\"title\":\"velit\",\"description\":\"amet eu proident ullamco reprehenderit\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"pariatur\":{\"name\":\"pariatur\",\"title\":\"pariatur\",\"description\":\"ea dolor exercitation non aliqua\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"est\":{\"name\":\"est\",\"title\":\"est\",\"description\":\"esse commodo eu ex eu\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"ipsum\":{\"name\":\"ipsum\",\"title\":\"ipsum\",\"description\":\"nisi cupidatat in et incididunt\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"mollit\":{\"name\":\"mollit\",\"title\":\"mollit\",\"description\":\"aute dolor minim eiusmod ex\",\"type\":\"number\",\"enabled\":true,\"required\":false}}",
+      "icon": "",
+      "name": "excepteur",
+      "id": 30
+    },
+    "model": "Component"
+  },
+  {
+    "data": {
+      "configuredProperties": "{\"reprehenderit\":{\"name\":\"reprehenderit\",\"title\":\"reprehenderit\",\"description\":\"quis in dolor mollit nostrud\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"cillum\":{\"name\":\"cillum\",\"title\":\"cillum\",\"description\":\"minim consequat esse consequat ea\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"aliquip\":{\"name\":\"aliquip\",\"title\":\"aliquip\",\"description\":\"incididunt consequat nostrud magna ullamco\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"adipisicing\":{\"name\":\"adipisicing\",\"title\":\"adipisicing\",\"description\":\"in nostrud Lorem minim laborum\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"culpa\":{\"name\":\"culpa\",\"title\":\"culpa\",\"description\":\"ex anim enim cupidatat officia\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"dolor\":{\"name\":\"dolor\",\"title\":\"dolor\",\"description\":\"velit Lorem elit nostrud enim\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"ipsum\":{\"name\":\"ipsum\",\"title\":\"ipsum\",\"description\":\"adipisicing sint aliqua qui id\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"labore\":{\"name\":\"labore\",\"title\":\"labore\",\"description\":\"id enim ipsum irure ex\",\"type\":\"password\",\"enabled\":true,\"required\":false}}",
+      "User": 5,
+      "Organization": 1,
+      "Component": 11,
+      "position": "From",
+      "description": "et ad aliqua incididunt anim et ex enim duis anim",
+      "icon": "fa-facebook-official",
+      "name": "laboris",
+      "id": 1
+    },
+    "model": "Connection"
+  },
+  {
+    "data": {
+      "configuredProperties": "{\"ad\":{\"name\":\"ad\",\"title\":\"ad\",\"description\":\"ullamco qui est magna occaecat\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"dolore\":{\"name\":\"dolore\",\"title\":\"dolore\",\"description\":\"deserunt deserunt nulla laboris elit\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"amet\":{\"name\":\"amet\",\"title\":\"amet\",\"description\":\"dolore veniam incididunt aute ad\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"pariatur\":{\"name\":\"pariatur\",\"title\":\"pariatur\",\"description\":\"adipisicing adipisicing aliquip qui proident\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"adipisicing\":{\"name\":\"adipisicing\",\"title\":\"adipisicing\",\"description\":\"duis elit voluptate irure laborum\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"ut\":{\"name\":\"ut\",\"title\":\"ut\",\"description\":\"ut minim pariatur commodo dolore\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"ea\":{\"name\":\"ea\",\"title\":\"ea\",\"description\":\"esse do pariatur irure do\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"commodo\":{\"name\":\"commodo\",\"title\":\"commodo\",\"description\":\"officia eiusmod irure mollit aliquip\",\"type\":\"number\",\"enabled\":true,\"required\":false}}",
+      "User": 3,
+      "Organization": 1,
+      "Component": 16,
+      "position": "From",
+      "description": "exercitation veniam id dolore elit excepteur esse laborum et enim",
+      "icon": "fa-linkedin-square",
+      "name": "elit",
+      "id": 2
+    },
+    "model": "Connection"
+  },
+  {
+    "data": {
+      "configuredProperties": "{\"aute\":{\"name\":\"aute\",\"title\":\"aute\",\"description\":\"sit minim aute aliquip dolor\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"ad\":{\"name\":\"ad\",\"title\":\"ad\",\"description\":\"mollit et enim ullamco commodo\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"occaecat\":{\"name\":\"occaecat\",\"title\":\"occaecat\",\"description\":\"anim reprehenderit sint ut esse\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"consequat\":{\"name\":\"consequat\",\"title\":\"consequat\",\"description\":\"laborum ad sunt ex Lorem\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"eu\":{\"name\":\"eu\",\"title\":\"eu\",\"description\":\"do enim reprehenderit non ipsum\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"esse\":{\"name\":\"esse\",\"title\":\"esse\",\"description\":\"minim anim adipisicing do irure\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"mollit\":{\"name\":\"mollit\",\"title\":\"mollit\",\"description\":\"aliqua ipsum laboris sit laborum\",\"type\":\"boolean\",\"enabled\":true,\"required\":true}}",
+      "User": 4,
+      "Organization": 1,
+      "Component": 1,
+      "position": "Anywhere",
+      "description": "proident dolor laboris ad do veniam eu quis nisi enim",
+      "icon": "fa-paypal",
+      "name": "veniam",
+      "id": 3
+    },
+    "model": "Connection"
+  },
+  {
+    "data": {
+      "configuredProperties": "{\"non\":{\"name\":\"non\",\"title\":\"non\",\"description\":\"elit consequat do enim cillum\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"magna\":{\"name\":\"magna\",\"title\":\"magna\",\"description\":\"et id anim nulla do\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"do\":{\"name\":\"do\",\"title\":\"do\",\"description\":\"do deserunt Lorem sint adipisicing\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"consectetur\":{\"name\":\"consectetur\",\"title\":\"consectetur\",\"description\":\"nostrud ex aliqua excepteur minim\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"officia\":{\"name\":\"officia\",\"title\":\"officia\",\"description\":\"in magna excepteur id veniam\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"cupidatat\":{\"name\":\"cupidatat\",\"title\":\"cupidatat\",\"description\":\"laborum adipisicing tempor elit adipisicing\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"nulla\":{\"name\":\"nulla\",\"title\":\"nulla\",\"description\":\"anim cupidatat aute minim fugiat\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"amet\":{\"name\":\"amet\",\"title\":\"amet\",\"description\":\"est nulla Lorem officia minim\",\"type\":\"number\",\"enabled\":true,\"required\":false}}",
+      "User": 4,
+      "Organization": 1,
+      "Component": 22,
+      "position": "From",
+      "description": "aliqua laborum nostrud eu occaecat ut enim ea eu officia",
+      "icon": "fa-get-pocket",
+      "name": "veniam",
+      "id": 4
+    },
+    "model": "Connection"
+  },
+  {
+    "data": {
+      "configuredProperties": "{\"nulla\":{\"name\":\"nulla\",\"title\":\"nulla\",\"description\":\"qui non consectetur commodo ullamco\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"anim\":{\"name\":\"anim\",\"title\":\"anim\",\"description\":\"nulla minim tempor quis labore\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"sunt\":{\"name\":\"sunt\",\"title\":\"sunt\",\"description\":\"dolore dolor et non in\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"aliqua\":{\"name\":\"aliqua\",\"title\":\"aliqua\",\"description\":\"magna sunt quis laborum eiusmod\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"adipisicing\":{\"name\":\"adipisicing\",\"title\":\"adipisicing\",\"description\":\"occaecat quis tempor magna nisi\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"aute\":{\"name\":\"aute\",\"title\":\"aute\",\"description\":\"cupidatat culpa ea sint dolore\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"ex\":{\"name\":\"ex\",\"title\":\"ex\",\"description\":\"enim anim esse officia exercitation\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"consectetur\":{\"name\":\"consectetur\",\"title\":\"consectetur\",\"description\":\"sit nostrud duis ullamco non\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"non\":{\"name\":\"non\",\"title\":\"non\",\"description\":\"consectetur in deserunt laborum sunt\",\"type\":\"number\",\"enabled\":true,\"required\":true}}",
+      "User": 4,
+      "Organization": 1,
+      "Component": 5,
+      "position": "Anywhere",
+      "description": "deserunt esse sunt minim fugiat consequat occaecat Lorem qui esse",
+      "icon": "fa-twitter",
+      "name": "pariatur",
+      "id": 5
+    },
+    "model": "Connection"
+  },
+  {
+    "data": {
+      "configuredProperties": "{\"nostrud\":{\"name\":\"nostrud\",\"title\":\"nostrud\",\"description\":\"fugiat eiusmod irure eu id\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"non\":{\"name\":\"non\",\"title\":\"non\",\"description\":\"sint voluptate ipsum qui nulla\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"elit\":{\"name\":\"elit\",\"title\":\"elit\",\"description\":\"esse elit eu do incididunt\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"dolore\":{\"name\":\"dolore\",\"title\":\"dolore\",\"description\":\"aliquip exercitation Lorem elit consequat\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"excepteur\":{\"name\":\"excepteur\",\"title\":\"excepteur\",\"description\":\"dolor elit do incididunt esse\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"ut\":{\"name\":\"ut\",\"title\":\"ut\",\"description\":\"ipsum mollit esse sit qui\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"cillum\":{\"name\":\"cillum\",\"title\":\"cillum\",\"description\":\"commodo id cillum amet commodo\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"irure\":{\"name\":\"irure\",\"title\":\"irure\",\"description\":\"voluptate deserunt sint commodo sunt\",\"type\":\"password\",\"enabled\":true,\"required\":true}}",
+      "User": 5,
+      "Organization": 1,
+      "Component": 10,
+      "position": "To",
+      "description": "eiusmod ea consectetur voluptate dolore proident nulla anim incididunt ut",
+      "icon": "fa-foursquare",
+      "name": "aliquip",
+      "id": 6
+    },
+    "model": "Connection"
+  },
+  {
+    "data": {
+      "configuredProperties": "{\"deserunt\":{\"name\":\"deserunt\",\"title\":\"deserunt\",\"description\":\"et pariatur elit elit minim\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"amet\":{\"name\":\"amet\",\"title\":\"amet\",\"description\":\"elit minim exercitation incididunt incididunt\",\"type\":\"string\",\"enabled\":true,\"required\":false},\"dolore\":{\"name\":\"dolore\",\"title\":\"dolore\",\"description\":\"velit enim dolor reprehenderit incididunt\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"ex\":{\"name\":\"ex\",\"title\":\"ex\",\"description\":\"veniam Lorem eu nisi consectetur\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"labore\":{\"name\":\"labore\",\"title\":\"labore\",\"description\":\"et occaecat dolor elit duis\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"ipsum\":{\"name\":\"ipsum\",\"title\":\"ipsum\",\"description\":\"cillum proident adipisicing proident nisi\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"voluptate\":{\"name\":\"voluptate\",\"title\":\"voluptate\",\"description\":\"tempor qui nisi officia ut\",\"type\":\"boolean\",\"enabled\":true,\"required\":true},\"qui\":{\"name\":\"qui\",\"title\":\"qui\",\"description\":\"quis officia ad commodo consequat\",\"type\":\"string\",\"enabled\":true,\"required\":true}}",
+      "User": 4,
+      "Organization": 1,
+      "Component": 1,
+      "position": "To",
+      "description": "labore est qui duis do sunt esse proident occaecat ut",
+      "icon": "fa-paypal",
+      "name": "nulla",
+      "id": 7
+    },
+    "model": "Connection"
+  },
+  {
+    "data": {
+      "configuredProperties": "{\"ex\":{\"name\":\"ex\",\"title\":\"ex\",\"description\":\"ex duis aute sint sunt\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"in\":{\"name\":\"in\",\"title\":\"in\",\"description\":\"laborum quis et sint pariatur\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"duis\":{\"name\":\"duis\",\"title\":\"duis\",\"description\":\"voluptate ullamco consectetur fugiat ipsum\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"proident\":{\"name\":\"proident\",\"title\":\"proident\",\"description\":\"pariatur occaecat non excepteur laborum\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"tempor\":{\"name\":\"tempor\",\"title\":\"tempor\",\"description\":\"est anim dolor nulla culpa\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"do\":{\"name\":\"do\",\"title\":\"do\",\"description\":\"amet proident labore enim laborum\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"laborum\":{\"name\":\"laborum\",\"title\":\"laborum\",\"description\":\"nisi ipsum enim laboris Lorem\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"aliqua\":{\"name\":\"aliqua\",\"title\":\"aliqua\",\"description\":\"ipsum sint incididunt mollit labore\",\"type\":\"boolean\",\"enabled\":true,\"required\":false}}",
+      "User": 4,
+      "Organization": 1,
+      "Component": 26,
+      "position": "To",
+      "description": "nisi aute enim officia laborum amet ad in fugiat officia",
+      "icon": "fa-flicker",
+      "name": "voluptate",
+      "id": 8
+    },
+    "model": "Connection"
+  },
+  {
+    "data": {
+      "configuredProperties": "{\"duis\":{\"name\":\"duis\",\"title\":\"duis\",\"description\":\"minim et eu et amet\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"excepteur\":{\"name\":\"excepteur\",\"title\":\"excepteur\",\"description\":\"nisi occaecat amet mollit elit\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"non\":{\"name\":\"non\",\"title\":\"non\",\"description\":\"qui ea officia enim consectetur\",\"type\":\"number\",\"enabled\":true,\"required\":true},\"est\":{\"name\":\"est\",\"title\":\"est\",\"description\":\"in consequat et laboris in\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"id\":{\"name\":\"id\",\"title\":\"id\",\"description\":\"sunt mollit velit ut ex\",\"type\":\"string\",\"enabled\":true,\"required\":true}}",
+      "User": 9,
+      "Organization": 1,
+      "Component": 14,
+      "position": "Anywhere",
+      "description": "nostrud veniam elit nostrud ea tempor tempor pariatur cillum dolore",
+      "icon": "fa-linkedin-square",
+      "name": "laborum",
+      "id": 9
+    },
+    "model": "Connection"
+  },
+  {
+    "data": {
+      "configuredProperties": "{\"ea\":{\"name\":\"ea\",\"title\":\"ea\",\"description\":\"aliqua aliquip ipsum laborum anim\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"Lorem\":{\"name\":\"Lorem\",\"title\":\"Lorem\",\"description\":\"exercitation adipisicing eiusmod duis tempor\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"dolor\":{\"name\":\"dolor\",\"title\":\"dolor\",\"description\":\"Lorem ullamco amet enim aliquip\",\"type\":\"string\",\"enabled\":true,\"required\":true},\"officia\":{\"name\":\"officia\",\"title\":\"officia\",\"description\":\"ut est nulla officia dolore\",\"type\":\"boolean\",\"enabled\":true,\"required\":false},\"est\":{\"name\":\"est\",\"title\":\"est\",\"description\":\"elit fugiat id veniam deserunt\",\"type\":\"password\",\"enabled\":true,\"required\":false},\"adipisicing\":{\"name\":\"adipisicing\",\"title\":\"adipisicing\",\"description\":\"irure Lorem aliqua est fugiat\",\"type\":\"number\",\"enabled\":true,\"required\":false},\"aute\":{\"name\":\"aute\",\"title\":\"aute\",\"description\":\"aliquip eu dolore fugiat ut\",\"type\":\"password\",\"enabled\":true,\"required\":true},\"sit\":{\"name\":\"sit\",\"title\":\"sit\",\"description\":\"amet occaecat qui nulla dolor\",\"type\":\"string\",\"enabled\":true,\"required\":false}}",
+      "User": 5,
+      "Organization": 1,
+      "Component": 5,
+      "position": "Anywhere",
+      "description": "aliqua tempor qui cupidatat magna aliquip aute pariatur consequat voluptate",
+      "icon": "fa-bitbucket",
+      "name": "cillum",
+      "id": 10
+    },
+    "model": "Connection"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 6,
+      "Organization": 1,
+      "name": "tempor",
+      "id": 1
+    },
+    "model": "IntegrationTemplate"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 9,
+      "Organization": 1,
+      "name": "magna",
+      "id": 2
+    },
+    "model": "IntegrationTemplate"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 3,
+      "Organization": 1,
+      "name": "reprehenderit",
+      "id": 3
+    },
+    "model": "IntegrationTemplate"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 10,
+      "Organization": 1,
+      "name": "aliqua",
+      "id": 4
+    },
+    "model": "IntegrationTemplate"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 6,
+      "Organization": 1,
+      "name": "et",
+      "id": 5
+    },
+    "model": "IntegrationTemplate"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 9,
+      "Organization": 1,
+      "name": "dolor",
+      "id": 6
+    },
+    "model": "IntegrationTemplate"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 10,
+      "Organization": 1,
+      "name": "esse",
+      "id": 7
+    },
+    "model": "IntegrationTemplate"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 9,
+      "Organization": 1,
+      "name": "anim",
+      "id": 8
+    },
+    "model": "IntegrationTemplate"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 3,
+      "Organization": 1,
+      "name": "eiusmod",
+      "id": 9
+    },
+    "model": "IntegrationTemplate"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 10,
+      "Organization": 1,
+      "name": "eiusmod",
+      "id": 10
+    },
+    "model": "IntegrationTemplate"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 2,
+      "IntegrationTemplate": 7,
+      "name": "ut",
+      "id": 1
+    },
+    "model": "Integration"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 2,
+      "IntegrationTemplate": 10,
+      "name": "ettu",
+      "id": 2
+    },
+    "model": "Integration"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 9,
+      "IntegrationTemplate": 5,
+      "name": "ex",
+      "id": 3
+    },
+    "model": "Integration"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 2,
+      "IntegrationTemplate": 2,
+      "name": "mollit",
+      "id": 4
+    },
+    "model": "Integration"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 8,
+      "IntegrationTemplate": 10,
+      "name": "nostrud",
+      "id": 5
+    },
+    "model": "Integration"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 2,
+      "IntegrationTemplate": 3,
+      "name": "nulla",
+      "id": 6
+    },
+    "model": "Integration"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 7,
+      "IntegrationTemplate": 4,
+      "name": "voluptate",
+      "id": 7
+    },
+    "model": "Integration"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 9,
+      "IntegrationTemplate": 8,
+      "name": "aliqua",
+      "id": 8
+    },
+    "model": "Integration"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 7,
+      "IntegrationTemplate": 9,
+      "name": "excepteur",
+      "id": 9
+    },
+    "model": "Integration"
+  },
+  {
+    "data": {
+      "configuration": "{}",
+      "User": 2,
+      "IntegrationTemplate": 7,
+      "name": "veniam",
+      "id": 10
+    },
+    "model": "Integration"
   }
 ]
