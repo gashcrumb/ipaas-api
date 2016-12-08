@@ -10,7 +10,8 @@ const _ = require('lodash');
 const app = require('../../app.js');
 const config = require('../../config/' + app.get('env') + '.json');
 const db = {
-  initialized: false
+  initialized: false,
+  lookupTable: {}
 };
 const fs = require('fs');
 const path = require('path');
@@ -55,6 +56,7 @@ function Models() {
 
           var model = sequelize.import(path.join(__dirname, eachDir, file));
           models[model.name] = model;
+          db.lookupTable[model.name.toLowerCase()] = model.name;
         });
     });
 

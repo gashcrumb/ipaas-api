@@ -1,10 +1,10 @@
-// ComponentTypes API
+// ComponentGroups API
 'use strict';
 
 // ---------------------- Dependencies ---->>
 
 var Services = require('../services/index.js');
-var ComponentTypeService = Services.ComponentTypeService;
+var ComponentGroupService = Services.ComponentGroupService;
 
 
 // ---------------------- API ---->>
@@ -13,9 +13,9 @@ exports.add = function(req, res) {
     var params = req.body;
     if(req.user) {params.UserId = req.user.id}
 
-    var ComponentType = new ComponentTypeService(params);
+    var ComponentGroup = new ComponentGroupService(params);
 
-    ComponentType
+    ComponentGroup
         .create()
         .then(function(result) {
             res.json(result);
@@ -30,9 +30,9 @@ exports.del = function(req, res) {
     var params = {id: req.params.id};
     params.UserId = req.user.id;
 
-    var ComponentType = new ComponentTypeService(params);
+    var ComponentGroup = new ComponentGroupService(params);
 
-    ComponentType
+    ComponentGroup
         .destroy()
         .then(function(result) {
             res.json(result);
@@ -44,27 +44,15 @@ exports.del = function(req, res) {
 
 
 exports.find = function (req, res) {
-    var Model, Models;
-    var params = {};
+  const Model = require('../models/index.js');
+  const db = new Model();
+  var params = {};
+  params.where = { id: req.params.id };
+  // ie: ?include=category&include=file&include=image
+  Helpers.applyModelIncludes(params, req, db);
+    var ComponentGroup = new ComponentGroupService(params);
 
-    Model = require('../models/index.js');
-    Models = new Model();
-
-    params.where = { id: req.params.id };
-
-    // ie: ?include=category&include=file&include=image
-    if(req.query.include) {
-        for(var i = 0; i < req.query.include.length; i++) {
-            var capitalize = req.query.include[i][0].toUpperCase() + req.query.include[i].slice(1);
-            includes.push(Models[capitalize]);
-        }
-
-        params.include = includes;
-    }
-
-    var ComponentType = new ComponentTypeService(params);
-
-    ComponentType
+    ComponentGroup
         .find()
         .then(function(result) {
             res.json(result);
@@ -76,24 +64,14 @@ exports.find = function (req, res) {
 
 
 exports.findAll = function (req, res) {
-    var Model = require('../models/index.js');
-    var Models = new Model();
-    var includes = [];
+    const Model = require('../models/index.js');
+    const db = new Model();
     var params = {};
-
     // ie: ?include=category&include=file&include=image
-    if(req.query.include) {
-        for(var i = 0; i < req.query.include.length; i++) {
-            var capitalize = req.query.include[i][0].toUpperCase() + req.query.include[i].slice(1);
-            includes.push(Models[capitalize]);
-        }
+    Helpers.applyModelIncludes(params, req, db);
+    var ComponentGroup = new ComponentGroupService(params);
 
-        params.include = includes;
-    }
-
-    var ComponentType = new ComponentTypeService(params);
-
-    ComponentType
+    ComponentGroup
         .findAll()
         .then(function(result) {
             res.json(result);
@@ -107,9 +85,9 @@ exports.save = function(req, res) {
     var params = req.body;
     if(req.user) {params.UserId = req.user.id}
 
-    var ComponentType = new ComponentTypeService(params);
+    var ComponentGroup = new ComponentGroupService(params);
 
-    ComponentType
+    ComponentGroup
         .save()
         .then(function(result) {
             res.json(result);
