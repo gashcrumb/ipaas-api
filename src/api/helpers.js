@@ -3,7 +3,9 @@
 // ---------------------- Dependencies ---->>
 const _ = require('lodash');
 
-exports.applyModelIncludes = function(params, req, models) {
+exports.applyModelIncludes = function(params, req, db) {
+  const lookupTable = db.lookupTable;
+  const models = db.models;
   var includes = [];
   // ie: ?include=category&include=file&include=image
   if (req.query.include) {
@@ -14,11 +16,10 @@ exports.applyModelIncludes = function(params, req, models) {
       includes.push(include);
     }
     includes = _.filter(_.map(includes, (include) => {
-      // Do our best to normalize the requested model name
-      const name = _.upperFirst(_.camelCase(include));
-      if (name in models) {
+      const name = include.toLowerCase();
+      if (name in lookupTable) {
         return {
-          model: models[name]
+          model: models[lookupTable[name]]
         };
       } else {
         console.log("Unknown model: ", name);

@@ -46,24 +46,12 @@ exports.del = function(req, res) {
 
 
 exports.find = function(req, res) {
-  var Model, Models;
+  const Model = require('../models/index.js');
+  const db = new Model();
   var params = {};
-
-  Model = require('../models/index.js');
-  Models = new Model();
-
-  params.where = {id: req.params.id};
-
+  params.where = { id: req.params.id };
   // ie: ?include=category&include=file&include=image
-  if (req.query.include) {
-    for (var i = 0; i < req.query.include.length; i++) {
-      var capitalize = req.query.include[i][0].toUpperCase() + req.query.include[i].slice(1);
-      includes.push(Models[capitalize]);
-    }
-
-    params.include = includes;
-  }
-
+  Helpers.applyModelIncludes(params, req, db);
   var IntegrationPatternGroup = new IntegrationPatternGroupService(params);
 
   IntegrationPatternGroup
@@ -78,21 +66,11 @@ exports.find = function(req, res) {
 
 
 exports.findAll = function(req, res) {
-  var Model = require('../models/index.js');
-  var Models = new Model();
-  var includes = [];
+  const Model = require('../models/index.js');
+  const db = new Model();
   var params = {};
-
   // ie: ?include=category&include=file&include=image
-  if (req.query.include) {
-    for (var i = 0; i < req.query.include.length; i++) {
-      var capitalize = req.query.include[i][0].toUpperCase() + req.query.include[i].slice(1);
-      includes.push(Models[capitalize]);
-    }
-
-    params.include = includes;
-  }
-
+  Helpers.applyModelIncludes(params, req, db);
   var IntegrationPatternGroup = new IntegrationPatternGroupService(params);
 
   IntegrationPatternGroup

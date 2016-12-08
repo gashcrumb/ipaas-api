@@ -49,11 +49,11 @@ exports.del = function(req, res) {
 
 exports.find = function(req, res) {
   const Model = require('../models/index.js');
-  const models = new Model().models;
-  const params = {};
-  params.where = {id: req.params.id};
+  const db = new Model();
+  var params = {};
+  params.where = { id: req.params.id };
   // ie: ?include=category&include=file&include=image
-  Helpers.applyModelIncludes(params, req, models);
+  Helpers.applyModelIncludes(params, req, db);
   var Connection = new ConnectionService(params);
   Connection
     .find()
@@ -67,11 +67,11 @@ exports.find = function(req, res) {
 
 
 exports.findAll = function(req, res) {
-  var Model = require('../models/index.js');
-  const models = new Model().models;
+  const Model = require('../models/index.js');
+  const db = new Model();
   var params = {};
   // ie: ?include=category&include=file&include=image
-  Helpers.applyModelIncludes(params, req, models);
+  Helpers.applyModelIncludes(params, req, db);
   var Connection = new ConnectionService(params);
   Connection
     .findAll()

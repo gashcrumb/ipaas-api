@@ -45,13 +45,12 @@ exports.del = function(req, res) {
 
 
 exports.find = function (req, res) {
-    var Model, models;
-    Model = require('../models/index.js');
-    models = new Model().models;
+    const Model = require('../models/index.js');
+    const db = new Model();
     var params = {};
     params.where = { id: req.params.id };
     // ie: ?include=category&include=file&include=image
-    Helpers.applyModelIncludes(params, req, models);
+    Helpers.applyModelIncludes(params, req, db);
     var Environment = new EnvironmentService(params);
 
     Environment
@@ -66,11 +65,11 @@ exports.find = function (req, res) {
 
 
 exports.findAll = function (req, res) {
-    var Model = require('../models/index.js');
-    var models = new Model().models;
+    const Model = require('../models/index.js');
+    const db = new Model();
     var params = {};
     // ie: ?include=category&include=file&include=image
-    Helpers.applyModelIncludes(params, req, models);
+    Helpers.applyModelIncludes(params, req, db);
     var Environment = new EnvironmentService(params);
 
     Environment
