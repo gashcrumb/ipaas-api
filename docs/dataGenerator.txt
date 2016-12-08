@@ -1,0 +1,146 @@
+[
+  {
+    "model": "Organization",
+    "data": {
+      id: 1,
+      name: "Acme"
+      
+    }
+  },
+  {
+    "model": "Role",
+    "data": {
+      id: 1,
+      "name": "iPaaS Administrator"
+    }
+  },
+  {
+    "model": "Role",
+    id: 2,
+    "data": {
+      "name": "Expert User"
+    }
+  },
+  {
+    "model": "Role",
+    "data": {
+      id: 3,
+      "name": "Citizen User"
+    }
+  },
+  {
+    'repeat(10)': {
+      model: 'User',
+      data: {
+        firstName: '{{firstName()}}',
+        lastName: '{{surname()}}',
+        username: function() {
+          return this.firstName.toLowerCase().charAt(0) + this.lastName.toLowerCase(); 
+        },
+        RoleId: '{{integer(1, 3)}}',
+        OrganizationId: 1
+      }
+    }
+  },
+  {
+    'repeat(25)': {
+      model: 'ComponentGroup',
+      data: {
+        id: '{{index() + 1}}',
+        name: '{{lorem(1, "words")}}'
+      }
+    }
+  },
+  {
+    'repeat(10)': {
+      model: 'IntegrationPatternGroup',
+      data: {
+        id: '{{index() + 1}}',
+        name: '{{lorem(1, "words")}}'
+      }
+    }
+  },
+  {
+    'repeat(50)': {
+      model: "Component",
+      data: {
+        id: '{{index() + 1}}',
+        name: '{{lorem(1, "words")}}',
+        icon: '{{random("fa-facebook-official", "fa-google", "fa-pinterest", "fa-github-alt", "fa-bitbucket", "fa-foursquare", "fa-paypal", "fa-slack", "fa-trello", "fa-flicker", "fa-get-pocket", "fa-twitter", "fa-linkedin-square", "fa-reddit")}}',
+        properties: function(tags, parent, index) {
+          var numAttrs = tags.integer(5, 10);
+          var words = tags.lorem(numAttrs, "words").split(' ');
+          var answer = {};
+          words.forEach(function(word) {
+            answer[word] = {
+              name: word,
+              title: word,
+              description: tags.lorem(5, "words"),
+              type: tags.random('string', 'boolean', 'number', 'password'),
+              enabled: true,
+              required: tags.random(true, false)
+            };
+          });
+          return JSON.stringify(answer);
+        },
+        description: '{{lorem(10, "words")}}',
+        ComponentGroupId: '{{integer(1, 25)}}'
+      }
+    }
+  },
+  {
+    'repeat(25)': {
+      model: "Connection",
+      data: {
+        id: '{{index() + 1}}',
+        name: '{{lorem(1, "words")}}',
+        icon: '{{random("fa-facebook-official", "fa-google", "fa-pinterest", "fa-github-alt", "fa-bitbucket", "fa-foursquare", "fa-paypal", "fa-slack", "fa-trello", "fa-flicker", "fa-get-pocket", "fa-twitter", "fa-linkedin-square", "fa-reddit")}}',
+        description: '{{lorem(10, "words")}}',
+        position: '{{random("From", "To", "Anywhere")}}',
+        ComponentId: '{{integer(1, 50)}}',
+        OrganizationId: 1,
+        UserId: '{{integer(1, 10)}}',
+        configuredProperties: function(tags, parent, index) {
+          var numAttrs = tags.integer(5, 10);
+          var words = tags.lorem(numAttrs, "words").split(' ');
+          var answer = {};
+          words.forEach(function(word) {
+            answer[word] = {
+              name: word,
+              title: word,
+              description: tags.lorem(5, "words"),
+              type: tags.random('string', 'boolean', 'number', 'password'),
+              enabled: true,
+              required: tags.random(true, false)
+            };
+          });
+          return JSON.stringify(answer);
+        }
+      }
+    }
+  },
+  {
+    'repeat(10)': {
+      model: 'IntegrationTemplate',
+      data: {
+        id: '{{index() + 1}}',
+        name: '{{lorem(1, "words")}}',
+        OrganizationId: 1,
+        UserId: '{{integer(1, 10)}}',
+        configuration: '{}'
+      }
+    }
+  },
+  {
+    'repeat(10)': {
+      model: 'Integration',
+      data: {
+        id: '{{index() + 1}}',
+        name: '{{lorem(1, "words")}}',
+        IntegrationTemplateId: '{{integer(1, 10)}}',
+        UserId: '{{integer(1, 10)}}',
+        configuration: '{}'
+      }
+    }
+  }
+]

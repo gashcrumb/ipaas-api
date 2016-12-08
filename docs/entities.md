@@ -91,3 +91,9 @@ You can edit the diagram of the above relationships using [this online tool](htt
 - Paste it into [`./entities.xml`](./entities.xml)
 - To capture an image using chrome you'll need [this browser extension](https://chrome.google.com/webstore/detail/full-page-screen-capture/fdpohaocaechififmbbbbbknoalclacl) to get the whole thing easily.
   - It's also good to go into the developer tools and hide the controls/minimap elements.
+
+
+## Generating dummy data
+
+- When running in development mode data comes from [a json file](`../src/data/fixtures/development.json').  This file can be generated easily using [this online tool](http://beta.json-generator.com/V18TJMZ7G), using the code in [`./dataGenerator.txt`](./dataGenerator.txt);
+

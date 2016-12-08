@@ -10,7 +10,7 @@
   "scripts": {
     "setup": "",
     "test": "node test/run-tests.js",
-    "watch:restart": "onchange '*.js' 'src/**/*.js' 'config/*.json' -v -- npm start",
+    "watch:restart": "onchange '*.js' 'src/**/*.js' 'src/data/fixtures/*.json' 'config/*.json' -v -- npm start",
     "watch:test": "onchange '*.js' 'src/**/*.js' 'test/*.js' 'test/**/*.js' -v -- npm test"
   },
   "dependencies": {
